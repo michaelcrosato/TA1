@@ -1,0 +1,75 @@
+{
+  "goblin": {
+    "name": "Goblin",
+    "description": "A small, green-skinned creature with sharp claws and yellow eyes. It bares its teeth menacingly.",
+    "health": 12,
+    "max_health": 12,
+    "attack": 4,
+    "defense": 1,
+    "agility": 6,
+    "ai_pattern": {
+      "attack_chance": 0.7,
+      "defend_chance": 0.3,
+      "flee_chance": 0.0,
+      "flee_threshold": 0.0
+    },
+    "loot_table": {
+      "gold_min": 2,
+      "gold_max": 8,
+      "items": [
+        {"item": "healing_herbs", "chance": 0.3},
+        {"item": "rusty_dagger", "chance": 0.2}
+      ]
+    },
+    "spawn_locations": ["tavern_cellar", "cave_tunnel"]
+  },
+  "wolf": {
+    "name": "Grey Wolf",
+    "description": "A lean, hungry wolf with matted grey fur and intelligent amber eyes. Its hackles are raised and it's ready to pounce.",
+    "health": 18,
+    "max_health": 18,
+    "attack": 6,
+    "defense": 2,
+    "agility": 8,
+    "ai_pattern": {
+      "attack_chance": 0.9,
+      "defend_chance": 0.0,
+      "flee_chance": 0.1,
+      "flee_threshold": 0.3
+    },
+    "loot_table": {
+      "gold_min": 1,
+      "gold_max": 4,
+      "items": [
+        {"item": "wolf_pelt", "chance": 0.8},
+        {"item": "healing_herbs", "chance": 0.4}
+      ]
+    },
+    "spawn_locations": ["forest_path", "forest_clearing"]
+  },
+  "bandit": {
+    "name": "Highway Bandit",
+    "description": "A rough-looking human in tattered leather armor. He grips a notched sword and eyes you with calculating malice.",
+    "health": 22,
+    "max_health": 22,
+    "attack": 7,
+    "defense": 3,
+    "agility": 5,
+    "ai_pattern": {
+      "attack_chance": 0.6,
+      "defend_chance": 0.3,
+      "flee_chance": 0.1,
+      "flee_threshold": 0.2
+    },
+    "loot_table": {
+      "gold_min": 8,
+      "gold_max": 20,
+      "items": [
+        {"item": "iron_sword", "chance": 0.15},
+        {"item": "leather_armor", "chance": 0.25},
+        {"item": "health_potion", "chance": 0.4}
+      ]
+    },
+    "spawn_locations": ["forest_path", "town_square"]
+  }
+} 

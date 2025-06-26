@@ -1,0 +1,111 @@
+{
+  "pest_control": {
+    "title": "Pest Control",
+    "description": "The tavern keeper is having trouble with goblins in the nearby caves. Help clear them out.",
+    "giver_npc": "barkeep",
+    "objectives": [
+      {
+        "type": "kill",
+        "target": "goblin",
+        "count": 3,
+        "description": "Defeat 3 goblins"
+      }
+    ],
+    "rewards": {
+      "xp": 50,
+      "gold": 25
+    },
+    "completion_text": "Thank you! The roads are much safer now. Here's your reward."
+  },
+  "gathering_pelts": {
+    "title": "Gathering Pelts",
+    "description": "The merchant needs wolf pelts for his trade routes. Bring him some pelts from the dangerous creatures.",
+    "giver_npc": "merchant",
+    "objectives": [
+      {
+        "type": "collect",
+        "target": "wolf_pelt",
+        "count": 2,
+        "description": "Collect 2 wolf pelts"
+      }
+    ],
+    "rewards": {
+      "xp": 75,
+      "gold": 50,
+      "items": ["health_potion"]
+    },
+    "completion_text": "Excellent pelts! These will fetch a good price. Here's your payment and a bonus potion."
+  },
+  "security_patrol": {
+    "title": "Security Patrol",
+    "description": "The town guard needs help patrolling the dangerous areas. Eliminate bandit threats.",
+    "giver_npc": "guard",
+    "objectives": [
+      {
+        "type": "kill",
+        "target": "bandit",
+        "count": 2,
+        "description": "Defeat 2 bandits"
+      }
+    ],
+    "rewards": {
+      "xp": 100,
+      "gold": 75,
+      "items": ["iron_sword"]
+    },
+    "completion_text": "Outstanding work, citizen! The roads are safer thanks to you. Accept this sword as a token of our gratitude."
+  },
+  "lost_treasure": {
+    "title": "Lost Treasure",
+    "description": "A villager has lost precious family heirlooms. Help explore the dangerous areas to find them.",
+    "giver_npc": "villager",
+    "objectives": [
+      {
+        "type": "visit",
+        "target": "ancient_ruins",
+        "description": "Explore the ancient ruins"
+      },
+      {
+        "type": "collect",
+        "target": "rusty_dagger",
+        "count": 1,
+        "description": "Find the family dagger"
+      }
+    ],
+    "rewards": {
+      "xp": 125,
+      "gold": 100
+    },
+    "completion_text": "You found it! This dagger has been in my family for generations. I can't thank you enough!"
+  },
+  "apprentice_trial": {
+    "title": "Apprentice Trial",
+    "description": "Prove your worth as an adventurer by completing a series of challenges.",
+    "giver_npc": "barkeep",
+    "objectives": [
+      {
+        "type": "kill",
+        "target": "goblin",
+        "count": 1,
+        "description": "Defeat 1 goblin"
+      },
+      {
+        "type": "visit",
+        "target": "forest_path",
+        "description": "Visit the forest path"
+      },
+      {
+        "type": "collect",
+        "target": "health_potion",
+        "count": 1,
+        "description": "Obtain a health potion"
+      }
+    ],
+    "rewards": {
+      "xp": 150,
+      "gold": 60,
+      "items": ["leather_armor"]
+    },
+    "completion_text": "Well done! You've proven yourself worthy. Take this armor - you'll need it for the challenges ahead."
+  }
+} 

@@ -1,0 +1,102 @@
+{
+  "tavern": {
+    "name": "The Dusty Tankard Tavern",
+    "description": "A cozy tavern filled with the smell of ale and roasted meat. A **[barkeep]** wipes down the bar behind stacks of wooden mugs, and a **[notice_board]** hangs crooked by the heavy oak door.",
+    "details": {
+      "barkeep": "A grizzled man with kind eyes and calloused hands. His leather apron has seen countless spills and decades of honest work. He nods at you with the practiced warmth of someone who's heard every story twice. A small sign behind him reads 'Healing Services - 5 gold per wound'.",
+      "notice_board": "Weather-beaten cork board covered in hand-written notices. Most are faded job postings and missing pet announcements, but a hand-drawn **[map]** is pinned prominently in the center.",
+      "map": "A crude but detailed sketch of the local area. The village sits in the center, surrounded by forests to the north and east. A skull symbol marks some caves to the northeast with the words 'GOBLIN TROUBLE' scrawled beneath."
+    },
+    "exits": {"north": "town_square", "east": "tavern_cellar"},
+    "items": ["rusty_key"],
+    "npcs": ["barkeep"]
+  },
+  "town_square": {
+    "name": "Village Town Square",
+    "description": "The heart of the small village, paved with worn cobblestones. A **[fountain]** sits in the center, its waters clear and inviting. Villagers hurry about their daily business, some stopping to chat near the **[market_stalls]**.",
+    "details": {
+      "fountain": "An old stone fountain with a carved fish spouting fresh water. Copper coins glint at the bottom - wishes made by hopeful villagers. The water is clean and cold.",
+      "market_stalls": "Colorful wooden stalls displaying fresh produce, handmade crafts, and daily necessities. A few merchants call out their wares, but most seem to be packing up for the day."
+    },
+    "exits": {"south": "tavern", "north": "forest_path", "west": "village_shop"},
+    "items": [],
+    "npcs": ["merchant", "guard", "villager"]
+  },
+  "tavern_cellar": {
+    "name": "Tavern Cellar",
+    "description": "A dim cellar beneath the tavern, lined with wooden barrels and stone shelves. The air smells of aged beer and damp stone. Something has clearly been rummaging through the supplies - **[claw_marks]** score the barrel tops.",
+    "details": {
+      "claw_marks": "Deep gouges in the wood, too large for rats but too small for bears. They're fresh - wood shavings still litter the floor beneath them.",
+      "barrels": "Heavy oak barrels containing the tavern's ale. Several have been scratched and one has been knocked over, its contents forming a sticky puddle on the stone floor."
+    },
+    "exits": {"west": "tavern"},
+    "items": ["old_bottle"],
+    "npcs": []
+  },
+  "forest_path": {
+    "name": "Forest Path",
+    "description": "A narrow dirt path winding through tall pine trees. Sunlight filters through the green canopy above, creating dancing patterns on the forest floor. You can hear birds singing and leaves rustling in the gentle breeze.",
+    "details": {
+      "trees": "Ancient pines that tower overhead, their thick trunks covered in rough bark. Some bear old scars from woodcutters' axes.",
+      "path": "The dirt path is well-worn from years of foot traffic. Fresh footprints suggest others have passed this way recently."
+    },
+    "exits": {"south": "town_square", "north": "forest_clearing"},
+    "items": [],
+    "npcs": []
+  },
+  "forest_clearing": {
+    "name": "Forest Clearing",
+    "description": "A peaceful circular clearing surrounded by towering trees. Wildflowers dot the grass, and a small **[stream]** bubbles along the eastern edge. This seems like a perfect place to rest and think.",
+    "details": {
+      "stream": "Crystal clear water flows over smooth stones, creating a gentle babbling sound. Small fish dart between the rocks.",
+      "flowers": "Colorful wildflowers - blues, yellows, and whites - scattered throughout the clearing like nature's confetti."
+    },
+    "exits": {"south": "forest_path", "east": "cave_entrance"},
+    "items": ["healing_herbs"],
+    "npcs": []
+  },
+  "cave_entrance": {
+    "name": "Cave Entrance",
+    "description": "The mouth of a dark cave yawns before you, carved into a rocky hillside. Strange **[scratching_sounds]** echo from within, and the air carries an unpleasant musky odor. This must be the goblin cave marked on the tavern map.",
+    "details": {
+      "scratching_sounds": "Rhythmic scraping and chittering echoes from deep within the cave. Whatever's making those sounds doesn't sound friendly.",
+      "cave_mouth": "The entrance is roughly circular, about eight feet high. The stone around it is scratched and stained from years of use by unsavory creatures."
+    },
+    "exits": {"west": "forest_clearing", "north": "cave_tunnel"},
+    "items": [],
+    "npcs": []
+  },
+  "cave_tunnel": {
+    "name": "Cave Tunnel",
+    "description": "A narrow tunnel leading deeper into the hillside. The walls are rough stone, and the air grows colder with each step. Your footsteps echo strangely here, and you catch glimpses of **[bone_fragments]** scattered on the floor.",
+    "details": {
+      "bone_fragments": "Small bones from various animals - rabbits, birds, and some you'd rather not identify. They've been gnawed clean and cracked open for marrow.",
+      "walls": "Natural stone walls carved smooth by water over countless years. Recent scratches suggest less natural inhabitants."
+    },
+    "exits": {"south": "cave_entrance", "north": "ancient_ruins"},
+    "items": ["torch"],
+    "npcs": []
+  },
+  "ancient_ruins": {
+    "name": "Ancient Ruins",
+    "description": "Crumbling stone structures from a forgotten age stand sentinel in this overgrown area. Ivy climbs the weathered **[stone_walls]**, and mysterious **[symbols]** are carved into fallen pillars. The air feels heavy with ancient magic.",
+    "details": {
+      "stone_walls": "Ancient masonry, expertly crafted but worn by centuries of weather. Some sections have collapsed, revealing hidden chambers within.",
+      "symbols": "Strange runic symbols carved deep into the stone. They seem to shift and shimmer when you're not looking directly at them."
+    },
+    "exits": {"south": "cave_tunnel"},
+    "items": ["rusty_dagger", "ancient_scroll"],
+    "npcs": []
+  },
+  "village_shop": {
+    "name": "Village General Store",
+    "description": "A cramped but well-organized shop filled with everyday necessities. Shelves line the walls, packed with everything from rope and lanterns to dried food and simple tools. The **[shopkeeper]** watches you carefully from behind the counter.",
+    "details": {
+      "shopkeeper": "A thin, nervous-looking man with quick eyes and fidgeting hands. He seems honest enough, but clearly doesn't trust strangers with his merchandise.",
+      "shelves": "Wooden shelves stuffed with goods - coils of rope, metal tools, sacks of grain, and various bottles and jars. Everything is neatly labeled with small price tags."
+    },
+    "exits": {"east": "town_square"},
+    "items": ["rope", "lantern"],
+    "npcs": ["shopkeeper"]
+  }
+} 

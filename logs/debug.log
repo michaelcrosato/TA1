@@ -1,0 +1,43 @@
+[2025-06-26 12:33:52] SYSTEM: Loaded 8 rooms and 6 items
+[2025-06-26 12:33:52] SYSTEM: New game started
+[2025-06-26 12:40:16] SYSTEM: Loaded 8 rooms and 6 items
+[2025-06-26 12:40:16] SYSTEM: New game started
+[2025-06-26 12:53:48] SYSTEM: Loaded 8 rooms, 11 items, 3 enemies, 13 combat text categories
+[2025-06-26 12:53:48] SYSTEM: New game started
+[2025-06-26 12:53:58] MOVEMENT: Player moved north to town_square
+[2025-06-26 12:54:08] EXAMINE: Player examined fountain in town_square
+[2025-06-26 12:54:27] MOVEMENT: Player moved north to forest_path
+[2025-06-26 12:54:34] MOVEMENT: Player moved north to forest_clearing
+[2025-06-26 12:54:34] COMBAT: Combat started with Grey Wolf
+[2025-06-26 12:54:42] COMBAT: Grey Wolf took 5 damage (health: 13/18)
+[2025-06-26 12:54:42] COMBAT: Player took 7 damage (health: 13/20)
+[2025-06-26 12:54:47] COMBAT: Player took 7 damage (health: 6/20)
+[2025-06-26 12:54:59] COMBAT: Grey Wolf took 4 damage (health: 9/18)
+[2025-06-26 12:54:59] COMBAT: Player took 5 damage (health: 1/20)
+[2025-06-26 12:55:06] COMBAT: Player took 7 damage (health: 0/20)
+[2025-06-26 12:55:06] COMBAT: Player died and respawned
+[2025-06-26 13:03:50] SYSTEM: Loaded 8 rooms, 16 items, 3 enemies, 13 combat text categories
+[2025-06-26 13:03:50] SYSTEM: New game started
+[2025-06-26 13:04:08] MOVEMENT: Player moved north to town_square
+[2025-06-26 13:04:10] MOVEMENT: Player moved north to forest_path
+[2025-06-26 13:04:12] MOVEMENT: Player moved north to forest_clearing
+[2025-06-26 13:04:15] MOVEMENT: Player moved east to cave_entrance
+[2025-06-26 13:04:18] MOVEMENT: Player moved west to forest_clearing
+[2025-06-26 13:04:19] MOVEMENT: Player moved east to cave_entrance
+[2025-06-26 13:04:29] MOVEMENT: Player moved north to cave_tunnel
+[2025-06-26 13:04:29] COMBAT: Combat started with Goblin
+[2025-06-26 13:04:32] COMBAT: Goblin took 4 damage (health: 8/12)
+[2025-06-26 13:04:32] COMBAT: Player took 5 damage (health: 15/20)
+[2025-06-26 13:04:34] COMBAT: Goblin took 4 damage (health: 4/12)
+[2025-06-26 13:04:35] COMBAT: Goblin took 6 damage (health: 0/12)
+[2025-06-26 13:04:35] PROGRESSION: Player gained 27 XP (total: 27)
+[2025-06-26 13:04:35] ECONOMY: Player earned 4 gold (total: 29)
+[2025-06-26 13:04:35] COMBAT: Player defeated Goblin
+[2025-06-26 13:05:11] ROOM: Removed torch from cave_tunnel
+[2025-06-26 13:05:11] INVENTORY: Added torch to inventory
+[2025-06-26 13:05:28] EXAMINE: Player examined at bone_fragments in cave_tunnel
+[2025-06-26 13:13:45] SYSTEM: Loaded 9 rooms, 17 items, 3 enemies, 13 combat text categories, 5 quests
+[2025-06-26 13:13:45] SYSTEM: New game started
+[2025-06-26 13:25:07] SYSTEM: Player quit game
+[2025-06-26 13:25:39] SYSTEM: Loaded 9 rooms, 17 items, 3 enemies, 13 combat text categories, 5 quests
+[2025-06-26 13:25:39] SYSTEM: New game started

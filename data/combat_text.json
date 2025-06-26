@@ -1,0 +1,88 @@
+{
+  "player_hit": [
+    "You lunge forward, driving your weapon deep into the {enemy}'s side!",
+    "Your blade finds its mark, slashing across the {enemy}'s chest!",
+    "With a mighty swing, you strike the {enemy} for {damage} damage!",
+    "You catch the {enemy} off guard, landing a solid blow!",
+    "Your weapon cuts through the air, connecting with brutal force!",
+    "A well-aimed strike hits the {enemy} right where it hurts!"
+  ],
+  "player_miss": [
+    "You swing wildly but miss the {enemy} completely!",
+    "The {enemy} dodges your attack with surprising agility!",
+    "Your weapon glances harmlessly off the {enemy}'s hide!",
+    "You lose your footing and your attack goes wide!",
+    "The {enemy} steps back just in time to avoid your strike!"
+  ],
+  "enemy_hit": [
+    "The {enemy} strikes you with vicious force!",
+    "Sharp claws rake across your body!",
+    "The {enemy}'s attack finds its mark, dealing {damage} damage!",
+    "You cry out as the {enemy}'s weapon bites deep!",
+    "The {enemy} lands a devastating blow!",
+    "Pain shoots through you as the {enemy} connects!"
+  ],
+  "enemy_miss": [
+    "The {enemy}'s attack goes wide!",
+    "You dodge the {enemy}'s clumsy strike!",
+    "The {enemy}'s weapon glances off your guard!",
+    "You step back just in time to avoid the attack!",
+    "The {enemy} swipes at air as you duck away!",
+    "Quick reflexes save you from the {enemy}'s assault!"
+  ],
+  "player_defend": [
+    "You raise your guard and brace for impact!",
+    "You focus on defense, ready to deflect incoming attacks!",
+    "You adopt a defensive stance, muscles tensed!",
+    "You prepare to weather the storm of battle!"
+  ],
+  "enemy_defend": [
+    "The {enemy} crouches low, protecting vital areas!",
+    "The {enemy} raises its guard defensively!",
+    "The {enemy} backs away, preparing for your next move!",
+    "The {enemy} adopts a cautious, defensive posture!"
+  ],
+  "player_use_item": [
+    "You quickly use the {item}!",
+    "In the heat of battle, you manage to use your {item}!",
+    "You grab your {item} and put it to use!",
+    "With practiced efficiency, you use the {item}!"
+  ],
+  "enemy_flee": [
+    "The {enemy} turns tail and flees from battle!",
+    "Seeing defeat approaching, the {enemy} retreats hastily!",
+    "The {enemy} breaks away from combat and escapes!",
+    "With a final snarl, the {enemy} disappears into the shadows!"
+  ],
+  "player_flee": [
+    "You break away from combat and flee to safety!",
+    "Discretion being the better part of valor, you retreat!",
+    "You manage to escape from the deadly encounter!",
+    "Your quick feet carry you away from danger!"
+  ],
+  "enemy_death": [
+    "The {enemy} collapses to the ground, defeated!",
+    "With a final gasp, the {enemy} falls lifeless!",
+    "The {enemy} crumples, its threat ended forever!",
+    "Victory is yours! The {enemy} has been slain!",
+    "The {enemy} lets out a death rattle and goes still!"
+  ],
+  "player_death": [
+    "Your vision fades as consciousness slips away...",
+    "The world grows dark as you fall to the ground...",
+    "Everything goes black as your strength fails you...",
+    "You feel your life force ebbing away..."
+  ],
+  "combat_start": [
+    "Combat begins! Steel yourself for battle!",
+    "The fight is on! Prepare to defend yourself!",
+    "Battle is joined! May your blade strike true!",
+    "The encounter turns deadly! Time to fight!"
+  ],
+  "low_health_warning": [
+    "You're badly wounded! Seek healing quickly!",
+    "Your strength is failing! You need help soon!",
+    "Blood loss is making you dizzy and weak!",
+    "You're in dire straits! One more hit might finish you!"
+  ]
+} 

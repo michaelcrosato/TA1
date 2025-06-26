@@ -1,0 +1,117 @@
+{
+  "rusty_key": {
+    "name": "Rusty Key",
+    "description": "An old iron key, orange with rust but still functional. It's surprisingly heavy and has an intricate pattern carved into the bow. What could it unlock?",
+    "type": "key",
+    "value": 5
+  },
+  "old_bottle": {
+    "name": "Old Bottle",
+    "description": "A thick glass bottle covered in dust and cobwebs. It still contains some amber liquid that might once have been ale, though you wouldn't want to drink it now.",
+    "type": "junk",
+    "value": 1
+  },
+  "healing_herbs": {
+    "name": "Healing Herbs",
+    "description": "A small bundle of green leaves and stems. They smell fresh and earthy. Local wisdom says they can help heal minor cuts and bruises when brewed into tea.",
+    "type": "consumable",
+    "value": 10
+  },
+  "torch": {
+    "name": "Torch",
+    "description": "A wooden torch wrapped with oil-soaked cloth. It's not currently lit, but it would provide good light in dark places. The wood is solid and could serve as a club in a pinch.",
+    "type": "tool",
+    "value": 8
+  },
+  "rope": {
+    "name": "Hemp Rope",
+    "description": "Fifty feet of sturdy hemp rope, coiled neatly. It's well-made and should hold considerable weight. Essential for any serious adventurer.",
+    "type": "tool",
+    "value": 15
+  },
+  "lantern": {
+    "name": "Oil Lantern",
+    "description": "A brass lantern with glass panels and a reliable wick. It burns lamp oil to provide steady, bright light. Much better than a torch for extended exploration.",
+    "type": "tool",
+    "value": 25
+  },
+  "rusty_dagger": {
+    "name": "Rusty Dagger",
+    "description": "A small, pitted blade with a worn leather grip. Despite its condition, it still has a sharp edge and could be deadly in the right hands.",
+    "type": "weapon",
+    "stats": {"attack": 2},
+    "value": 8
+  },
+  "iron_sword": {
+    "name": "Iron Sword",
+    "description": "A well-balanced blade of decent craftsmanship. The iron is sturdy and the edge is sharp. A reliable weapon for any warrior.",
+    "type": "weapon",
+    "stats": {"attack": 4},
+    "value": 35
+  },
+  "leather_armor": {
+    "name": "Leather Armor",
+    "description": "Tough leather armor reinforced with metal studs. It's well-worn but provides decent protection against claws and blades.",
+    "type": "armor",
+    "stats": {"defense": 2},
+    "value": 30
+  },
+  "health_potion": {
+    "name": "Health Potion",
+    "description": "A small vial filled with red liquid that glows faintly. It smells of herbs and magic - drinking it should restore health.",
+    "type": "consumable",
+    "effect": {"heal": 15},
+    "value": 20,
+    "stackable": true,
+    "max_stack": 3
+  },
+  "wolf_pelt": {
+    "name": "Wolf Pelt",
+    "description": "A thick, grey wolf hide. It's still warm and soft to the touch. Could be valuable to the right buyer.",
+    "type": "material",
+    "value": 12
+  },
+  "steel_sword": {
+    "name": "Steel Sword",
+    "description": "A finely crafted steel blade with perfect balance. The edge gleams razor-sharp in the light. A true warrior's weapon.",
+    "type": "weapon",
+    "stats": {"attack": 6},
+    "value": 150
+  },
+  "chain_mail": {
+    "name": "Chain Mail",
+    "description": "Interlocking metal rings form a flexible yet protective suit of armor. Well-made and surprisingly comfortable to wear.",
+    "type": "armor",
+    "stats": {"defense": 4},
+    "value": 120
+  },
+  "ancient_scroll": {
+    "name": "Ancient Scroll",
+    "description": "A weathered parchment covered in mysterious runes. It emanates a faint magical aura and feels warm to the touch.",
+    "type": "misc",
+    "value": 75
+  },
+  "legendary_blade": {
+    "name": "Dragonbane Sword",
+    "description": "A legendary weapon forged from meteoric steel and blessed by ancient magic. Runes along the blade glow with inner fire. This is the stuff of legends!",
+    "type": "weapon",
+    "stats": {"attack": 10},
+    "value": 500
+  },
+  "greater_health_potion": {
+    "name": "Greater Health Potion",
+    "description": "A large vial of crimson liquid that pulses with magical energy. This potent brew can heal even the gravest wounds.",
+    "type": "consumable",
+    "effect": {"heal": 30},
+    "value": 50,
+    "stackable": true,
+    "max_stack": 3
+  },
+  "magic_ring": {
+    "name": "Ring of Protection",
+    "description": "A silver ring set with a small sapphire that seems to shimmer with protective magic. Wearing it makes you feel more resilient.",
+    "type": "accessory",
+    "stats": {"defense": 2, "max_health": 10},
+    "value": 200
+  }
+} 

@@ -71,5 +71,752 @@
       ]
     },
     "spawn_locations": ["forest_path", "town_square"]
+  },
+  "giant_spider": {
+    "name": "Giant Spider",
+    "description": "A massive arachnid with a leg span wider than your outstretched arms. Venom drips from its fangs.",
+    "health": 28,
+    "max_health": 28,
+    "attack": 8,
+    "defense": 2,
+    "agility": 7,
+    "ai_pattern": {
+      "attack_chance": 0.8,
+      "defend_chance": 0.1,
+      "flee_chance": 0.1,
+      "flee_threshold": 0.3
+    },
+    "loot_table": {
+      "gold_min": 3,
+      "gold_max": 12,
+      "items": [
+        {"item": "spider_silk", "chance": 0.9},
+        {"item": "poison_gland", "chance": 0.6},
+        {"item": "spider_fang", "chance": 0.4}
+      ]
+    },
+    "spawn_locations": ["spider_woods", "webbed_clearing", "spider_queen_lair"]
+  },
+  "orc_warrior": {
+    "name": "Orc Warrior",
+    "description": "A brutish humanoid with tusks and scars. He hefts a crude but effective battleaxe with practiced ease.",
+    "health": 35,
+    "max_health": 35,
+    "attack": 10,
+    "defense": 4,
+    "agility": 4,
+    "ai_pattern": {
+      "attack_chance": 0.9,
+      "defend_chance": 0.1,
+      "flee_chance": 0.0,
+      "flee_threshold": 0.0
+    },
+    "loot_table": {
+      "gold_min": 15,
+      "gold_max": 35,
+      "items": [
+        {"item": "battleaxe", "chance": 0.3},
+        {"item": "orc_hide", "chance": 0.7},
+        {"item": "crude_armor", "chance": 0.4}
+      ]
+    },
+    "spawn_locations": ["goblin_warren", "cave_tunnel", "deep_forest"]
+  },
+  "skeleton": {
+    "name": "Animated Skeleton",
+    "description": "Bleached bones held together by necromantic magic. Its empty sockets burn with unholy fire.",
+    "health": 15,
+    "max_health": 15,
+    "attack": 6,
+    "defense": 1,
+    "agility": 6,
+    "ai_pattern": {
+      "attack_chance": 1.0,
+      "defend_chance": 0.0,
+      "flee_chance": 0.0,
+      "flee_threshold": 0.0
+    },
+    "loot_table": {
+      "gold_min": 0,
+      "gold_max": 5,
+      "items": [
+        {"item": "ancient_bone", "chance": 0.8},
+        {"item": "bone_dust", "chance": 0.5}
+      ]
+    },
+    "spawn_locations": ["cemetery", "bone_yard", "cursed_grove"]
+  },
+  "dire_wolf": {
+    "name": "Dire Wolf",
+    "description": "A wolf the size of a pony, with glowing red eyes and fangs like daggers. Its howl chills your blood.",
+    "health": 32,
+    "max_health": 32,
+    "attack": 11,
+    "defense": 3,
+    "agility": 9,
+    "ai_pattern": {
+      "attack_chance": 0.85,
+      "defend_chance": 0.0,
+      "flee_chance": 0.15,
+      "flee_threshold": 0.25
+    },
+    "loot_table": {
+      "gold_min": 2,
+      "gold_max": 8,
+      "items": [
+        {"item": "dire_wolf_pelt", "chance": 0.9},
+        {"item": "wolf_fang", "chance": 0.6},
+        {"item": "pack_leader_claw", "chance": 0.3}
+      ]
+    },
+    "spawn_locations": ["deep_forest", "hunting_grounds", "forest_clearing"]
+  },
+  "troll": {
+    "name": "Cave Troll",
+    "description": "A massive, lumbering creature with hide like stone and claws that can rend metal. It regenerates wounds before your eyes.",
+    "health": 80,
+    "max_health": 80,
+    "attack": 15,
+    "defense": 8,
+    "agility": 3,
+    "ai_pattern": {
+      "attack_chance": 0.7,
+      "defend_chance": 0.3,
+      "flee_chance": 0.0,
+      "flee_threshold": 0.0
+    },
+    "loot_table": {
+      "gold_min": 50,
+      "gold_max": 150,
+      "items": [
+        {"item": "troll_hide", "chance": 0.8},
+        {"item": "regeneration_gland", "chance": 0.4},
+        {"item": "troll_tooth", "chance": 0.6}
+      ]
+    },
+    "spawn_locations": ["underground_lake", "cave_tunnel", "deep_mine"]
+  },
+  "pixie": {
+    "name": "Mischievous Pixie",
+    "description": "A tiny humanoid with gossamer wings and a impish grin. Don't let its size fool you - it wields powerful fey magic.",
+    "health": 8,
+    "max_health": 8,
+    "attack": 3,
+    "defense": 0,
+    "agility": 15,
+    "ai_pattern": {
+      "attack_chance": 0.4,
+      "defend_chance": 0.0,
+      "flee_chance": 0.6,
+      "flee_threshold": 0.5
+    },
+    "loot_table": {
+      "gold_min": 1,
+      "gold_max": 3,
+      "items": [
+        {"item": "pixie_dust", "chance": 0.9},
+        {"item": "fey_flower", "chance": 0.5}
+      ]
+    },
+    "spawn_locations": ["pixie_hollow", "fairy_ring", "enchanted_pool"]
+  },
+  "shadow": {
+    "name": "Living Shadow",
+    "description": "A writhing mass of darkness given malevolent form. It seems to absorb light and hope from its surroundings.",
+    "health": 20,
+    "max_health": 20,
+    "attack": 9,
+    "defense": 0,
+    "agility": 12,
+    "ai_pattern": {
+      "attack_chance": 0.8,
+      "defend_chance": 0.0,
+      "flee_chance": 0.2,
+      "flee_threshold": 0.3
+    },
+    "loot_table": {
+      "gold_min": 0,
+      "gold_max": 0,
+      "items": [
+        {"item": "shadow_essence", "chance": 0.7},
+        {"item": "void_crystal", "chance": 0.3}
+      ]
+    },
+    "spawn_locations": ["cursed_grove", "shadow_realm", "bone_yard"]
+  },
+  "crystal_golem": {
+    "name": "Crystal Golem",
+    "description": "A towering construct made of living crystal. It moves with surprising grace for something so large and heavy.",
+    "health": 65,
+    "max_health": 65,
+    "attack": 12,
+    "defense": 10,
+    "agility": 2,
+    "ai_pattern": {
+      "attack_chance": 0.6,
+      "defend_chance": 0.4,
+      "flee_chance": 0.0,
+      "flee_threshold": 0.0
+    },
+    "loot_table": {
+      "gold_min": 30,
+      "gold_max": 80,
+      "items": [
+        {"item": "crystal_shard", "chance": 1.0},
+        {"item": "golem_core", "chance": 0.5},
+        {"item": "pure_crystal", "chance": 0.3}
+      ]
+    },
+    "spawn_locations": ["crystal_caves", "crystal_throne_room", "crystal_beach"]
+  },
+  "dragon_wyrmling": {
+    "name": "Red Dragon Wyrmling",
+    "description": "A young dragon, barely the size of a horse but already breathing fire. Its scales glimmer like rubies.",
+    "health": 120,
+    "max_health": 120,
+    "attack": 18,
+    "defense": 12,
+    "agility": 8,
+    "ai_pattern": {
+      "attack_chance": 0.8,
+      "defend_chance": 0.2,
+      "flee_chance": 0.0,
+      "flee_threshold": 0.0
+    },
+    "loot_table": {
+      "gold_min": 200,
+      "gold_max": 500,
+      "items": [
+        {"item": "dragon_scale", "chance": 1.0},
+        {"item": "dragon_claw", "chance": 0.8},
+        {"item": "fire_gem", "chance": 0.6}
+      ]
+    },
+    "spawn_locations": ["dragon_lair", "volcanic_caves", "treasure_hoard"]
+  },
+  "lich": {
+    "name": "Ancient Lich",
+    "description": "A powerful undead sorcerer whose body has long since rotted away, leaving only bones and malevolent intelligence.",
+    "health": 150,
+    "max_health": 150,
+    "attack": 20,
+    "defense": 15,
+    "agility": 6,
+    "ai_pattern": {
+      "attack_chance": 0.9,
+      "defend_chance": 0.1,
+      "flee_chance": 0.0,
+      "flee_threshold": 0.0
+    },
+    "loot_table": {
+      "gold_min": 500,
+      "gold_max": 1000,
+      "items": [
+        {"item": "phylactery", "chance": 1.0},
+        {"item": "lich_bone", "chance": 0.9},
+        {"item": "death_magic_scroll", "chance": 0.8}
+      ]
+    },
+    "spawn_locations": ["necromancer_tower", "lich_sanctum", "death_realm"]
+  },
+  "earth_elemental": {
+    "name": "Earth Elemental",
+    "description": "A being of living stone and soil, towering above you like a walking mountain. Each step makes the ground tremble.",
+    "health": 90,
+    "max_health": 90,
+    "attack": 16,
+    "defense": 12,
+    "agility": 1,
+    "ai_pattern": {
+      "attack_chance": 0.8,
+      "defend_chance": 0.2,
+      "flee_chance": 0.0,
+      "flee_threshold": 0.0
+    },
+    "loot_table": {
+      "gold_min": 20,
+      "gold_max": 60,
+      "items": [
+        {"item": "elemental_stone", "chance": 1.0},
+        {"item": "earth_gem", "chance": 0.6},
+        {"item": "mountain_essence", "chance": 0.4}
+      ]
+    },
+    "spawn_locations": ["mountain_peak", "stone_circle", "elemental_plane"]
+  },
+  "vampire": {
+    "name": "Vampire Lord",
+    "description": "An aristocratic undead with pale skin and burning red eyes. He moves with predatory grace and aristocratic bearing.",
+    "health": 110,
+    "max_health": 110,
+    "attack": 17,
+    "defense": 8,
+    "agility": 12,
+    "ai_pattern": {
+      "attack_chance": 0.7,
+      "defend_chance": 0.2,
+      "flee_chance": 0.1,
+      "flee_threshold": 0.2
+    },
+    "loot_table": {
+      "gold_min": 150,
+      "gold_max": 400,
+      "items": [
+        {"item": "vampire_fang", "chance": 1.0},
+        {"item": "blood_ruby", "chance": 0.7},
+        {"item": "noble_cloak", "chance": 0.5}
+      ]
+    },
+    "spawn_locations": ["vampire_castle", "crypt_entrance", "noble_tomb"]
+  },
+  "demon": {
+    "name": "Lesser Demon",
+    "description": "A creature of pure malevolence from the lower planes. Its skin burns with hellfire and its claws drip acid.",
+    "health": 75,
+    "max_health": 75,
+    "attack": 14,
+    "defense": 6,
+    "agility": 10,
+    "ai_pattern": {
+      "attack_chance": 0.9,
+      "defend_chance": 0.1,
+      "flee_chance": 0.0,
+      "flee_threshold": 0.0
+    },
+    "loot_table": {
+      "gold_min": 50,
+      "gold_max": 120,
+      "items": [
+        {"item": "demon_heart", "chance": 0.8},
+        {"item": "hellfire_shard", "chance": 0.6},
+        {"item": "cursed_claw", "chance": 0.7}
+      ]
+    },
+    "spawn_locations": ["hellish_portal", "demon_circle", "cursed_temple"]
+  },
+  "angel": {
+    "name": "Guardian Angel",
+    "description": "A celestial being with pristine white wings and a sword of pure light. Its presence fills you with hope and awe.",
+    "health": 100,
+    "max_health": 100,
+    "attack": 16,
+    "defense": 10,
+    "agility": 8,
+    "ai_pattern": {
+      "attack_chance": 0.6,
+      "defend_chance": 0.3,
+      "flee_chance": 0.1,
+      "flee_threshold": 0.15
+    },
+    "loot_table": {
+      "gold_min": 100,
+      "gold_max": 300,
+      "items": [
+        {"item": "angel_wing", "chance": 1.0},
+        {"item": "holy_sword", "chance": 0.5},
+        {"item": "divine_essence", "chance": 0.7}
+      ]
+    },
+    "spawn_locations": ["celestial_realm", "holy_shrine", "divine_gate"]
+  },
+  "minotaur": {
+    "name": "Labyrinth Minotaur",
+    "description": "A massive humanoid with the head of a bull. Its horns are stained with the blood of countless victims.",
+    "health": 85,
+    "max_health": 85,
+    "attack": 15,
+    "defense": 7,
+    "agility": 4,
+    "ai_pattern": {
+      "attack_chance": 0.85,
+      "defend_chance": 0.15,
+      "flee_chance": 0.0,
+      "flee_threshold": 0.0
+    },
+    "loot_table": {
+      "gold_min": 40,
+      "gold_max": 100,
+      "items": [
+        {"item": "minotaur_horn", "chance": 1.0},
+        {"item": "labyrinth_key", "chance": 0.4},
+        {"item": "bull_hide", "chance": 0.8}
+      ]
+    },
+    "spawn_locations": ["labyrinth_center", "maze_chamber", "bull_shrine"]
+  },
+  "phoenix": {
+    "name": "Reborn Phoenix",
+    "description": "A magnificent bird wreathed in eternal flames. It has recently risen from its own ashes and burns with renewed life.",
+    "health": 140,
+    "max_health": 140,
+    "attack": 19,
+    "defense": 8,
+    "agility": 15,
+    "ai_pattern": {
+      "attack_chance": 0.7,
+      "defend_chance": 0.1,
+      "flee_chance": 0.2,
+      "flee_threshold": 0.3
+    },
+    "loot_table": {
+      "gold_min": 200,
+      "gold_max": 600,
+      "items": [
+        {"item": "phoenix_feather", "chance": 1.0},
+        {"item": "rebirth_essence", "chance": 0.8},
+        {"item": "flame_core", "chance": 0.6}
+      ]
+    },
+    "spawn_locations": ["phoenix_nest", "fire_mountain", "flame_sanctuary"]
+  },
+  "beholder": {
+    "name": "Floating Eye",
+    "description": "A spherical aberration covered in eyes, each one capable of casting a different magical spell. Its central eye negates magic.",
+    "health": 130,
+    "max_health": 130,
+    "attack": 18,
+    "defense": 12,
+    "agility": 6,
+    "ai_pattern": {
+      "attack_chance": 0.9,
+      "defend_chance": 0.1,
+      "flee_chance": 0.0,
+      "flee_threshold": 0.0
+    },
+    "loot_table": {
+      "gold_min": 300,
+      "gold_max": 800,
+      "items": [
+        {"item": "beholder_eye", "chance": 1.0},
+        {"item": "antimagic_core", "chance": 0.7},
+        {"item": "aberrant_flesh", "chance": 0.9}
+      ]
+    },
+    "spawn_locations": ["aberrant_cavern", "eye_chamber", "reality_rift"]
+  },
+  "kraken": {
+    "name": "Deep Kraken",
+    "description": "A colossal sea monster with tentacles the size of tree trunks. Its intelligence is alien and ancient.",
+    "health": 200,
+    "max_health": 200,
+    "attack": 22,
+    "defense": 15,
+    "agility": 7,
+    "ai_pattern": {
+      "attack_chance": 0.8,
+      "defend_chance": 0.2,
+      "flee_chance": 0.0,
+      "flee_threshold": 0.0
+    },
+    "loot_table": {
+      "gold_min": 500,
+      "gold_max": 1500,
+      "items": [
+        {"item": "kraken_tentacle", "chance": 1.0},
+        {"item": "deep_pearl", "chance": 0.8},
+        {"item": "oceanic_heart", "chance": 0.6}
+      ]
+    },
+    "spawn_locations": ["ocean_depths", "underwater_city", "leviathan_trench"]
+  },
+  "corporate_enforcer": {
+    "name": "Corporate Enforcer",
+    "description": "A well-dressed thug in expensive clothing who collects debts for the banking houses. His knuckles are scarred from 'negotiations'.",
+    "health": 45,
+    "max_health": 45,
+    "attack": 12,
+    "defense": 6,
+    "agility": 7,
+    "ai_pattern": {
+      "attack_chance": 0.8,
+      "defend_chance": 0.2,
+      "flee_chance": 0.0,
+      "flee_threshold": 0.1
+    },
+    "loot_table": {
+      "gold_min": 25,
+      "gold_max": 80,
+      "items": [
+        {"item": "debt_collection_notice", "chance": 0.9},
+        {"item": "expensive_suit", "chance": 0.3},
+        {"item": "brass_knuckles", "chance": 0.4}
+      ]
+    },
+    "spawn_locations": ["financial_district", "grand_bank", "merchant_exchange"]
+  },
+  "steam_automaton": {
+    "name": "Steam-Powered Automaton",
+    "description": "A mechanical construct powered by steam and gears. Its brass body hisses and clanks as it moves with mechanical precision.",
+    "health": 55,
+    "max_health": 55,
+    "attack": 14,
+    "defense": 10,
+    "agility": 4,
+    "ai_pattern": {
+      "attack_chance": 0.9,
+      "defend_chance": 0.1,
+      "flee_chance": 0.0,
+      "flee_threshold": 0.0
+    },
+    "loot_table": {
+      "gold_min": 0,
+      "gold_max": 15,
+      "items": [
+        {"item": "brass_gears", "chance": 0.8},
+        {"item": "steam_core", "chance": 0.5},
+        {"item": "mechanical_parts", "chance": 0.9}
+      ]
+    },
+    "spawn_locations": ["industrial_district", "steam_works", "grand_foundry"]
+  },
+  "corrupt_noble": {
+    "name": "Corrupt Noble",
+    "description": "A decadent aristocrat who has turned to dark practices. Draped in fine silk, but his eyes hold malevolent intelligence.",
+    "health": 38,
+    "max_health": 38,
+    "attack": 9,
+    "defense": 5,
+    "agility": 6,
+    "ai_pattern": {
+      "attack_chance": 0.6,
+      "defend_chance": 0.3,
+      "flee_chance": 0.1,
+      "flee_threshold": 0.2
+    },
+    "loot_table": {
+      "gold_min": 50,
+      "gold_max": 200,
+      "items": [
+        {"item": "noble_signet_ring", "chance": 0.7},
+        {"item": "silk_robes", "chance": 0.8},
+        {"item": "poison_vial", "chance": 0.4}
+      ]
+    },
+    "spawn_locations": ["noble_district", "grand_mansion", "exclusive_club"]
+  },
+  "animated_tome": {
+    "name": "Animated Tome",
+    "description": "A large book that has gained malevolent life. Its pages flutter like wings and words leap from its surface to attack.",
+    "health": 25,
+    "max_health": 25,
+    "attack": 8,
+    "defense": 2,
+    "agility": 9,
+    "ai_pattern": {
+      "attack_chance": 0.7,
+      "defend_chance": 0.1,
+      "flee_chance": 0.2,
+      "flee_threshold": 0.3
+    },
+    "loot_table": {
+      "gold_min": 5,
+      "gold_max": 25,
+      "items": [
+        {"item": "spell_pages", "chance": 0.8},
+        {"item": "magic_ink", "chance": 0.6},
+        {"item": "book_binding", "chance": 0.4}
+      ]
+    },
+    "spawn_locations": ["scholar_district", "grand_library", "ancient_archive"]
+  },
+  "arena_champion": {
+    "name": "Arena Champion",
+    "description": "A seasoned gladiator with countless victories. Battle-scarred but deadly, wielding weapons with lethal expertise.",
+    "health": 65,
+    "max_health": 65,
+    "attack": 16,
+    "defense": 8,
+    "agility": 10,
+    "ai_pattern": {
+      "attack_chance": 0.8,
+      "defend_chance": 0.2,
+      "flee_chance": 0.0,
+      "flee_threshold": 0.0
+    },
+    "loot_table": {
+      "gold_min": 75,
+      "gold_max": 200,
+      "items": [
+        {"item": "champion_sword", "chance": 0.6},
+        {"item": "gladiator_armor", "chance": 0.5},
+        {"item": "victory_trophy", "chance": 0.8}
+      ]
+    },
+    "spawn_locations": ["entertainment_district", "arena_complex", "gladiator_barracks"]
+  },
+  "smuggler_assassin": {
+    "name": "Smuggler Assassin",
+    "description": "A deadly killer who works for the criminal underworld. Silent as shadow, with poisoned blades and no conscience.",
+    "health": 40,
+    "max_health": 40,
+    "attack": 13,
+    "defense": 4,
+    "agility": 12,
+    "ai_pattern": {
+      "attack_chance": 0.9,
+      "defend_chance": 0.0,
+      "flee_chance": 0.1,
+      "flee_threshold": 0.15
+    },
+    "loot_table": {
+      "gold_min": 30,
+      "gold_max": 100,
+      "items": [
+        {"item": "poisoned_dagger", "chance": 0.7},
+        {"item": "smoke_bomb", "chance": 0.5},
+        {"item": "lock_picks", "chance": 0.8}
+      ]
+    },
+    "spawn_locations": ["merchant_quarter", "smuggler_den", "caravan_depot"]
+  },
+  "vault_guardian": {
+    "name": "Vault Guardian",
+    "description": "A magical construct designed to protect valuable treasures. Its crystalline eyes scan for threats with unwavering vigilance.",
+    "health": 70,
+    "max_health": 70,
+    "attack": 15,
+    "defense": 12,
+    "agility": 5,
+    "ai_pattern": {
+      "attack_chance": 0.8,
+      "defend_chance": 0.2,
+      "flee_chance": 0.0,
+      "flee_threshold": 0.0
+    },
+    "loot_table": {
+      "gold_min": 100,
+      "gold_max": 300,
+      "items": [
+        {"item": "guardian_core", "chance": 0.6},
+        {"item": "crystal_eye", "chance": 0.8},
+        {"item": "vault_key", "chance": 0.3}
+      ]
+    },
+    "spawn_locations": ["financial_district", "vault_level", "treasure_vault"]
+  },
+  "industrial_saboteur": {
+    "name": "Industrial Saboteur",
+    "description": "A terrorist who seeks to destroy the city's industrial capacity. Carries explosive devices and has no regard for collateral damage.",
+    "health": 30,
+    "max_health": 30,
+    "attack": 11,
+    "defense": 3,
+    "agility": 11,
+    "ai_pattern": {
+      "attack_chance": 0.7,
+      "defend_chance": 0.0,
+      "flee_chance": 0.3,
+      "flee_threshold": 0.4
+    },
+    "loot_table": {
+      "gold_min": 15,
+      "gold_max": 50,
+      "items": [
+        {"item": "explosive_device", "chance": 0.8},
+        {"item": "sabotage_tools", "chance": 0.9},
+        {"item": "anarchist_manifesto", "chance": 0.3}
+      ]
+    },
+    "spawn_locations": ["industrial_district", "steam_works", "mill_complex"]
+  },
+  "court_assassin": {
+    "name": "Court Assassin",
+    "description": "An elegant killer who operates in high society. Dressed as a noble but trained in the deadliest arts.",
+    "health": 42,
+    "max_health": 42,
+    "attack": 14,
+    "defense": 5,
+    "agility": 13,
+    "ai_pattern": {
+      "attack_chance": 0.85,
+      "defend_chance": 0.1,
+      "flee_chance": 0.05,
+      "flee_threshold": 0.1
+    },
+    "loot_table": {
+      "gold_min": 40,
+      "gold_max": 120,
+      "items": [
+        {"item": "concealed_blade", "chance": 0.8},
+        {"item": "noble_disguise", "chance": 0.6},
+        {"item": "assassination_contract", "chance": 0.4}
+      ]
+    },
+    "spawn_locations": ["noble_district", "noble_court", "grand_mansion"]
+  },
+  "knowledge_wraith": {
+    "name": "Knowledge Wraith",
+    "description": "The spirit of a scholar who died seeking forbidden knowledge. It hungers for the thoughts and memories of the living.",
+    "health": 35,
+    "max_health": 35,
+    "attack": 9,
+    "defense": 2,
+    "agility": 11,
+    "ai_pattern": {
+      "attack_chance": 0.8,
+      "defend_chance": 0.0,
+      "flee_chance": 0.2,
+      "flee_threshold": 0.25
+    },
+    "loot_table": {
+      "gold_min": 10,
+      "gold_max": 40,
+      "items": [
+        {"item": "spectral_essence", "chance": 0.7},
+        {"item": "forgotten_knowledge", "chance": 0.5},
+        {"item": "soul_fragment", "chance": 0.3}
+      ]
+    },
+    "spawn_locations": ["scholar_district", "ancient_archive", "experimental_laboratory"]
+  },
+  "gambling_thug": {
+    "name": "Gambling Thug",
+    "description": "An enforcer for the gambling houses who ensures debts are paid. Large, intimidating, and carries brass knuckles.",
+    "health": 50,
+    "max_health": 50,
+    "attack": 13,
+    "defense": 7,
+    "agility": 6,
+    "ai_pattern": {
+      "attack_chance": 0.9,
+      "defend_chance": 0.1,
+      "flee_chance": 0.0,
+      "flee_threshold": 0.0
+    },
+    "loot_table": {
+      "gold_min": 20,
+      "gold_max": 80,
+      "items": [
+        {"item": "brass_knuckles", "chance": 0.8},
+        {"item": "gambling_debt", "chance": 0.6},
+        {"item": "casino_chips", "chance": 0.9}
+      ]
+    },
+    "spawn_locations": ["entertainment_district", "gambling_hall", "casino_vault"]
+  },
+  "merchant_prince": {
+    "name": "Merchant Prince",
+    "description": "A wealthy trader who has turned to darker methods to maintain his empire. Accompanied by hired bodyguards and exotic weapons.",
+    "health": 45,
+    "max_health": 45,
+    "attack": 11,
+    "defense": 7,
+    "agility": 8,
+    "ai_pattern": {
+      "attack_chance": 0.6,
+      "defend_chance": 0.3,
+      "flee_chance": 0.1,
+      "flee_threshold": 0.2
+    },
+    "loot_table": {
+      "gold_min": 100,
+      "gold_max": 300,
+      "items": [
+        {"item": "merchant_seal", "chance": 0.8},
+        {"item": "exotic_treasure", "chance": 0.6},
+        {"item": "trade_monopoly", "chance": 0.4}
+      ]
+    },
+    "spawn_locations": ["merchant_quarter", "grand_bazaar", "trading_post"]
   }
 } 

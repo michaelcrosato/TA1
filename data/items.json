@@ -113,5 +113,985 @@
     "type": "accessory",
     "stats": {"defense": 2, "max_health": 10},
     "value": 200
+  },
+  "spider_silk": {
+    "name": "Spider Silk",
+    "description": "Strong, flexible silk harvested from giant spiders. It's lighter than steel but twice as strong, perfect for crafting.",
+    "type": "material",
+    "value": 25
+  },
+  "poison_gland": {
+    "name": "Poison Gland",
+    "description": "A toxic organ extracted from a venomous spider. Alchemists prize these for creating deadly poisons.",
+    "type": "material",
+    "value": 40
+  },
+  "hunting_bow": {
+    "name": "Hunter's Bow",
+    "description": "A well-crafted longbow made from yew wood. It's been treated with oil and wax to resist weather damage.",
+    "type": "weapon",
+    "stats": {"attack": 5, "range": "long"},
+    "value": 80
+  },
+  "animal_trap": {
+    "name": "Steel Trap",
+    "description": "A mechanical trap with powerful spring-loaded jaws. Designed to catch and hold medium-sized animals.",
+    "type": "tool",
+    "value": 35
+  },
+  "skinning_knife": {
+    "name": "Skinning Knife",
+    "description": "A sharp, curved blade perfect for processing animal hides. The edge is kept razor-sharp.",
+    "type": "tool",
+    "stats": {"attack": 1},
+    "value": 15
+  },
+  "goblin_tooth": {
+    "name": "Goblin Tooth",
+    "description": "A yellowed fang from a goblin warrior. Some cultures believe they bring luck in battle.",
+    "type": "trophy",
+    "value": 3
+  },
+  "crude_spear": {
+    "name": "Crude Spear",
+    "description": "A simple weapon made from a sharpened stick with a stone point. Crude but effective.",
+    "type": "weapon",
+    "stats": {"attack": 3},
+    "value": 8
+  },
+  "lake_pearl": {
+    "name": "Lake Pearl",
+    "description": "A lustrous pearl formed in the depths of the underground lake. It glows with a soft inner light.",
+    "type": "treasure",
+    "value": 75
+  },
+  "ancient_bone": {
+    "name": "Ancient Bone",
+    "description": "A weathered bone from some long-dead creature. It's carved with primitive symbols.",
+    "type": "material",
+    "value": 20
+  },
+  "ritual_dagger": {
+    "name": "Ritual Dagger",
+    "description": "A ceremonial blade with a jeweled hilt. The metal is stained dark from ancient rituals.",
+    "type": "weapon",
+    "stats": {"attack": 4, "magic": 2},
+    "value": 120
+  },
+  "star_map": {
+    "name": "Star Map",
+    "description": "An ancient chart showing the positions of stars and constellations. Some configurations no longer exist.",
+    "type": "misc",
+    "value": 90
+  },
+  "arcane_crystal": {
+    "name": "Arcane Crystal",
+    "description": "A crystal that pulses with raw magical energy. It's warm to the touch and hums with power.",
+    "type": "material",
+    "value": 150
+  },
+  "wizard_staff": {
+    "name": "Wizard's Staff",
+    "description": "A gnarled wooden staff topped with a glowing crystal. It amplifies magical energy for spellcasters.",
+    "type": "weapon",
+    "stats": {"attack": 2, "magic": 5},
+    "value": 300
+  },
+  "spell_component": {
+    "name": "Spell Component",
+    "description": "A rare ingredient needed for magical rituals. Its exact nature is difficult to determine.",
+    "type": "material",
+    "value": 60
+  },
+  "magic_lens": {
+    "name": "Magic Lens",
+    "description": "A crystal lens that reveals hidden magical auras. Looking through it shows the true nature of things.",
+    "type": "tool",
+    "value": 180
+  },
+  "thieves_tools": {
+    "name": "Thieves' Tools",
+    "description": "A set of lockpicks, prying tools, and other implements used by burglars and rogues.",
+    "type": "tool",
+    "value": 45
+  },
+  "smuggled_goods": {
+    "name": "Smuggled Goods",
+    "description": "A package of contraband items wrapped in oiled cloth. The contents are a mystery.",
+    "type": "treasure",
+    "value": 85
+  },
+  "meditation_beads": {
+    "name": "Meditation Beads",
+    "description": "A string of polished wooden beads used for prayer and meditation. They bring a sense of calm.",
+    "type": "accessory",
+    "stats": {"wisdom": 1},
+    "value": 25
+  },
+  "herbal_tea": {
+    "name": "Herbal Tea",
+    "description": "A blend of soothing herbs that restore mental clarity and energy when brewed.",
+    "type": "consumable",
+    "effect": {"heal": 5, "restore_mana": 10},
+    "value": 15
+  },
+  "blessed_candle": {
+    "name": "Blessed Candle",
+    "description": "A candle blessed by holy priests. Its light wards off evil spirits and provides comfort.",
+    "type": "tool",
+    "value": 20
+  },
+  "grave_flowers": {
+    "name": "Grave Flowers",
+    "description": "Fresh flowers left on a grave by mourning relatives. They smell of sadness and remembrance.",
+    "type": "misc",
+    "value": 5
+  },
+  "mourning_veil": {
+    "name": "Mourning Veil",
+    "description": "A black veil worn by those grieving the dead. It provides a sense of privacy and dignity.",
+    "type": "accessory",
+    "value": 30
+  },
+  "pilgrim_staff": {
+    "name": "Pilgrim's Staff",
+    "description": "A wooden walking stick carried by religious pilgrims. It bears the symbols of various faiths.",
+    "type": "weapon",
+    "stats": {"attack": 2, "holy": 1},
+    "value": 40
+  },
+  "blessed_amulet": {
+    "name": "Blessed Amulet",
+    "description": "A small pendant blessed by priests. It provides protection against evil magic.",
+    "type": "accessory",
+    "stats": {"defense": 1, "magic_resistance": 2},
+    "value": 65
+  },
+  "holy_incense": {
+    "name": "Holy Incense",
+    "description": "Sacred incense that burns with a pure, cleansing smoke. It purifies the air and soul.",
+    "type": "consumable",
+    "effect": {"purify": true, "heal": 3},
+    "value": 25
+  },
+  "practice_sword": {
+    "name": "Practice Sword",
+    "description": "A blunted training sword used for combat practice. It won't cause serious injury.",
+    "type": "weapon",
+    "stats": {"attack": 1},
+    "value": 10
+  },
+  "training_shield": {
+    "name": "Training Shield",
+    "description": "A lightweight shield used for combat training. It's designed to be easy to handle.",
+    "type": "armor",
+    "stats": {"defense": 1},
+    "value": 15
+  },
+  "target_arrow": {
+    "name": "Target Arrow",
+    "description": "A practice arrow with a blunted tip. Designed for archery training rather than hunting.",
+    "type": "ammunition",
+    "stats": {"attack": 1},
+    "value": 2
+  },
+  "military_sword": {
+    "name": "Military Sword",
+    "description": "A standard-issue military blade. It's well-balanced and bears the mark of the local garrison.",
+    "type": "weapon",
+    "stats": {"attack": 5},
+    "value": 90
+  },
+  "guard_armor": {
+    "name": "Guard Armor",
+    "description": "Standard military armor consisting of chain mail and leather. It bears the town's heraldry.",
+    "type": "armor",
+    "stats": {"defense": 3},
+    "value": 85
+  },
+  "crossbow_bolts": {
+    "name": "Crossbow Bolts",
+    "description": "A quiver of steel-tipped crossbow bolts. They're designed for maximum penetration.",
+    "type": "ammunition",
+    "stats": {"attack": 2},
+    "value": 15
+  },
+  "spyglass": {
+    "name": "Spyglass",
+    "description": "A collapsible telescope used for long-distance observation. Perfect for scouting.",
+    "type": "tool",
+    "value": 120
+  },
+  "signal_torch": {
+    "name": "Signal Torch",
+    "description": "A special torch that burns with a bright, colored flame. Used for long-distance communication.",
+    "type": "tool",
+    "value": 25
+  },
+  "message_scroll": {
+    "name": "Message Scroll",
+    "description": "A sealed scroll containing an important message. The wax seal bears an official mark.",
+    "type": "misc",
+    "value": 10
+  },
+  "trade_goods": {
+    "name": "Trade Goods",
+    "description": "A bundle of various merchandise ready for transport. The contents vary but all have value.",
+    "type": "treasure",
+    "value": 50
+  },
+  "exotic_spice": {
+    "name": "Exotic Spice",
+    "description": "A rare spice from distant lands. It's worth its weight in silver to the right buyer.",
+    "type": "material",
+    "value": 80
+  },
+  "shipping_manifest": {
+    "name": "Shipping Manifest",
+    "description": "A detailed list of cargo and destinations. It might contain valuable information.",
+    "type": "misc",
+    "value": 15
+  },
+  "fishing_net": {
+    "name": "Fishing Net",
+    "description": "A large net used for catching fish. It's made of strong rope and has lead weights.",
+    "type": "tool",
+    "value": 30
+  },
+  "boat_hook": {
+    "name": "Boat Hook",
+    "description": "A long pole with a hook on the end, used for maneuvering boats and retrieving items.",
+    "type": "tool",
+    "stats": {"attack": 2},
+    "value": 20
+  },
+  "sea_chart": {
+    "name": "Sea Chart",
+    "description": "A detailed map of local waters showing depths, currents, and hazards.",
+    "type": "misc",
+    "value": 60
+  },
+  "fairy_dust": {
+    "name": "Fairy Dust",
+    "description": "Glittering powder that falls from fairy wings. It has unpredictable magical properties.",
+    "type": "material",
+    "value": 100
+  },
+  "mushroom_cap": {
+    "name": "Giant Mushroom Cap",
+    "description": "The cap of a huge mushroom. It's lightweight and could be used as a shield in emergencies.",
+    "type": "misc",
+    "value": 12
+  },
+  "fey_flower": {
+    "name": "Fey Flower",
+    "description": "A flower that blooms in the fairy realm. It never wilts and glows with soft light.",
+    "type": "material",
+    "value": 85
+  },
+  "witch_brew": {
+    "name": "Witch's Brew",
+    "description": "A mysterious potion brewed by a witch. Its effects are unpredictable and potentially dangerous.",
+    "type": "consumable",
+    "effect": {"random": true},
+    "value": 75
+  },
+  "eye_of_newt": {
+    "name": "Eye of Newt",
+    "description": "A preserved newt's eye, a classic ingredient in magical potions and spells.",
+    "type": "material",
+    "value": 30
+  },
+  "cursed_doll": {
+    "name": "Cursed Doll",
+    "description": "A small doll that seems to move when you're not looking. It radiates malevolent energy.",
+    "type": "cursed",
+    "value": -20
+  },
+  "ancient_bark": {
+    "name": "Ancient Bark",
+    "description": "Bark from a tree that has lived for millennia. It's covered in natural runes of power.",
+    "type": "material",
+    "value": 95
+  },
+  "whispering_leaf": {
+    "name": "Whispering Leaf",
+    "description": "A leaf that continues to whisper secrets even after being plucked from its tree.",
+    "type": "material",
+    "value": 70
+  },
+  "nature_rune": {
+    "name": "Nature Rune",
+    "description": "A stone carved with druidic symbols. It pulses with the power of nature itself.",
+    "type": "material",
+    "value": 140
+  },
+  "crystal_shard": {
+    "name": "Crystal Shard",
+    "description": "A fragment of pure crystal that glows with inner light. It vibrates with magical energy.",
+    "type": "material",
+    "value": 55
+  },
+  "pure_spring_water": {
+    "name": "Pure Spring Water",
+    "description": "Water from a magical spring, so pure it seems to glow. It has healing properties.",
+    "type": "consumable",
+    "effect": {"heal": 8, "purify": true},
+    "value": 35
+  },
+  "rare_mushrooms": {
+    "name": "Rare Mushrooms",
+    "description": "Exotic fungi that grow only in the deepest parts of the forest. They glow with bioluminescence.",
+    "type": "material",
+    "value": 60
+  },
+  "moonstone": {
+    "name": "Moonstone",
+    "description": "A gem that captures and stores moonlight. It glows softly in the darkness.",
+    "type": "treasure",
+    "value": 120
+  },
+  "druidic_focus": {
+    "name": "Druidic Focus",
+    "description": "A carved wooden symbol used by druids to channel natural magic. It's warm to the touch.",
+    "type": "tool",
+    "stats": {"magic": 3, "nature": 2},
+    "value": 180
+  },
+  "nature_essence": {
+    "name": "Nature Essence",
+    "description": "A vial of concentrated natural energy. It smells of fresh earth and growing things.",
+    "type": "material",
+    "value": 110
+  },
+  "holy_water": {
+    "name": "Holy Water",
+    "description": "Water blessed by priests and infused with divine power. It's effective against undead.",
+    "type": "consumable",
+    "effect": {"holy_damage": 10, "purify": true},
+    "value": 40
+  },
+  "prayer_book": {
+    "name": "Prayer Book",
+    "description": "A leather-bound book containing prayers and hymns. Reading it brings comfort and hope.",
+    "type": "misc",
+    "value": 30
+  },
+  "military_rations": {
+    "name": "Military Rations",
+    "description": "Preserved food designed for soldiers on campaign. It's nutritious but not particularly tasty.",
+    "type": "consumable",
+    "effect": {"heal": 3, "stamina": 5},
+    "value": 8
+  },
+  "signal_horn": {
+    "name": "Signal Horn",
+    "description": "A brass horn used for military communication. Its sound can be heard for miles.",
+    "type": "tool",
+    "value": 45
+  },
+  "masterwork_sword": {
+    "name": "Masterwork Sword",
+    "description": "A sword crafted by a master smith. Every aspect is perfect, from balance to edge retention.",
+    "type": "weapon",
+    "stats": {"attack": 8, "crit_chance": 0.1},
+    "value": 400
+  },
+  "mithril_armor": {
+    "name": "Mithril Armor",
+    "description": "Armor made from the legendary metal mithril. It's lighter than silk but stronger than steel.",
+    "type": "armor",
+    "stats": {"defense": 6, "agility": 2},
+    "value": 800
+  },
+  "flame_blade": {
+    "name": "Flame Blade",
+    "description": "A sword that burns with eternal fire. The blade is wreathed in flames that never consume it.",
+    "type": "weapon",
+    "stats": {"attack": 9, "fire_damage": 5},
+    "value": 750
+  },
+  "ice_armor": {
+    "name": "Ice Armor",
+    "description": "Armor made from magical ice that never melts. It provides excellent protection and cooling.",
+    "type": "armor",
+    "stats": {"defense": 5, "ice_resistance": 3},
+    "value": 650
+  },
+  "lightning_spear": {
+    "name": "Lightning Spear",
+    "description": "A spear that crackles with electrical energy. It can strike faster than the eye can follow.",
+    "type": "weapon",
+    "stats": {"attack": 7, "lightning_damage": 4, "speed": 2},
+    "value": 600
+  },
+  "shadow_cloak": {
+    "name": "Shadow Cloak",
+    "description": "A cloak woven from shadows themselves. It makes the wearer nearly invisible in darkness.",
+    "type": "armor",
+    "stats": {"defense": 2, "stealth": 5},
+    "value": 450
+  },
+  "ring_of_strength": {
+    "name": "Ring of Strength",
+    "description": "A golden ring that enhances the wearer's physical power. It makes you feel invincible.",
+    "type": "accessory",
+    "stats": {"strength": 3, "attack": 2},
+    "value": 350
+  },
+  "amulet_of_wisdom": {
+    "name": "Amulet of Wisdom",
+    "description": "An ancient amulet that expands the mind and enhances understanding of magic.",
+    "type": "accessory",
+    "stats": {"wisdom": 3, "magic": 2},
+    "value": 400
+  },
+  "boots_of_speed": {
+    "name": "Boots of Speed",
+    "description": "Enchanted boots that allow the wearer to move with supernatural swiftness.",
+    "type": "accessory",
+    "stats": {"agility": 4, "movement": 2},
+    "value": 300
+  },
+  "potion_of_giants": {
+    "name": "Potion of Giant Strength",
+    "description": "A powerful potion that temporarily grants the strength of a giant. Handle with care.",
+    "type": "consumable",
+    "effect": {"temp_strength": 5, "duration": 300},
+    "value": 150
+  },
+  "elixir_of_life": {
+    "name": "Elixir of Life",
+    "description": "A legendary potion that can restore even the gravest wounds and extend life itself.",
+    "type": "consumable",
+    "effect": {"heal": 50, "max_health": 10},
+    "value": 500
+  },
+  "scroll_of_fireball": {
+    "name": "Scroll of Fireball",
+    "description": "A spell scroll that contains the fireball incantation. Use it to cast the spell once.",
+    "type": "consumable",
+    "effect": {"fireball": 25},
+    "value": 80
+  },
+  "scroll_of_healing": {
+    "name": "Scroll of Healing",
+    "description": "A divine scroll that channels healing magic. It can mend even serious wounds.",
+    "type": "consumable",
+    "effect": {"heal": 35},
+    "value": 120
+  },
+  "teleport_stone": {
+    "name": "Teleport Stone",
+    "description": "A crystalline stone that can instantly transport the user to a previously visited location.",
+    "type": "consumable",
+    "effect": {"teleport": true},
+    "value": 200
+  },
+  "bag_of_holding": {
+    "name": "Bag of Holding",
+    "description": "A magical bag that can hold far more than its size suggests. It defies the laws of physics.",
+    "type": "tool",
+    "stats": {"inventory_slots": 20},
+    "value": 1000
+  },
+  "crystal_ball": {
+    "name": "Crystal Ball",
+    "description": "A sphere of perfect crystal that shows distant places and future events to those who know how to use it.",
+    "type": "tool",
+    "stats": {"scrying": 5},
+    "value": 800
+  },
+  "wand_of_magic_missiles": {
+    "name": "Wand of Magic Missiles",
+    "description": "A wand that shoots bolts of pure magical energy. It has limited charges but is devastatingly effective.",
+    "type": "weapon",
+    "stats": {"attack": 3, "magic_damage": 8, "charges": 20},
+    "value": 600
+  },
+  "staff_of_power": {
+    "name": "Staff of Power",
+    "description": "An artifact-level staff that amplifies all magical abilities. Only the most powerful wizards can wield it.",
+    "type": "weapon",
+    "stats": {"attack": 4, "magic": 8, "all_spell_power": 3},
+    "value": 2000
+  },
+  "crown_of_kings": {
+    "name": "Crown of Kings",
+    "description": "A magnificent crown that grants authority and charisma to its wearer. It commands respect.",
+    "type": "accessory",
+    "stats": {"charisma": 5, "leadership": 3},
+    "value": 5000
+  },
+  "dragon_scale": {
+    "name": "Dragon Scale",
+    "description": "A scale from an ancient dragon. It's incredibly tough and radiates residual draconic power.",
+    "type": "material",
+    "value": 300
+  },
+  "phoenix_feather": {
+    "name": "Phoenix Feather",
+    "description": "A feather from the legendary phoenix. It burns with eternal fire but is never consumed.",
+    "type": "material",
+    "value": 400
+  },
+  "unicorn_horn": {
+    "name": "Unicorn Horn",
+    "description": "The horn of a unicorn, imbued with pure magic. It can neutralize any poison or curse.",
+    "type": "material",
+    "value": 1000
+  },
+  "demon_heart": {
+    "name": "Demon Heart",
+    "description": "The still-beating heart of a demon. It pulses with dark energy and whispers of power.",
+    "type": "material",
+    "value": 666
+  },
+  "angel_wing": {
+    "name": "Angel Wing",
+    "description": "A feathered wing from a celestial being. It glows with divine light and grants protection.",
+    "type": "material",
+    "value": 800
+  },
+  "void_essence": {
+    "name": "Void Essence",
+    "description": "A sample of pure nothingness given form. It absorbs light and matter, defying comprehension.",
+    "type": "material",
+    "value": 1200
+  },
+  "time_crystal": {
+    "name": "Time Crystal",
+    "description": "A crystal that exists outside normal time. It ages and rejuvenates in endless cycles.",
+    "type": "material",
+    "value": 2000
+  },
+  "soul_gem": {
+    "name": "Soul Gem",
+    "description": "A gem that can trap and store souls. It whispers with the voices of the captured.",
+    "type": "material",
+    "value": 1500
+  },
+  "world_seed": {
+    "name": "World Seed",
+    "description": "A seed from the World Tree that contains the potential for entire forests within it.",
+    "type": "material",
+    "value": 3000
+  },
+  "starlight_fruit": {
+    "name": "Starlight Fruit",
+    "description": "Fruit that grows only on the World Tree, nourished by starlight. It grants cosmic awareness.",
+    "type": "consumable",
+    "effect": {"heal": 25, "wisdom": 1, "cosmic_sight": true},
+    "value": 500
+  },
+  "bark_of_ages": {
+    "name": "Bark of Ages",
+    "description": "Bark from the World Tree that has absorbed the wisdom of millennia. It grants understanding.",
+    "type": "material",
+    "value": 800
+  },
+  "fey_crystal": {
+    "name": "Fey Crystal",
+    "description": "A crystal formed in the Feywild. It phases in and out of reality and grants fey magic.",
+    "type": "material",
+    "value": 600
+  },
+  "portal_shard": {
+    "name": "Portal Shard",
+    "description": "A fragment of a shattered portal. It still contains traces of dimensional magic.",
+    "type": "material",
+    "value": 400
+  },
+  "pixie_dust": {
+    "name": "Pixie Dust",
+    "description": "Dust from pixie wings that grants temporary flight and magical abilities.",
+    "type": "consumable",
+    "effect": {"fly": true, "duration": 300, "magic": 2},
+    "value": 250
+  },
+  "spirit_water": {
+    "name": "Spirit Water",
+    "description": "Water blessed by nature spirits. It purifies the soul and heals both body and mind.",
+    "type": "consumable",
+    "effect": {"heal": 15, "purify_soul": true, "restore_mana": 20},
+    "value": 180
+  },
+  "reflection_mirror": {
+    "name": "Reflection Mirror",
+    "description": "A mirror that shows not your appearance but your true nature. It reveals hidden truths.",
+    "type": "tool",
+    "stats": {"insight": 3, "truth_sight": true},
+    "value": 350
+  },
+  "wish_coin": {
+    "name": "Wish Coin",
+    "description": "A coin that grants one wish to whoever flips it. Choose carefully, for it works only once.",
+    "type": "consumable",
+    "effect": {"wish": true},
+    "value": 10000
+  },
+  "debt_collection_notice": {
+    "name": "Debt Collection Notice",
+    "description": "A legal document detailing someone's outstanding debts. Could be valuable to the right creditor.",
+    "type": "document",
+    "value": 15
+  },
+  "expensive_suit": {
+    "name": "Expensive Suit",
+    "description": "A well-tailored suit made from the finest materials. Wearing it grants respectability in high society.",
+    "type": "clothing",
+    "stats": {"charisma": 2},
+    "value": 200
+  },
+  "brass_knuckles": {
+    "name": "Brass Knuckles",
+    "description": "Metal hand weapons that turn your fists into deadly weapons. Favored by street thugs and enforcers.",
+    "type": "weapon",
+    "stats": {"attack": 3},
+    "value": 25
+  },
+  "brass_gears": {
+    "name": "Brass Gears",
+    "description": "Precision-crafted mechanical components. Essential for creating or repairing clockwork devices.",
+    "type": "material",
+    "value": 30
+  },
+  "steam_core": {
+    "name": "Steam Core",
+    "description": "The heart of a steam-powered machine. Still warm and contains residual energy.",
+    "type": "material",
+    "value": 75
+  },
+  "mechanical_parts": {
+    "name": "Mechanical Parts",
+    "description": "Assorted gears, springs, and widgets from dismantled machinery. Useful for inventive minds.",
+    "type": "material",
+    "value": 20
+  },
+  "noble_signet_ring": {
+    "name": "Noble Signet Ring",
+    "description": "A ring bearing the crest of a noble house. Could be used to forge documents or gain access.",
+    "type": "accessory",
+    "stats": {"charisma": 3},
+    "value": 150
+  },
+  "silk_robes": {
+    "name": "Silk Robes",
+    "description": "Luxurious robes made from the finest silk. They mark the wearer as wealthy and important.",
+    "type": "armor",
+    "stats": {"defense": 1, "charisma": 3},
+    "value": 180
+  },
+  "poison_vial": {
+    "name": "Poison Vial",
+    "description": "A small bottle containing deadly poison. Handle with extreme care - one drop could kill.",
+    "type": "consumable",
+    "effect": {"poison_weapon": true},
+    "value": 50
+  },
+  "spell_pages": {
+    "name": "Spell Pages",
+    "description": "Torn pages from magical tomes. They contain fragments of spells and arcane knowledge.",
+    "type": "material",
+    "value": 40
+  },
+  "magic_ink": {
+    "name": "Magic Ink",
+    "description": "Ink infused with magical properties. Essential for scribing spells and enchantments.",
+    "type": "material",
+    "value": 35
+  },
+  "book_binding": {
+    "name": "Book Binding",
+    "description": "The leather and metal components used to bind magical tomes. Some still hold traces of power.",
+    "type": "material",
+    "value": 25
+  },
+  "champion_sword": {
+    "name": "Champion's Sword",
+    "description": "A masterwork blade carried by arena champions. Its edge has been tested in countless combats.",
+    "type": "weapon",
+    "stats": {"attack": 8},
+    "value": 300
+  },
+  "gladiator_armor": {
+    "name": "Gladiator Armor",
+    "description": "Protective gear designed for arena combat. It balances protection with mobility.",
+    "type": "armor",
+    "stats": {"defense": 5, "agility": 1},
+    "value": 250
+  },
+  "victory_trophy": {
+    "name": "Victory Trophy",
+    "description": "A golden cup awarded to arena champions. It's valuable and marks you as a formidable warrior.",
+    "type": "trophy",
+    "stats": {"charisma": 2},
+    "value": 100
+  },
+  "poisoned_dagger": {
+    "name": "Poisoned Dagger",
+    "description": "A dagger coated with deadly toxins. Even a small wound from this blade can be fatal.",
+    "type": "weapon",
+    "stats": {"attack": 4, "poison_chance": 0.3},
+    "value": 80
+  },
+  "smoke_bomb": {
+    "name": "Smoke Bomb",
+    "description": "A small device that creates a cloud of concealing smoke when thrown. Perfect for quick escapes.",
+    "type": "consumable",
+    "effect": {"escape_boost": 0.5},
+    "value": 30
+  },
+  "lock_picks": {
+    "name": "Lock Picks",
+    "description": "A set of specialized tools for opening locks. Only useful if you know how to use them.",
+    "type": "tool",
+    "value": 45
+  },
+  "guardian_core": {
+    "name": "Guardian Core",
+    "description": "The magical heart of a construct guardian. It pulses with protective energy.",
+    "type": "material",
+    "value": 200
+  },
+  "crystal_eye": {
+    "name": "Crystal Eye",
+    "description": "A crystalline eye from a magical guardian. It sees through illusions and deceptions.",
+    "type": "material",
+    "value": 150
+  },
+  "vault_key": {
+    "name": "Vault Key",
+    "description": "A key that opens high-security vaults. Extremely valuable to the right person.",
+    "type": "key",
+    "value": 500
+  },
+  "explosive_device": {
+    "name": "Explosive Device",
+    "description": "A dangerous bomb designed to destroy industrial equipment. Handle with extreme caution.",
+    "type": "consumable",
+    "effect": {"explosive_damage": 30},
+    "value": 75
+  },
+  "sabotage_tools": {
+    "name": "Sabotage Tools",
+    "description": "Specialized equipment for damaging machinery and infrastructure. Illegal in most places.",
+    "type": "tool",
+    "value": 60
+  },
+  "anarchist_manifesto": {
+    "name": "Anarchist Manifesto",
+    "description": "A radical political document calling for the overthrow of established order. Dangerous to possess.",
+    "type": "document",
+    "value": 10
+  },
+  "concealed_blade": {
+    "name": "Concealed Blade",
+    "description": "A hidden weapon designed to look like an ordinary object. Perfect for assassinations.",
+    "type": "weapon",
+    "stats": {"attack": 5, "stealth": 3},
+    "value": 120
+  },
+  "noble_disguise": {
+    "name": "Noble Disguise",
+    "description": "A complete outfit that allows you to pass as nobility. Includes clothing, jewelry, and mannerisms guide.",
+    "type": "clothing",
+    "stats": {"charisma": 4, "deception": 2},
+    "value": 300
+  },
+  "assassination_contract": {
+    "name": "Assassination Contract",
+    "description": "A document outlining a hit job. Contains dangerous information about political intrigue.",
+    "type": "document",
+    "value": 200
+  },
+  "spectral_essence": {
+    "name": "Spectral Essence",
+    "description": "The concentrated life force of a ghost. It whispers with otherworldly knowledge.",
+    "type": "material",
+    "value": 80
+  },
+  "forgotten_knowledge": {
+    "name": "Forgotten Knowledge",
+    "description": "Information that was lost to time. It exists only as fragments in the minds of spirits.",
+    "type": "material",
+    "value": 120
+  },
+  "soul_fragment": {
+    "name": "Soul Fragment",
+    "description": "A piece of someone's essence, trapped in crystalline form. It holds memories and emotions.",
+    "type": "material",
+    "value": 100
+  },
+  "gambling_debt": {
+    "name": "Gambling Debt",
+    "description": "A promissory note from someone who lost big at the tables. Could be collected for cash.",
+    "type": "document",
+    "value": 50
+  },
+  "casino_chips": {
+    "name": "Casino Chips",
+    "description": "High-value gambling tokens from exclusive establishments. Can be redeemed for gold.",
+    "type": "currency",
+    "value": 25
+  },
+  "merchant_seal": {
+    "name": "Merchant Seal",
+    "description": "An official seal that authenticates trade documents. Very valuable to competing merchants.",
+    "type": "tool",
+    "value": 175
+  },
+  "exotic_treasure": {
+    "name": "Exotic Treasure",
+    "description": "A valuable artifact from distant lands. Its true worth may be greater than its appearance suggests.",
+    "type": "treasure",
+    "value": 250
+  },
+  "trade_monopoly": {
+    "name": "Trade Monopoly",
+    "description": "Legal documents granting exclusive trading rights for certain goods. Extremely valuable.",
+    "type": "document",
+    "value": 400
+  },
+  "bank_statement": {
+    "name": "Bank Statement",
+    "description": "Financial records showing large transactions. Could reveal corruption or hidden wealth.",
+    "type": "document",
+    "value": 30
+  },
+  "gold_bars": {
+    "name": "Gold Bars",
+    "description": "Pure gold cast into convenient bars for storage and transport. The universal currency.",
+    "type": "treasure",
+    "value": 500
+  },
+  "investment_portfolio": {
+    "name": "Investment Portfolio",
+    "description": "Documents detailing profitable investments. Could be worth a fortune to the right buyer.",
+    "type": "document",
+    "value": 300
+  },
+  "credit_note": {
+    "name": "Credit Note",
+    "description": "A promise to pay that's as good as gold in financial circles. Transferable value.",
+    "type": "currency",
+    "value": 100
+  },
+  "masterwork_hammer": {
+    "name": "Masterwork Hammer",
+    "description": "A perfectly balanced forging hammer used by master smiths. Essential for creating legendary items.",
+    "type": "tool",
+    "stats": {"crafting_bonus": 3},
+    "value": 200
+  },
+  "dragon_steel_ingot": {
+    "name": "Dragon Steel Ingot",
+    "description": "Metal forged with dragon fire and magical techniques. It can be shaped into incredibly powerful weapons.",
+    "type": "material",
+    "value": 800
+  },
+  "legendary_blueprint": {
+    "name": "Legendary Blueprint",
+    "description": "Plans for crafting items of incredible power. These designs are closely guarded secrets.",
+    "type": "document",
+    "value": 600
+  },
+  "forging_catalyst": {
+    "name": "Forging Catalyst",
+    "description": "A magical substance that enhances the forging process. Makes ordinary metals extraordinary.",
+    "type": "material",
+    "value": 150
+  },
+  "cut_diamonds": {
+    "name": "Cut Diamonds",
+    "description": "Expertly cut gems that sparkle with inner fire. Worth a fortune to collectors.",
+    "type": "treasure",
+    "value": 400
+  },
+  "golden_necklace": {
+    "name": "Golden Necklace",
+    "description": "An exquisite piece of jewelry crafted by master artisans. It radiates wealth and status.",
+    "type": "accessory",
+    "stats": {"charisma": 3},
+    "value": 350
+  },
+  "jeweler_loupe": {
+    "name": "Jeweler's Loupe",
+    "description": "A specialized magnifying glass for examining gems. Essential for determining true value.",
+    "type": "tool",
+    "stats": {"appraisal": 3},
+    "value": 80
+  },
+  "gem_setting_tools": {
+    "name": "Gem Setting Tools",
+    "description": "Precision instruments for mounting gems in jewelry. Only masters can use them effectively.",
+    "type": "tool",
+    "value": 120
+  },
+  "clockwork_components": {
+    "name": "Clockwork Components",
+    "description": "Intricate mechanical parts for creating automated devices. Each piece is a work of art.",
+    "type": "material",
+    "value": 60
+  },
+  "precision_gears": {
+    "name": "Precision Gears",
+    "description": "Perfectly machined gears that mesh with clockwork precision. Essential for mechanical devices.",
+    "type": "material",
+    "value": 45
+  },
+  "mechanical_blueprint": {
+    "name": "Mechanical Blueprint",
+    "description": "Detailed plans for constructing complex mechanical devices. The designs are revolutionary.",
+    "type": "document",
+    "value": 200
+  },
+  "automation_core": {
+    "name": "Automation Core",
+    "description": "The central component that gives mechanical devices independent operation.",
+    "type": "material",
+    "value": 300
+  },
+  "theater_ticket": {
+    "name": "Theater Ticket",
+    "description": "Admission to a performance at the grand theater. The show tonight is supposedly spectacular.",
+    "type": "misc",
+    "value": 5
+  },
+  "street_performer_coins": {
+    "name": "Street Performer Coins",
+    "description": "Coins tossed to entertaining performers. They're marked with good luck symbols.",
+    "type": "currency",
+    "value": 3
+  },
+  "entertainment_poster": {
+    "name": "Entertainment Poster",
+    "description": "A colorful advertisement for upcoming shows and events. Collectors prize rare posters.",
+    "type": "misc",
+    "value": 10
+  },
+  "ancient_tome": {
+    "name": "Ancient Tome",
+    "description": "A book of incredible age containing knowledge lost to time. Its pages whisper secrets.",
+    "type": "material",
+    "value": 500
+  },
+  "library_catalog": {
+    "name": "Library Catalog",
+    "description": "An index of all books in the grand library. It reveals the location of rare volumes.",
+    "type": "document",
+    "value": 75
+  },
+  "reading_lamp": {
+    "name": "Reading Lamp",
+    "description": "A specially designed lamp that provides perfect illumination for studying. Scholars treasure these.",
+    "type": "tool",
+    "value": 40
+  },
+  "bookmark_collection": {
+    "name": "Bookmark Collection",
+    "description": "Ornate bookmarks made from precious materials. Each one marks a significant passage.",
+    "type": "misc",
+    "value": 25
   }
 } 

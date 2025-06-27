@@ -25,7 +25,7 @@ class Config:
     DEBUG_MODE = False
     
     # Game balance
-    STARTING_INVENTORY_SIZE = 10  # Increased from 3 for Phase 3
+    # STARTING_INVENTORY_SIZE = 10  # Unlimited inventory now
     STARTING_HEALTH = 20
     STARTING_STRENGTH = 3
     STARTING_DEFENSE = 2
@@ -46,7 +46,7 @@ class Config:
     ENCOUNTER_CHANCE = 0.3  # Chance of enemy encounter when moving
     
     # Economy
-    HEALING_SERVICE_COST = 5  # Cost per HP to heal at tavern
+    HEALING_SERVICE_COST = 1  # Cost per HP to heal at tavern
     MERCHANT_MARKUP = 1.5     # Merchant sells at 150% of item value
     MERCHANT_BUYBACK = 0.6    # Merchant buys at 60% of item value
     
@@ -158,7 +158,7 @@ class Player:
     name: str = "Hero"
     current_room: str = "tavern"
     inventory: List[str] = field(default_factory=list)
-    max_inventory: int = Config.STARTING_INVENTORY_SIZE
+    # max_inventory: int = float('inf')  # Unlimited inventory
     
     # Combat stats
     health: int = Config.STARTING_HEALTH
@@ -177,6 +177,14 @@ class Player:
     completed_quests: List[str] = field(default_factory=list)
     quest_progress: Dict[str, Dict[str, Any]] = field(default_factory=dict)
     
+    # Faction & Relationship System
+    faction_reputation: Dict[str, int] = field(default_factory=dict)  # faction_id -> reputation (-100 to +100)
+    npc_relationships: Dict[str, int] = field(default_factory=dict)   # npc_id -> relationship (-100 to +100)
+    
+    # World Impact Tracking
+    world_actions: List[Dict[str, Any]] = field(default_factory=list)  # Track major player actions
+    world_flags: Dict[str, bool] = field(default_factory=dict)         # Global state flags
+    
     # Combat state
     defending: bool = False  # Gets defense bonus this turn
     equipped_weapon: Optional[str] = None
@@ -184,7 +192,7 @@ class Player:
     
     def can_carry_more(self) -> bool:
         """Check if player can carry more items."""
-        return len(self.inventory) < self.max_inventory
+        return True  # Unlimited inventory
     
     def add_item(self, item_id: str) -> bool:
         """Add item to inventory if there's space.
@@ -398,6 +406,75 @@ class Player:
     def get_quest_progress(self, quest_id: str, objective_key: str, default: Any = 0) -> Any:
         """Get current progress on a quest objective."""
         return self.quest_progress.get(quest_id, {}).get(objective_key, default)
+    
+    # === [FACTION & RELATIONSHIP SYSTEM] ===
+    def adjust_faction_reputation(self, faction_id: str, change: int, reason: str = "") -> None:
+        """Adjust reputation with a faction."""
+        current = self.faction_reputation.get(faction_id, 0)
+        new_rep = max(-100, min(100, current + change))
+        self.faction_reputation[faction_id] = new_rep
+        
+        # Log the change
+        self.record_world_action("faction_reputation_change", {
+            "faction": faction_id,
+            "change": change,
+            "new_reputation": new_rep,
+            "reason": reason
+        })
+        
+        log_event("FACTION", f"Reputation with {faction_id}: {current} -> {new_rep} ({reason})")
+    
+    def get_faction_reputation(self, faction_id: str) -> int:
+        """Get current reputation with a faction."""
+        return self.faction_reputation.get(faction_id, 0)
+    
+    def get_faction_standing(self, faction_id: str) -> str:
+        """Get descriptive standing with a faction."""
+        rep = self.get_faction_reputation(faction_id)
+        if rep >= 75: return "Revered"
+        elif rep >= 50: return "Honored"
+        elif rep >= 25: return "Friendly"
+        elif rep >= 10: return "Favorable"
+        elif rep >= -10: return "Neutral"
+        elif rep >= -25: return "Unfriendly"
+        elif rep >= -50: return "Hostile"
+        elif rep >= -75: return "Hated"
+        else: return "Despised"
+    
+    def adjust_npc_relationship(self, npc_id: str, change: int, reason: str = "") -> None:
+        """Adjust relationship with an NPC."""
+        current = self.npc_relationships.get(npc_id, 0)
+        new_rel = max(-100, min(100, current + change))
+        self.npc_relationships[npc_id] = new_rel
+        
+        log_event("NPC_RELATIONSHIP", f"Relationship with {npc_id}: {current} -> {new_rel} ({reason})")
+    
+    def get_npc_relationship(self, npc_id: str) -> int:
+        """Get current relationship with an NPC."""
+        return self.npc_relationships.get(npc_id, 0)
+    
+    def record_world_action(self, action_type: str, details: Dict[str, Any]) -> None:
+        """Record a significant world action."""
+        action = {
+            "type": action_type,
+            "timestamp": datetime.now().isoformat(),
+            "location": self.current_room,
+            "details": details
+        }
+        self.world_actions.append(action)
+        
+        # Keep only last 100 actions to prevent bloat
+        if len(self.world_actions) > 100:
+            self.world_actions = self.world_actions[-100:]
+    
+    def set_world_flag(self, flag_name: str, value: bool) -> None:
+        """Set a global world state flag."""
+        self.world_flags[flag_name] = value
+        log_event("WORLD_FLAG", f"Set {flag_name} = {value}")
+    
+    def get_world_flag(self, flag_name: str, default: bool = False) -> bool:
+        """Get a global world state flag."""
+        return self.world_flags.get(flag_name, default)
 
 # === [GAME ENTITIES] ===
 @dataclass
@@ -539,7 +616,20 @@ class Room:
         
         # Add exits
         if self.exits:
-            exit_names = [direction.title() for direction in self.exits.keys()]
+            exit_names = []
+            for direction, target_room_id in self.exits.items():
+                direction_title = direction.title()
+                first_letter = direction_title[0].upper()
+                bracketed = f"[{first_letter}]{direction_title[1:]}"
+                
+                # Get destination room name
+                if target_room_id in rooms_data:
+                    target_room_name = rooms_data[target_room_id].get("name", target_room_id)
+                    exit_names.append(f"{bracketed} - {target_room_name}")
+                else:
+                    # Fallback if room data not found
+                    exit_names.append(bracketed)
+            
             desc_parts.append(f"Exits: {', '.join(exit_names)}")
         
         return "\n".join(desc_parts)
@@ -596,10 +686,10 @@ def get_available_commands() -> List[str]:
     if game_state['mode'] == 'exploration':
         return ['go', 'north', 'south', 'east', 'west', 'n', 's', 'e', 'w',
                 'look', 'l', 'examine', 'x', 'take', 'drop', 'inventory', 'i', 'use',
-                'stats', 'help', 'quit', 'save', 'debug', 'buy', 'sell', 'talk', 'heal',
-                'quests', 'accept', 'complete']
+                'stats', 'help', 'quit', 'save', 'load', 'debug', 'buy', 'sell', 'talk', 'heal',
+                'quests', 'accept', 'complete', 'recall', 'reputation']
     elif game_state['mode'] == 'combat':
-        return ['attack', 'defend', 'use', 'flee', 'help', 'stats']
+        return ['attack', 'defend', 'use', 'flee', 'help', 'stats', 'a', 'd', 'u', 'f']
     else:
         return ['help', 'quit']
 
@@ -608,7 +698,8 @@ def expand_aliases(command: str) -> str:
     aliases = {
         'n': 'north', 's': 'south', 'e': 'east', 'w': 'west',
         'l': 'look', 'x': 'examine', 'i': 'inventory',
-        'q': 'quit', 'h': 'help'
+        'q': 'quit', 'h': 'help',
+        'a': 'attack', 'd': 'defend', 'u': 'use', 'f': 'flee'
     }
     return aliases.get(command, command)
 
@@ -695,6 +786,9 @@ def parse_command(input_text: str) -> Dict[str, Any]:
     elif action == 'save':
         return {'action': 'save', 'target': '', 'valid': True, 'error': ''}
     
+    elif action == 'load':
+        return {'action': 'load', 'target': '', 'valid': True, 'error': ''}
+    
     elif action == 'debug':
         return {'action': 'debug', 'target': target, 'valid': True, 'error': ''}
     
@@ -728,6 +822,12 @@ def parse_command(input_text: str) -> Dict[str, Any]:
         if not target:
             return {'action': 'complete', 'target': '', 'valid': False, 'error': 'Complete what quest?'}
         return {'action': 'complete', 'target': target, 'valid': True, 'error': ''}
+    
+    elif action == 'recall':
+        return {'action': 'recall', 'target': '', 'valid': True, 'error': ''}
+    
+    elif action == 'reputation':
+        return {'action': 'reputation', 'target': target, 'valid': True, 'error': ''}
     
     # Unknown command
     else:
@@ -786,6 +886,47 @@ def move_player(direction: str) -> None:
             print(f"That path leads to an unknown area.")
     else:
         print(f"You can't go {direction} from here.")
+
+def recall_to_town() -> None:
+    """Fast travel back to town square."""
+    # Check if already in town
+    if game_state['current_room'] == 'town_square':
+        print("You're already in the town square!")
+        return
+    
+    player = game_state['player']
+    
+    # Add some flavor text and a small cost
+    recall_cost = 10  # 10 gold cost for convenience
+    
+    if not player.can_afford(recall_cost):
+        print(f"You need {recall_cost} gold to use the town recall service.")
+        print("Find a magical recall scroll or earn more gold!")
+        return
+    
+    # Confirm the recall
+    print(f"Use magical recall to return to town square for {recall_cost} gold? (y/n)")
+    choice = input("> ").strip().lower()
+    
+    if choice in ['y', 'yes']:
+        # Charge the gold
+        player.spend_gold(recall_cost)
+        
+        # Teleport to town
+        old_room = game_state['current_room'] 
+        game_state['current_room'] = 'town_square'
+        player.current_room = 'town_square'
+        
+        print("\n✨ A magical portal swirls around you...")
+        print("The world blurs and shifts...")
+        print("You feel the familiar cobblestones beneath your feet!")
+        
+        log_event("MOVEMENT", f"Player recalled from {old_room} to town_square")
+        
+        # Show the town square
+        display_room()
+    else:
+        print("You decide to stay where you are.")
 
 def examine_object(object_name: str) -> None:
     """Examine an object in the current room."""
@@ -863,10 +1004,9 @@ def take_item(item_name: str) -> None:
         print(f"You don't see any '{item_name}' here.")
         return
     
-    # Check inventory space
+    # Check inventory space (unlimited now, but keeping structure for future use)
     if not player.can_carry_more():
-        print(f"Your inventory is full! ({len(player.inventory)}/{player.max_inventory} items)")
-        print("Drop something first with 'drop <item>'")
+        print(f"Your inventory is full! Drop something first with 'drop <item>'")
         return
     
     # Take the item
@@ -913,18 +1053,38 @@ def show_inventory() -> None:
         print("Your inventory is empty.")
         return
     
-    print(f"Inventory ({len(player.inventory)}/{player.max_inventory}):")
+    # Count items
+    item_counts = {}
     for item_id in player.inventory:
+        item_counts[item_id] = item_counts.get(item_id, 0) + 1
+    
+    # Get item display names and sort alphabetically
+    display_items = []
+    for item_id, count in item_counts.items():
         if item_id in items_data:
             item_name = items_data[item_id].get("name", item_id)
-            equipped_marker = ""
-            if item_id == player.equipped_weapon:
-                equipped_marker = " (equipped weapon)"
-            elif item_id == player.equipped_armor:
-                equipped_marker = " (equipped armor)"
-            print(f"  - {item_name}{equipped_marker}")
         else:
-            print(f"  - {item_id}")
+            item_name = item_id
+        
+        # Check if equipped
+        equipped_marker = ""
+        if item_id == player.equipped_weapon:
+            equipped_marker = " (equipped weapon)"
+        elif item_id == player.equipped_armor:
+            equipped_marker = " (equipped armor)"
+        
+        # Format with count
+        if count == 1:
+            display_items.append((item_name.lower(), f"  - {item_name}{equipped_marker}"))
+        else:
+            display_items.append((item_name.lower(), f"  - {item_name} x{count}{equipped_marker}"))
+    
+    # Sort alphabetically by item name
+    display_items.sort(key=lambda x: x[0])
+    
+    print(f"Inventory ({len(player.inventory)} items):")
+    for _, display_text in display_items:
+        print(display_text)
 
 def use_item(item_name: str) -> None:
     """Use/consume an item from inventory."""
@@ -1189,6 +1349,56 @@ def track_enemy_kill(enemy_id: str) -> None:
                     else:
                         print(f"\n📜 Quest progress: Defeat {enemy_id} ({new_count}/{required_count})")
 
+def show_reputation() -> None:
+    """Display player's faction reputation and NPC relationships."""
+    player = game_state['player']
+    
+    print("\n" + "="*50)
+    print("🏛️ REPUTATION & RELATIONSHIPS")
+    print("="*50)
+    
+    # Show faction reputation
+    if player.faction_reputation:
+        print("\n⚔️ FACTION STANDING:")
+        for faction_id, reputation in sorted(player.faction_reputation.items()):
+            standing = player.get_faction_standing(faction_id)
+            print(f"   {faction_id.title()}: {standing} ({reputation:+d})")
+    else:
+        print("\n⚔️ FACTION STANDING: No faction relationships established.")
+    
+    # Show NPC relationships
+    if player.npc_relationships:
+        print("\n👥 NPC RELATIONSHIPS:")
+        for npc_id, relationship in sorted(player.npc_relationships.items()):
+            if relationship >= 50:
+                status = "💚 Beloved"
+            elif relationship >= 25:
+                status = "💙 Trusted"
+            elif relationship >= 10:
+                status = "💛 Liked"
+            elif relationship >= -10:
+                status = "⚪ Neutral"
+            elif relationship >= -25:
+                status = "🧡 Disliked"
+            elif relationship >= -50:
+                status = "❤️ Hated"
+            else:
+                status = "💔 Despised"
+            
+            print(f"   {npc_id.title()}: {status} ({relationship:+d})")
+    else:
+        print("\n👥 NPC RELATIONSHIPS: No personal relationships established.")
+    
+    # Show recent world actions
+    if player.world_actions:
+        print(f"\n📋 RECENT WORLD IMPACT ({len(player.world_actions)} actions logged):")
+        for action in player.world_actions[-5:]:  # Show last 5 actions
+            timestamp = action["timestamp"].split("T")[0]  # Just the date
+            action_type = action["type"].replace("_", " ").title()
+            print(f"   {timestamp}: {action_type}")
+    
+    print("="*50)
+
 # === [ECONOMY SYSTEM] ===
 def get_item_price(item_id: str, is_selling: bool = False) -> int:
     """Get the price of an item for buying/selling."""
@@ -1347,7 +1557,7 @@ def talk_to_npc(npc_name: str) -> None:
         print("'Welcome to The Dusty Tankard! Can I get you anything?'")
         print()
         print("Services available:")
-        print("- 'heal' - Healing services (5 gold per HP)")
+        print("- 'heal' - Healing services (1 gold per HP)")
         print("- 'talk barkeep' - Chat with the barkeep")
         
         # Check for available quests
@@ -1653,6 +1863,9 @@ def end_combat_victory() -> None:
     game_state['mode'] = 'exploration'
     
     log_event("COMBAT", f"Player defeated {combat.enemy.name}")
+    
+    # Show current location after combat
+    display_room()
 
 def end_combat_fled() -> None:
     """Handle end of combat with player fleeing."""
@@ -1667,6 +1880,9 @@ def end_combat_fled() -> None:
     game_state['mode'] = 'exploration'
     
     log_event("COMBAT", f"Player fled from {combat.enemy.name}")
+    
+    # Show current location after fleeing
+    display_room()
 
 def handle_player_death() -> None:
     """Handle player death and respawn."""
@@ -1702,6 +1918,9 @@ def handle_player_death() -> None:
     game_state['mode'] = 'exploration'
     
     log_event("COMBAT", "Player died and respawned")
+    
+    # Show respawn location
+    display_room()
 
 # === [UI/DISPLAY] ===
 def display_title():
@@ -1731,19 +1950,19 @@ def display_help(topic: str = "") -> None:
         print("  Looking: look (room overview), examine <object> (detailed look)")
         print("  Items: take <item>, drop <item>, inventory, use <item>")
         print("  Commerce: buy <item>, sell <item>, talk <npc>")
-        print("  Services: heal (at tavern)")
+        print("  Services: heal (at tavern), recall (fast travel to town)")
         print("  Quests: quests (view quest log), accept <quest>, complete <quest>")
-        print("  Character: stats (view level, XP, health, etc.)")
+        print("  Character: stats (view level, XP, health, etc.), reputation (faction standing)")
         print("  Combat: attack, defend, use <item>, flee")
-        print("  System: help, save, quit")
+        print("  System: help, save, load, quit")
         print("  Debug: debug <command>")
         print("\nFor detailed help on a topic, type: help <topic>")
-        print("Topics: movement, items, combat, economy, quests")
+        print("Topics: movement, items, combat, economy, quests, recall")
     elif topic == "movement":
         print("\n=== MOVEMENT HELP ===")
         print("You can move between rooms using:")
-        print("  'go north' or just 'north' or 'n'")
-        print("  Valid directions: north, south, east, west")
+        print("  'go north' or just '[n]orth'")
+        print("  Valid directions: [n]orth, [s]outh, [e]ast, [w]est")
         print("  Use 'look' to see available exits")
     elif topic == "items":
         print("\n=== ITEMS HELP ===")
@@ -1756,10 +1975,10 @@ def display_help(topic: str = "") -> None:
     elif topic == "combat":
         print("\n=== COMBAT HELP ===")
         print("During combat you can:")
-        print("  'attack' - Strike the enemy")
-        print("  'defend' - +50% defense this turn")
-        print("  'use <item>' - Use a potion or consumable")
-        print("  'flee' - Attempt to escape (success depends on agility)")
+        print("  '[a]ttack' - Strike the enemy")
+        print("  '[d]efend' - +50% defense this turn")
+        print("  '[u]se <item>' - Use a potion or consumable")
+        print("  '[f]lee' - Attempt to escape (success depends on agility)")
         print("Gain XP by defeating enemies to level up!")
     elif topic == "economy":
         print("\n=== ECONOMY HELP ===")
@@ -1767,7 +1986,7 @@ def display_help(topic: str = "") -> None:
         print("  'talk merchant' - See available items for sale")
         print("  'buy <item>' - Purchase an item from merchant")
         print("  'sell <item>' - Sell an item from your inventory")
-        print("  'heal' - Pay for healing services at the tavern (5 gold per HP)")
+        print("  'heal' - Pay for healing services at the tavern (1 gold per HP)")
         print("Legendary items cost 500+ gold - start saving!")
     elif topic == "quests":
         print("\n=== QUESTS HELP ===")
@@ -1777,6 +1996,14 @@ def display_help(topic: str = "") -> None:
         print("  'quests' - View your active and completed quests")
         print("  'complete <quest_id>' - Turn in a completed quest for rewards")
         print("Quest types: kill enemies, collect items, visit locations, deliver items")
+    elif topic == "recall":
+        print("\n=== RECALL HELP ===")
+        print("Fast travel back to town using magical recall:")
+        print("  'recall' - Instantly teleport to town square")
+        print("  Costs 10 gold per use")
+        print("  Cannot be used during combat")
+        print("  Useful when deep in dungeons or far from town")
+        print("  Great for accessing shops, healing, and quest turn-ins")
     else:
         print(f"No help available for '{topic}'. Try 'help' for main topics.")
 
@@ -1849,7 +2076,7 @@ def display_combat_status() -> None:
         print("   🛡️ DEFENDING (+50% defense)")
     
     print("-" * 50)
-    print("Actions: attack, defend, use <item>, flee")
+    print("Actions: [a]ttack, [d]efend, [u]se <item>, [f]lee")
     print("=" * 50)
 
 def display_debug_info() -> None:
@@ -1908,6 +2135,11 @@ def load_game() -> bool:
         
         # Restore player state
         player_data = save_data.get("player", {})
+        
+        # Handle backward compatibility - remove max_inventory if present
+        if 'max_inventory' in player_data:
+            del player_data['max_inventory']
+        
         game_state['player'] = Player(**player_data)
         
         # Restore game state
@@ -1922,6 +2154,29 @@ def load_game() -> bool:
         print(f"Error loading game: {e}")
         log_event("ERROR", f"Load failed: {e}")
         return False
+
+def manual_load_game() -> None:
+    """Manually reload the save file during gameplay."""
+    if not os.path.exists(Config.SAVE_FILE):
+        print("No save file found!")
+        print("Use 'save' to create a save file first.")
+        return
+    
+    print("Reload your saved game? This will lose any unsaved progress. (y/n)")
+    choice = input("> ").strip().lower()
+    
+    if choice in ['y', 'yes']:
+        if load_game():
+            print("✅ Save file loaded successfully!")
+            print("You've been restored to your last saved state.")
+            
+            # Show current location after loading
+            display_room()
+        else:
+            print("❌ Failed to load save file.")
+            print("Your current game continues unchanged.")
+    else:
+        print("Load cancelled. Continuing current game...")
 
 # === [DATA LOADING] ===
 def load_game_data() -> None:
@@ -2072,6 +2327,8 @@ def process_command(input_text: str) -> None:
             heal_at_tavern()
     elif action == 'quests':
         show_quests()
+    elif action == 'reputation':
+        show_reputation()
     elif action == 'accept':
         if game_state['mode'] == 'combat':
             print("You can't accept quests during combat!")
@@ -2082,6 +2339,11 @@ def process_command(input_text: str) -> None:
             print("You can't complete quests during combat!")
         else:
             complete_quest_with_rewards(target)
+    elif action == 'recall':
+        if game_state['mode'] == 'combat':
+            print("You can't recall during combat!")
+        else:
+            recall_to_town()
     # Combat commands
     elif action == 'attack':
         if game_state['mode'] == 'combat':
@@ -2106,6 +2368,11 @@ def process_command(input_text: str) -> None:
             print("You can't save during combat!")
         else:
             save_game()
+    elif action == 'load':
+        if game_state['mode'] == 'combat':
+            print("You can't load during combat!")
+        else:
+            manual_load_game()
     elif action == 'quit':
         confirm_quit()
     elif action == 'debug':

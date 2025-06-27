@@ -107,5 +107,549 @@
       "items": ["leather_armor"]
     },
     "completion_text": "Well done! You've proven yourself worthy. Take this armor - you'll need it for the challenges ahead."
+  },
+  "spider_extermination": {
+    "title": "The Spider Menace",
+    "description": "Giant spiders have been terrorizing travelers. Clear out their nest in the spider woods.",
+    "giver_npc": "guard",
+    "objectives": [
+      {
+        "type": "kill",
+        "target": "giant_spider",
+        "count": 5,
+        "description": "Defeat 5 giant spiders"
+      },
+      {
+        "type": "visit",
+        "target": "spider_queen_lair",
+        "description": "Explore the spider queen's lair"
+      }
+    ],
+    "rewards": {
+      "xp": 200,
+      "gold": 100,
+      "items": ["spider_silk", "poison_antidote"]
+    },
+    "completion_text": "The roads are much safer now! The spider threat has been neutralized thanks to your bravery."
+  },
+  "crystal_harvest": {
+    "title": "Crystal Expedition",
+    "description": "The wizard needs rare crystals for his research. Venture into the dangerous crystal caves.",
+    "giver_npc": "wizard",
+    "objectives": [
+      {
+        "type": "collect",
+        "target": "crystal_shard",
+        "count": 3,
+        "description": "Collect 3 crystal shards"
+      },
+      {
+        "type": "kill",
+        "target": "crystal_golem",
+        "count": 1,
+        "description": "Defeat the crystal golem guardian"
+      }
+    ],
+    "rewards": {
+      "xp": 300,
+      "gold": 150,
+      "items": ["magic_lens", "arcane_crystal"]
+    },
+    "completion_text": "Excellent work! These crystals will advance my research significantly. Your contribution to magical knowledge is appreciated."
+  },
+  "undead_uprising": {
+    "title": "Rise of the Undead",
+    "description": "Undead creatures are rising from the cemetery. Find the source and stop it.",
+    "giver_npc": "high_priest",
+    "objectives": [
+      {
+        "type": "kill",
+        "target": "skeleton",
+        "count": 8,
+        "description": "Defeat 8 animated skeletons"
+      },
+      {
+        "type": "visit",
+        "target": "bone_yard",
+        "description": "Investigate the bone yard"
+      },
+      {
+        "type": "collect",
+        "target": "holy_water",
+        "count": 2,
+        "description": "Use 2 holy water to purify the area"
+      }
+    ],
+    "rewards": {
+      "xp": 350,
+      "gold": 200,
+      "items": ["blessed_amulet", "holy_sword"]
+    },
+    "completion_text": "The divine light has cleansed this unholy corruption. The dead can now rest in peace."
+  },
+  "dragon_awakening": {
+    "title": "The Dragon's Awakening",
+    "description": "A young dragon has been spotted near the mountains. This threat must be dealt with before it grows stronger.",
+    "giver_npc": "captain",
+    "objectives": [
+      {
+        "type": "kill",
+        "target": "dragon_wyrmling",
+        "count": 1,
+        "description": "Slay the red dragon wyrmling"
+      },
+      {
+        "type": "collect",
+        "target": "dragon_scale",
+        "count": 1,
+        "description": "Retrieve a dragon scale as proof"
+      }
+    ],
+    "rewards": {
+      "xp": 500,
+      "gold": 1000,
+      "items": ["dragonbane_sword", "dragon_scale_armor"]
+    },
+    "completion_text": "Incredible! You've slain a dragon! This deed will be remembered for generations. You are truly a legendary hero."
+  },
+  "fey_diplomacy": {
+    "title": "Fey Court Relations",
+    "description": "The fey creatures are causing mischief. Establish peaceful relations through diplomacy or force.",
+    "giver_npc": "old_druid",
+    "objectives": [
+      {
+        "type": "visit",
+        "target": "pixie_hollow",
+        "description": "Visit the pixie hollow"
+      },
+      {
+        "type": "collect",
+        "target": "fey_flower",
+        "count": 1,
+        "description": "Obtain a fey flower as a peace offering"
+      },
+      {
+        "type": "deliver",
+        "target": "pixie_queen",
+        "description": "Deliver the flower to the pixie queen"
+      }
+    ],
+    "rewards": {
+      "xp": 250,
+      "gold": 80,
+      "items": ["fairy_dust", "nature_blessing"]
+    },
+    "completion_text": "Well done! The fey now see mortals in a more favorable light. Nature is in balance once again."
+  },
+  "merchant_troubles": {
+    "title": "Merchant Protection",
+    "description": "Bandits have been attacking trade caravans. Escort the merchant safely to his destination.",
+    "giver_npc": "merchant",
+    "objectives": [
+      {
+        "type": "kill",
+        "target": "bandit",
+        "count": 4,
+        "description": "Defeat 4 highway bandits"
+      },
+      {
+        "type": "visit",
+        "target": "trading_post",
+        "description": "Safely reach the trading post"
+      }
+    ],
+    "rewards": {
+      "xp": 180,
+      "gold": 120,
+      "items": ["trader_map", "merchant_discount"]
+    },
+    "completion_text": "Thank you for keeping the trade routes safe! Commerce can flourish thanks to heroes like you."
+  },
+  "elemental_balance": {
+    "title": "Elemental Imbalance",
+    "description": "The elemental planes are in chaos. Restore balance by dealing with rogue elementals.",
+    "giver_npc": "elemental_sage",
+    "objectives": [
+      {
+        "type": "kill",
+        "target": "earth_elemental",
+        "count": 1,
+        "description": "Calm the earth elemental"
+      },
+      {
+        "type": "collect",
+        "target": "elemental_stone",
+        "count": 1,
+        "description": "Collect an elemental stone"
+      },
+      {
+        "type": "visit",
+        "target": "elemental_shrine",
+        "description": "Visit the elemental shrine"
+      }
+    ],
+    "rewards": {
+      "xp": 400,
+      "gold": 250,
+      "items": ["elemental_staff", "earth_gem"]
+    },
+    "completion_text": "The elements are in harmony once more. Your intervention has prevented a catastrophic imbalance."
+  },
+  "vampire_hunt": {
+    "title": "Night Stalker",
+    "description": "A vampire lord has been preying on the innocent. Track down this creature of the night.",
+    "giver_npc": "vampire_hunter",
+    "objectives": [
+      {
+        "type": "kill",
+        "target": "vampire",
+        "count": 1,
+        "description": "Destroy the vampire lord"
+      },
+      {
+        "type": "collect",
+        "target": "vampire_fang",
+        "count": 1,
+        "description": "Retrieve the vampire's fang"
+      },
+      {
+        "type": "visit",
+        "target": "vampire_castle",
+        "description": "Explore the vampire's castle"
+      }
+    ],
+    "rewards": {
+      "xp": 450,
+      "gold": 300,
+      "items": ["silver_sword", "holy_symbol"]
+    },
+    "completion_text": "The darkness has been lifted! The vampire's reign of terror is over, and the night is safe once more."
+  },
+  "demon_incursion": {
+    "title": "Hellish Invasion",
+    "description": "Demons are breaking through from the lower planes. Seal the portals before it's too late.",
+    "giver_npc": "arch_mage",
+    "objectives": [
+      {
+        "type": "kill",
+        "target": "demon",
+        "count": 3,
+        "description": "Banish 3 lesser demons"
+      },
+      {
+        "type": "collect",
+        "target": "demon_heart",
+        "count": 1,
+        "description": "Obtain a demon heart"
+      },
+      {
+        "type": "visit",
+        "target": "hellish_portal",
+        "description": "Seal the hellish portal"
+      }
+    ],
+    "rewards": {
+      "xp": 600,
+      "gold": 400,
+      "items": ["demon_bane_sword", "protection_ward"]
+    },
+    "completion_text": "The portals are sealed! You've saved our realm from demonic invasion. The forces of hell have been repelled."
+  },
+  "celestial_blessing": {
+    "title": "Divine Intervention",
+    "description": "The gods seek a mortal champion. Prove your worth to earn divine blessing.",
+    "giver_npc": "angel",
+    "objectives": [
+      {
+        "type": "collect",
+        "target": "angel_wing",
+        "count": 1,
+        "description": "Find a fallen angel wing"
+      },
+      {
+        "type": "visit",
+        "target": "celestial_realm",
+        "description": "Journey to the celestial realm"
+      },
+      {
+        "type": "kill",
+        "target": "fallen_angel",
+        "count": 1,
+        "description": "Redeem the fallen angel"
+      }
+    ],
+    "rewards": {
+      "xp": 700,
+      "gold": 500,
+      "items": ["divine_sword", "celestial_armor"]
+    },
+    "completion_text": "You have proven yourself worthy of divine favor. The gods smile upon you, champion."
+  },
+  "labyrinth_challenge": {
+    "title": "The Minotaur's Maze",
+    "description": "An ancient labyrinth holds treasure and danger in equal measure. Navigate its twisting paths.",
+    "giver_npc": "maze_keeper",
+    "objectives": [
+      {
+        "type": "visit",
+        "target": "labyrinth_center",
+        "description": "Reach the center of the labyrinth"
+      },
+      {
+        "type": "kill",
+        "target": "minotaur",
+        "count": 1,
+        "description": "Defeat the labyrinth minotaur"
+      },
+      {
+        "type": "collect",
+        "target": "labyrinth_key",
+        "count": 1,
+        "description": "Retrieve the golden key"
+      }
+    ],
+    "rewards": {
+      "xp": 550,
+      "gold": 350,
+      "items": ["minotaur_horn", "maze_map"]
+    },
+    "completion_text": "You've conquered the ancient labyrinth! Few have managed such a feat. The maze holds no more secrets from you."
+  },
+  "phoenix_rebirth": {
+    "title": "Cycle of Fire",
+    "description": "A phoenix's rebirth cycle has been disrupted. Help restore the natural order.",
+    "giver_npc": "fire_sage",
+    "objectives": [
+      {
+        "type": "visit",
+        "target": "phoenix_nest",
+        "description": "Find the phoenix nest"
+      },
+      {
+        "type": "collect",
+        "target": "phoenix_feather",
+        "count": 3,
+        "description": "Collect 3 phoenix feathers"
+      },
+      {
+        "type": "kill",
+        "target": "phoenix",
+        "count": 1,
+        "description": "Help the phoenix complete its rebirth"
+      }
+    ],
+    "rewards": {
+      "xp": 500,
+      "gold": 400,
+      "items": ["flame_sword", "rebirth_potion"]
+    },
+    "completion_text": "The phoenix's cycle is restored! The eternal flame burns bright once more, bringing renewal to the land."
+  },
+  "beholder_terror": {
+    "title": "The All-Seeing Eye",
+    "description": "A beholder has taken residence in the caverns, its alien intelligence threatening reality itself.",
+    "giver_npc": "reality_guardian",
+    "objectives": [
+      {
+        "type": "visit",
+        "target": "aberrant_cavern",
+        "description": "Locate the beholder's lair"
+      },
+      {
+        "type": "kill",
+        "target": "beholder",
+        "count": 1,
+        "description": "Destroy the floating eye"
+      },
+      {
+        "type": "collect",
+        "target": "beholder_eye",
+        "count": 1,
+        "description": "Retrieve a beholder eye"
+      }
+    ],
+    "rewards": {
+      "xp": 800,
+      "gold": 600,
+      "items": ["antimagic_shield", "reality_anchor"]
+    },
+    "completion_text": "Reality stabilizes as the beholder's influence fades. The cosmos is safe from aberrant corruption."
+  },
+  "kraken_depths": {
+    "title": "Terror of the Deep",
+    "description": "A kraken threatens all sea travel. Brave the ocean depths to face this legendary monster.",
+    "giver_npc": "sea_captain",
+    "objectives": [
+      {
+        "type": "visit",
+        "target": "ocean_depths",
+        "description": "Descend to the ocean depths"
+      },
+      {
+        "type": "kill",
+        "target": "kraken",
+        "count": 1,
+        "description": "Slay the deep kraken"
+      },
+      {
+        "type": "collect",
+        "target": "kraken_tentacle",
+        "count": 1,
+        "description": "Claim a kraken tentacle"
+      }
+    ],
+    "rewards": {
+      "xp": 1000,
+      "gold": 1500,
+      "items": ["trident_of_seas", "oceanic_crown"]
+    },
+    "completion_text": "The seas are free! Your legendary battle with the kraken will be sung about for ages to come."
+  },
+  "world_tree_pilgrimage": {
+    "title": "Journey to the World Tree",
+    "description": "Seek the wisdom of the World Tree, the ancient source of all life and knowledge.",
+    "giver_npc": "tree_shepherd",
+    "objectives": [
+      {
+        "type": "visit",
+        "target": "world_tree",
+        "description": "Reach the World Tree"
+      },
+      {
+        "type": "collect",
+        "target": "world_seed",
+        "count": 1,
+        "description": "Receive a world seed"
+      },
+      {
+        "type": "collect",
+        "target": "starlight_fruit",
+        "count": 1,
+        "description": "Gather starlight fruit"
+      }
+    ],
+    "rewards": {
+      "xp": 750,
+      "gold": 300,
+      "items": ["staff_of_nature", "bark_of_ages"]
+    },
+    "completion_text": "The World Tree has shared its ancient wisdom with you. You are now connected to the eternal cycle of life."
+  },
+  "void_anomaly": {
+    "title": "Void Corruption",
+    "description": "Reality is being consumed by void energies. Stabilize the dimensional barriers.",
+    "giver_npc": "void_scholar",
+    "objectives": [
+      {
+        "type": "collect",
+        "target": "void_essence",
+        "count": 2,
+        "description": "Collect 2 samples of void essence"
+      },
+      {
+        "type": "visit",
+        "target": "reality_rift",
+        "description": "Investigate the reality rift"
+      },
+      {
+        "type": "collect",
+        "target": "stabilization_crystal",
+        "count": 1,
+        "description": "Deploy a stabilization crystal"
+      }
+    ],
+    "rewards": {
+      "xp": 650,
+      "gold": 450,
+      "items": ["void_shield", "reality_anchor"]
+    },
+    "completion_text": "The void anomaly is contained! Reality remains stable thanks to your intervention."
+  },
+  "time_paradox": {
+    "title": "Temporal Disturbance",
+    "description": "Time itself is fracturing. Use time crystals to repair the temporal flow.",
+    "giver_npc": "time_keeper",
+    "objectives": [
+      {
+        "type": "collect",
+        "target": "time_crystal",
+        "count": 3,
+        "description": "Gather 3 time crystals"
+      },
+      {
+        "type": "visit",
+        "target": "temporal_nexus",
+        "description": "Reach the temporal nexus"
+      },
+      {
+        "type": "deliver",
+        "target": "time_altar",
+        "description": "Place crystals at the time altar"
+      }
+    ],
+    "rewards": {
+      "xp": 900,
+      "gold": 700,
+      "items": ["chronos_staff", "temporal_armor"]
+    },
+    "completion_text": "Time flows normally once again. The timeline is secure and paradoxes have been resolved."
+  },
+  "soul_liberation": {
+    "title": "Prison of Souls",
+    "description": "Countless souls are trapped in cursed gems. Free them from their eternal prison.",
+    "giver_npc": "soul_guardian",
+    "objectives": [
+      {
+        "type": "collect",
+        "target": "soul_gem",
+        "count": 5,
+        "description": "Collect 5 soul gems"
+      },
+      {
+        "type": "visit",
+        "target": "soul_sanctuary",
+        "description": "Visit the soul sanctuary"
+      },
+      {
+        "type": "deliver",
+        "target": "liberation_altar",
+        "description": "Free the souls at the liberation altar"
+      }
+    ],
+    "rewards": {
+      "xp": 800,
+      "gold": 500,
+      "items": ["soul_blade", "spirit_armor"]
+    },
+    "completion_text": "The souls are free at last! Their grateful spirits bless you as they ascend to their eternal rest."
+  },
+  "ultimate_wish": {
+    "title": "The Final Wish",
+    "description": "Legends speak of a coin that grants a single wish. Find it and decide the fate of the world.",
+    "giver_npc": "destiny_weaver",
+    "objectives": [
+      {
+        "type": "collect",
+        "target": "wish_coin",
+        "count": 1,
+        "description": "Find the legendary wish coin"
+      },
+      {
+        "type": "visit",
+        "target": "fate_chamber",
+        "description": "Reach the chamber of fate"
+      },
+      {
+        "type": "deliver",
+        "target": "wish_altar",
+        "description": "Make your choice at the wish altar"
+      }
+    ],
+    "rewards": {
+      "xp": 2000,
+      "gold": 2000,
+      "items": ["crown_of_destiny", "ultimate_artifact"]
+    },
+    "completion_text": "Your wish echoes through reality itself. You have shaped the very fabric of existence. The world is forever changed."
   }
 } 

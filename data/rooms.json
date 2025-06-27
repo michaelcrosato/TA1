@@ -7,9 +7,16 @@
       "notice_board": "Weather-beaten cork board covered in hand-written notices. Most are faded job postings and missing pet announcements, but a hand-drawn **[map]** is pinned prominently in the center.",
       "map": "A crude but detailed sketch of the local area. The village sits in the center, surrounded by forests to the north and east. A skull symbol marks some caves to the northeast with the words 'GOBLIN TROUBLE' scrawled beneath."
     },
-    "exits": {"north": "town_square", "east": "tavern_cellar"},
-    "items": ["rusty_key"],
-    "npcs": ["barkeep"]
+    "exits": {
+      "north": "town_square",
+      "east": "tavern_cellar"
+    },
+    "items": [
+      "rusty_key"
+    ],
+    "npcs": [
+      "barkeep"
+    ]
   },
   "town_square": {
     "name": "Village Town Square",
@@ -18,9 +25,18 @@
       "fountain": "An old stone fountain with a carved fish spouting fresh water. Copper coins glint at the bottom - wishes made by hopeful villagers. The water is clean and cold.",
       "market_stalls": "Colorful wooden stalls displaying fresh produce, handmade crafts, and daily necessities. A few merchants call out their wares, but most seem to be packing up for the day."
     },
-    "exits": {"south": "tavern", "north": "forest_path", "west": "village_shop"},
+    "exits": {
+      "south": "tavern",
+      "north": "forest_path",
+      "west": "village_shop",
+      "east": "temple_district"
+    },
     "items": [],
-    "npcs": ["merchant", "guard", "villager"]
+    "npcs": [
+      "merchant",
+      "guard",
+      "villager"
+    ]
   },
   "tavern_cellar": {
     "name": "Tavern Cellar",
@@ -29,8 +45,13 @@
       "claw_marks": "Deep gouges in the wood, too large for rats but too small for bears. They're fresh - wood shavings still litter the floor beneath them.",
       "barrels": "Heavy oak barrels containing the tavern's ale. Several have been scratched and one has been knocked over, its contents forming a sticky puddle on the stone floor."
     },
-    "exits": {"west": "tavern"},
-    "items": ["old_bottle"],
+    "exits": {
+      "west": "tavern",
+      "south": "hidden_passage"
+    },
+    "items": [
+      "old_bottle"
+    ],
     "npcs": []
   },
   "forest_path": {
@@ -40,7 +61,12 @@
       "trees": "Ancient pines that tower overhead, their thick trunks covered in rough bark. Some bear old scars from woodcutters' axes.",
       "path": "The dirt path is well-worn from years of foot traffic. Fresh footprints suggest others have passed this way recently."
     },
-    "exits": {"south": "town_square", "north": "forest_clearing"},
+    "exits": {
+      "south": "town_square",
+      "north": "forest_clearing",
+      "west": "hunters_lodge",
+      "east": "spider_woods"
+    },
     "items": [],
     "npcs": []
   },
@@ -51,8 +77,15 @@
       "stream": "Crystal clear water flows over smooth stones, creating a gentle babbling sound. Small fish dart between the rocks.",
       "flowers": "Colorful wildflowers - blues, yellows, and whites - scattered throughout the clearing like nature's confetti."
     },
-    "exits": {"south": "forest_path", "east": "cave_entrance"},
-    "items": ["healing_herbs"],
+    "exits": {
+      "south": "forest_path",
+      "east": "cave_entrance",
+      "north": "deep_forest",
+      "west": "druid_grove"
+    },
+    "items": [
+      "healing_herbs"
+    ],
     "npcs": []
   },
   "cave_entrance": {
@@ -62,7 +95,11 @@
       "scratching_sounds": "Rhythmic scraping and chittering echoes from deep within the cave. Whatever's making those sounds doesn't sound friendly.",
       "cave_mouth": "The entrance is roughly circular, about eight feet high. The stone around it is scratched and stained from years of use by unsavory creatures."
     },
-    "exits": {"west": "forest_clearing", "north": "cave_tunnel"},
+    "exits": {
+      "west": "forest_clearing",
+      "north": "cave_tunnel",
+      "east": "crystal_caves"
+    },
     "items": [],
     "npcs": []
   },
@@ -73,8 +110,15 @@
       "bone_fragments": "Small bones from various animals - rabbits, birds, and some you'd rather not identify. They've been gnawed clean and cracked open for marrow.",
       "walls": "Natural stone walls carved smooth by water over countless years. Recent scratches suggest less natural inhabitants."
     },
-    "exits": {"south": "cave_entrance", "north": "ancient_ruins"},
-    "items": ["torch"],
+    "exits": {
+      "south": "cave_entrance",
+      "north": "ancient_ruins",
+      "west": "underground_lake",
+      "east": "goblin_warren"
+    },
+    "items": [
+      "torch"
+    ],
     "npcs": []
   },
   "ancient_ruins": {
@@ -84,8 +128,15 @@
       "stone_walls": "Ancient masonry, expertly crafted but worn by centuries of weather. Some sections have collapsed, revealing hidden chambers within.",
       "symbols": "Strange runic symbols carved deep into the stone. They seem to shift and shimmer when you're not looking directly at them."
     },
-    "exits": {"south": "cave_tunnel"},
-    "items": ["rusty_dagger", "ancient_scroll"],
+    "exits": {
+      "south": "cave_tunnel",
+      "north": "ritual_chamber",
+      "east": "collapsed_tower"
+    },
+    "items": [
+      "rusty_dagger",
+      "ancient_scroll"
+    ],
     "npcs": []
   },
   "village_shop": {
@@ -95,8 +146,2006 @@
       "shopkeeper": "A thin, nervous-looking man with quick eyes and fidgeting hands. He seems honest enough, but clearly doesn't trust strangers with his merchandise.",
       "shelves": "Wooden shelves stuffed with goods - coils of rope, metal tools, sacks of grain, and various bottles and jars. Everything is neatly labeled with small price tags."
     },
-    "exits": {"east": "town_square"},
-    "items": ["rope", "lantern"],
-    "npcs": ["shopkeeper"]
+    "exits": {
+      "east": "town_square",
+      "north": "warehouse",
+      "west": "docks",
+      "south": "garrison"
+    },
+    "items": [
+      "rope",
+      "lantern"
+    ],
+    "npcs": [
+      "shopkeeper"
+    ]
+  },
+  "temple_district": {
+    "name": "Temple District",
+    "description": "A serene area dominated by a white marble **[temple]** dedicated to the gods of light and healing. Robed **[priests]** tend to the faithful, and the air carries the scent of incense and burning candles.",
+    "details": {
+      "temple": "A magnificent structure with soaring spires and stained glass windows depicting various deities. The main doors are carved with protective wards.",
+      "priests": "Peaceful clergy in white robes, carrying healing staves and holy symbols. They radiate an aura of divine protection."
+    },
+    "exits": {
+      "west": "town_square",
+      "north": "monastery",
+      "east": "cemetery",
+      "south": "pilgrim_quarter"
+    },
+    "items": [
+      "holy_water",
+      "prayer_book"
+    ],
+    "npcs": [
+      "high_priest",
+      "acolyte"
+    ]
+  },
+  "garrison": {
+    "name": "Town Garrison",
+    "description": "A sturdy stone building that serves as the local military headquarters. **[guards]** in polished armor practice combat drills in the courtyard, and weapon racks line the walls.",
+    "details": {
+      "guards": "Professional soldiers in chain mail and tabards bearing the town's coat of arms. They eye you with disciplined wariness.",
+      "weapon_racks": "Well-maintained displays of swords, spears, and crossbows. Everything is kept in perfect military order."
+    },
+    "exits": {
+      "north": "training_grounds",
+      "south": "village_shop",
+      "east": "armory",
+      "west": "watchtower"
+    },
+    "items": [
+      "military_rations",
+      "signal_horn"
+    ],
+    "npcs": [
+      "captain",
+      "sergeant",
+      "recruit"
+    ]
+  },
+  "deep_forest": {
+    "name": "Deep Forest",
+    "description": "Ancient trees tower overhead, their canopy so thick that little sunlight penetrates to the forest floor. The air is thick with the scent of moss and decay, and strange **[will_o_wisps]** flicker between the trees.",
+    "details": {
+      "will_o_wisps": "Ethereal lights that dance just beyond reach, leading deeper into the forest's mysteries. Local legends say they're the souls of lost travelers.",
+      "trees": "Massive oaks and elms, some so wide that five men couldn't encircle them. They've stood here since before recorded history."
+    },
+    "exits": {
+      "south": "forest_clearing",
+      "north": "fairy_ring",
+      "east": "ancient_grove",
+      "west": "witches_hut"
+    },
+    "items": [
+      "rare_mushrooms",
+      "moonstone"
+    ],
+    "npcs": []
+  },
+  "druid_grove": {
+    "name": "Sacred Druid Grove",
+    "description": "A circle of ancient standing stones surrounds a natural amphitheater where druids once held their sacred ceremonies. The **[stones]** hum with nature magic, and the **[altar]** is covered in fresh flowers and offerings.",
+    "details": {
+      "stones": "Weathered megaliths arranged in perfect circles, covered in moss and carved with druidic symbols. They vibrate with barely contained power.",
+      "altar": "A flat stone slab where druids once performed rituals. It's stained with centuries of sacrificial blood and offerings to nature spirits."
+    },
+    "exits": {
+      "east": "forest_clearing",
+      "north": "sacred_pool",
+      "west": "hermit_cave"
+    },
+    "items": [
+      "druidic_focus",
+      "nature_essence"
+    ],
+    "npcs": [
+      "old_druid"
+    ]
+  },
+  "crystal_caves": {
+    "name": "Crystal Caves",
+    "description": "Magnificent caverns filled with glowing crystals that provide their own illumination. The **[crystals]** sing with musical tones when the wind passes through, and pools of pure water reflect the colored light.",
+    "details": {
+      "crystals": "Massive formations of quartz, amethyst, and unknown minerals that pulse with inner light. They're said to have magical properties.",
+      "pools": "Mirror-still pools of the clearest water you've ever seen. Fish with translucent scales swim in the depths."
+    },
+    "exits": {
+      "west": "cave_entrance",
+      "north": "crystal_throne_room",
+      "east": "underground_river",
+      "south": "mining_tunnels"
+    },
+    "items": [
+      "crystal_shard",
+      "pure_spring_water"
+    ],
+    "npcs": []
+  },
+  "spider_woods": {
+    "name": "Spider-Infested Woods",
+    "description": "Dark, oppressive woods where massive **[webs]** stretch between the trees. The air is thick with the sound of chittering, and you can see the glowing eyes of **[spiders]** watching from the shadows.",
+    "details": {
+      "webs": "Thick, sticky webs that glisten with morning dew. Some are large enough to trap a human, and you can see the dried husks of previous victims.",
+      "spiders": "Creatures ranging from tiny jumping spiders to massive arachnids the size of dinner plates. Their eyes reflect your light like tiny stars."
+    },
+    "exits": {
+      "west": "forest_path",
+      "north": "spider_queen_lair",
+      "east": "poisoned_grove",
+      "south": "webbed_clearing"
+    },
+    "items": [
+      "spider_silk",
+      "poison_gland"
+    ],
+    "npcs": []
+  },
+  "hunters_lodge": {
+    "name": "Hunter's Lodge",
+    "description": "A rustic log cabin where local hunters gather to share tales and prepare for expeditions. **[trophies]** of successful hunts line the walls, and a warm **[fire]** crackles in the stone hearth.",
+    "details": {
+      "trophies": "Mounted heads of deer, bear, and more exotic creatures. Each tells a story of skill and bravery in the wilderness.",
+      "fire": "A welcoming fire that casts dancing shadows on the walls. A pot of stew bubbles over the flames, filling the air with savory aromas."
+    },
+    "exits": {
+      "east": "forest_path",
+      "north": "hunting_grounds",
+      "west": "trappers_cabin",
+      "south": "skinning_shed"
+    },
+    "items": [
+      "hunting_bow",
+      "animal_trap",
+      "skinning_knife"
+    ],
+    "npcs": [
+      "master_hunter",
+      "tracker"
+    ]
+  },
+  "goblin_warren": {
+    "name": "Goblin Warren",
+    "description": "A maze of tunnels carved roughly into the earth, reeking of filth and decay. **[crude_drawings]** cover the walls, and the sound of goblin chatter echoes from deeper chambers.",
+    "details": {
+      "crude_drawings": "Primitive artwork depicting goblin victories in battle, stick figures of humans being devoured, and crude maps of the local area.",
+      "chambers": "Rough-hewn rooms connected by narrow passages. The floors are littered with bones, scraps of armor, and other less identifiable debris."
+    },
+    "exits": {
+      "west": "cave_tunnel",
+      "north": "goblin_chief_chamber",
+      "east": "treasure_chamber",
+      "south": "prison_pits"
+    },
+    "items": [
+      "goblin_tooth",
+      "crude_spear"
+    ],
+    "npcs": []
+  },
+  "underground_lake": {
+    "name": "Underground Lake",
+    "description": "A vast subterranean lake stretches into the darkness beyond your light. The water is perfectly still, reflecting the cavern ceiling like black glass. Something large occasionally breaks the surface in the distance.",
+    "details": {
+      "water": "Dark, still water that seems impossibly deep. The surface is mirror-smooth except for the occasional ripple from something moving beneath.",
+      "shore": "A rocky beach of smooth stones worn by centuries of gentle lapping. Strange shells and bones are scattered among the pebbles."
+    },
+    "exits": {
+      "east": "cave_tunnel",
+      "north": "underground_dock",
+      "west": "flooded_passages",
+      "south": "crystal_beach"
+    },
+    "items": [
+      "lake_pearl",
+      "ancient_bone"
+    ],
+    "npcs": []
+  },
+  "ritual_chamber": {
+    "name": "Ancient Ritual Chamber",
+    "description": "A circular chamber with a domed ceiling covered in star charts and mystical symbols. In the center sits a **[ritual_circle]** carved into the stone floor, stained dark with centuries of use.",
+    "details": {
+      "ritual_circle": "Intricate patterns carved deep into the stone, filled with what might once have been gold inlay. The air above it shimmers with residual magic.",
+      "star_charts": "Astronomical maps showing constellations that no longer exist, suggesting this place is far older than the current age."
+    },
+    "exits": {
+      "south": "ancient_ruins",
+      "north": "astral_gate",
+      "east": "library_ruins",
+      "west": "sanctum"
+    },
+    "items": [
+      "ritual_dagger",
+      "star_map",
+      "arcane_crystal"
+    ],
+    "npcs": []
+  },
+  "collapsed_tower": {
+    "name": "Collapsed Wizard Tower",
+    "description": "The remains of what was once a mighty wizard's tower now lie in ruins. **[magical_residue]** still crackles in the air, and **[spell_books]** are scattered among the rubble.",
+    "details": {
+      "magical_residue": "Wisps of colorful energy that dance through the air, remnants of powerful spells cast long ago. They're harmless but beautiful.",
+      "spell_books": "Ancient tomes bound in exotic materials, their pages filled with arcane formulas and mystical diagrams. Most are too damaged to read."
+    },
+    "exits": {
+      "west": "ancient_ruins",
+      "north": "ancient_ruins",
+      "east": "ancient_grove"
+    },
+    "items": [
+      "wizard_staff",
+      "spell_component",
+      "magic_lens"
+    ],
+    "npcs": []
+  },
+  "hidden_passage": {
+    "name": "Hidden Passage",
+    "description": "A narrow secret tunnel that runs beneath the village. The walls are lined with old stone, and the air smells of dust and secrets. This passage has clearly been used by smugglers and other unsavory types.",
+    "details": {
+      "walls": "Carefully fitted stone blocks, much older than the buildings above. This tunnel predates the current village by centuries.",
+      "footprints": "Fresh tracks in the dust suggest this passage is still in use. Someone has been moving goods through here recently."
+    },
+    "exits": {
+      "north": "tavern_cellar",
+      "west": "tavern_cellar"
+    },
+    "items": [
+      "thieves_tools",
+      "smuggled_goods"
+    ],
+    "npcs": []
+  },
+  "monastery": {
+    "name": "Peaceful Monastery",
+    "description": "A quiet retreat where monks spend their days in meditation and study. The **[bell_tower]** overlooks the surrounding countryside, and the **[gardens]** are meticulously maintained.",
+    "details": {
+      "bell_tower": "A tall stone tower with a bronze bell that rings the hours. The view from the top reveals the entire valley spread out below.",
+      "gardens": "Perfectly tended plots of vegetables, herbs, and flowers. The monks grow everything they need and more, following ancient traditions."
+    },
+    "exits": {
+      "south": "temple_district",
+      "north": "temple_district",
+      "west": "temple_district"
+    },
+    "items": [
+      "meditation_beads",
+      "herbal_tea",
+      "blessed_candle"
+    ],
+    "npcs": [
+      "abbot",
+      "senior_monk",
+      "novice"
+    ]
+  },
+  "cemetery": {
+    "name": "Village Cemetery",
+    "description": "A peaceful graveyard where the village's dead rest beneath weathered **[headstones]**. Ancient **[mausoleums]** house the remains of noble families, and fresh flowers mark recent graves.",
+    "details": {
+      "headstones": "Worn stone markers bearing the names and dates of the departed. Some are so old the inscriptions are barely readable.",
+      "mausoleums": "Elaborate stone tombs built for wealthy families. Their heavy doors are sealed with both locks and protective wards."
+    },
+    "exits": {
+      "west": "temple_district",
+      "south": "temple_district"
+    },
+    "items": [
+      "grave_flowers",
+      "mourning_veil"
+    ],
+    "npcs": [
+      "gravedigger",
+      "mourner"
+    ]
+  },
+  "pilgrim_quarter": {
+    "name": "Pilgrim Quarter",
+    "description": "A district that caters to religious pilgrims visiting the temple. **[inns]** offer clean beds and simple meals, while **[vendors]** sell religious artifacts and holy symbols.",
+    "details": {
+      "inns": "Modest establishments that provide basic accommodation for travelers seeking spiritual guidance. The rooms are simple but clean.",
+      "vendors": "Merchants selling prayer beads, holy water, religious texts, and other items needed for pilgrimage."
+    },
+    "exits": {
+      "north": "temple_district",
+      "east": "temple_district",
+      "west": "temple_district"
+    },
+    "items": [
+      "pilgrim_staff",
+      "blessed_amulet",
+      "holy_incense"
+    ],
+    "npcs": [
+      "pilgrim",
+      "shrine_keeper",
+      "holy_merchant"
+    ]
+  },
+  "training_grounds": {
+    "name": "Military Training Grounds",
+    "description": "An open field where soldiers practice their combat skills. **[training_dummies]** are positioned around the area, and the ground is churned up from countless drills and exercises.",
+    "details": {
+      "training_dummies": "Straw-filled targets dressed in old armor, bearing the scars of countless sword strikes and arrow hits.",
+      "obstacle_course": "A challenging series of walls, pits, and barriers designed to test a soldier's agility and endurance."
+    },
+    "exits": {
+      "south": "garrison",
+      "east": "garrison"
+    },
+    "items": [
+      "practice_sword",
+      "training_shield",
+      "target_arrow"
+    ],
+    "npcs": [
+      "drill_sergeant",
+      "veteran_soldier"
+    ]
+  },
+  "armory": {
+    "name": "Town Armory",
+    "description": "A heavily fortified building where the town's weapons and armor are stored. Racks of **[weapons]** line the walls, and suits of **[armor]** stand ready for battle.",
+    "details": {
+      "weapons": "Professional-grade swords, spears, crossbows, and other military equipment. Everything is kept in perfect condition.",
+      "armor": "Complete suits of chain mail and plate armor, each sized for different soldiers. They bear the town's heraldry."
+    },
+    "exits": {
+      "west": "garrison",
+      "south": "garrison"
+    },
+    "items": [
+      "military_sword",
+      "guard_armor",
+      "crossbow_bolts"
+    ],
+    "npcs": [
+      "quartermaster",
+      "armorer"
+    ]
+  },
+  "watchtower": {
+    "name": "Village Watchtower",
+    "description": "A tall stone tower that provides a commanding view of the surrounding countryside. **[guards]** keep constant watch for threats, and a **[signal_fire]** stands ready to warn of danger.",
+    "details": {
+      "guards": "Alert sentries who scan the horizon for any sign of trouble. They're equipped with spyglasses and signal horns.",
+      "signal_fire": "A prepared pyre that can be lit to send warnings to other settlements. Bundles of dry wood are stacked nearby."
+    },
+    "exits": {
+      "east": "garrison",
+      "south": "garrison"
+    },
+    "items": [
+      "spyglass",
+      "signal_torch",
+      "message_scroll"
+    ],
+    "npcs": [
+      "lookout",
+      "signal_keeper"
+    ]
+  },
+  "warehouse": {
+    "name": "Merchant Warehouse",
+    "description": "A large building where merchants store goods awaiting transport. **[crates]** and **[barrels]** are stacked to the ceiling, and the air is thick with the smell of various trade goods.",
+    "details": {
+      "crates": "Wooden boxes of various sizes, each labeled with destinations and contents. Some bear exotic stamps from distant lands.",
+      "barrels": "Large containers holding everything from grain to exotic spices. The variety of goods suggests extensive trade networks."
+    },
+    "exits": {
+      "south": "village_shop",
+      "west": "village_shop"
+    },
+    "items": [
+      "trade_goods",
+      "exotic_spice",
+      "shipping_manifest"
+    ],
+    "npcs": [
+      "warehouse_keeper",
+      "dock_worker"
+    ]
+  },
+  "docks": {
+    "name": "Village Docks",
+    "description": "A series of wooden piers extending into a small harbor. **[boats]** of various sizes are moored here, and the air carries the smell of salt water and fish.",
+    "details": {
+      "boats": "Everything from small fishing skiffs to larger merchant vessels. They creak gently in the harbor swell.",
+      "harbor": "A natural inlet protected from storms by rocky breakwaters. The water is deep enough for substantial vessels."
+    },
+    "exits": {
+      "east": "village_shop"
+    },
+    "items": [
+      "fishing_net",
+      "boat_hook",
+      "sea_chart"
+    ],
+    "npcs": [
+      "fisherman",
+      "boat_captain",
+      "harbor_master"
+    ]
+  },
+  "fairy_ring": {
+    "name": "Fairy Ring",
+    "description": "A perfect circle of mushrooms in a moonlit clearing. The air shimmers with **[fairy_dust]**, and tiny **[lights]** dance just beyond the edge of vision. This is clearly a place of powerful fey magic.",
+    "details": {
+      "fairy_dust": "Glittering particles that float on the air, causing mild hallucinations and a sense of euphoria. Breathing too much might be dangerous.",
+      "lights": "Tiny points of colored light that dart between the mushrooms. They might be actual fairies, or just magical manifestations."
+    },
+    "exits": {
+      "south": "deep_forest",
+      "north": "feywild_gate",
+      "east": "pixie_hollow",
+      "west": "enchanted_pool"
+    },
+    "items": [
+      "fairy_dust",
+      "mushroom_cap",
+      "fey_flower"
+    ],
+    "npcs": []
+  },
+  "witches_hut": {
+    "name": "Witch's Hut",
+    "description": "A ramshackle cottage built on chicken legs, constantly shifting and turning. Smoke rises from the chimney, and the windows glow with an eerie green light. **[cauldrons]** bubble outside the door.",
+    "details": {
+      "cauldrons": "Large iron pots filled with bubbling, multicolored liquids. The smells range from pleasant to absolutely nauseating.",
+      "chicken_legs": "Massive, scaly legs that support the entire structure. They occasionally shift position, making the whole hut sway alarmingly."
+    },
+    "exits": {
+      "east": "deep_forest",
+      "north": "potion_garden",
+      "south": "cursed_grove",
+      "west": "bone_yard"
+    },
+    "items": [
+      "witch_brew",
+      "eye_of_newt",
+      "cursed_doll"
+    ],
+    "npcs": [
+      "crone_witch"
+    ]
+  },
+  "ancient_grove": {
+    "name": "Ancient Grove",
+    "description": "A grove of trees so old they've become almost sentient. Their **[bark]** is covered in natural runes, and their **[leaves]** whisper secrets in the wind. This is a place of primal magic.",
+    "details": {
+      "bark": "Rough, ancient bark that has grown into natural patterns resembling runic writing. Touching it causes visions of the distant past.",
+      "leaves": "Massive leaves that rustle with words in languages that predate human speech. They seem to be having conversations."
+    },
+    "exits": {
+      "west": "deep_forest",
+      "north": "world_tree",
+      "east": "nature_shrine",
+      "south": "treant_clearing"
+    },
+    "items": [
+      "ancient_bark",
+      "whispering_leaf",
+      "nature_rune"
+    ],
+    "npcs": []
+  },
+  "feywild_gate": {
+    "name": "Feywild Gate",
+    "description": "A shimmering portal of pure magic stands between two twisted trees. The **[gate]** pulses with rainbow light, and you can see glimpses of an alien realm beyond. Stepping through would be... unwise.",
+    "details": {
+      "gate": "A vertical tear in reality itself, crackling with arcane energy. Through it, you glimpse a realm of impossible beauty and terrible danger.",
+      "trees": "Ancient oaks twisted into unnatural shapes, their branches forming an archway around the portal. They seem to be guarding the gate."
+    },
+    "exits": {
+      "south": "fairy_ring",
+      "east": "pixie_hollow",
+      "west": "enchanted_pool"
+    },
+    "items": [
+      "fey_crystal",
+      "portal_shard"
+    ],
+    "npcs": []
+  },
+  "pixie_hollow": {
+    "name": "Pixie Hollow",
+    "description": "A cozy grove where tiny pixies have built their homes in mushroom houses and flower beds. The **[pixies]** watch you curiously, their wings glittering like stained glass.",
+    "details": {
+      "pixies": "Palm-sized humanoids with butterfly wings in every color imaginable. They communicate in tinkling voices like wind chimes.",
+      "homes": "Tiny houses built into mushroom caps and flower petals, complete with miniature furniture and glowing windows."
+    },
+    "exits": {
+      "west": "feywild_gate"
+    },
+    "items": [
+      "pixie_dust",
+      "tiny_furniture",
+      "flower_crown"
+    ],
+    "npcs": [
+      "pixie_queen"
+    ]
+  },
+  "enchanted_pool": {
+    "name": "Enchanted Pool",
+    "description": "A perfectly circular pool of crystal-clear water that reflects not your face, but your heart's deepest desires. **[water_spirits]** dance just beneath the surface.",
+    "details": {
+      "water_spirits": "Ethereal beings of living water that rise and fall in graceful patterns. They seem to be trying to communicate something important.",
+      "reflections": "The water shows not what is, but what could be - visions of possible futures dance in the depths."
+    },
+    "exits": {
+      "east": "feywild_gate"
+    },
+    "items": [
+      "spirit_water",
+      "reflection_mirror",
+      "wish_coin"
+    ],
+    "npcs": []
+  },
+  "potion_garden": {
+    "name": "Witch's Potion Garden",
+    "description": "A garden where magical plants grow in impossible profusion. **[herbs]** glow with inner light, and **[mushrooms]** whisper secrets to each other in the dark.",
+    "details": {
+      "herbs": "Magical plants that defy natural law - some burn with cold fire, others float in mid-air, and a few seem to phase in and out of existence.",
+      "mushrooms": "Fungi in every color and size, some as tall as trees, others small as pebbles. They pulse with bioluminescent patterns."
+    },
+    "exits": {
+      "south": "witches_hut"
+    },
+    "items": [
+      "magic_herbs",
+      "glowing_mushroom",
+      "rare_seed",
+      "mandrake_root"
+    ],
+    "npcs": []
+  },
+  "cursed_grove": {
+    "name": "Cursed Grove",
+    "description": "Dead trees reach toward the sky like skeletal fingers, their bark blackened by some ancient curse. The very air seems to whisper of **[doom]** and **[despair]**.",
+    "details": {
+      "doom": "An oppressive feeling of impending catastrophe weighs on your soul. Every shadow seems to hide a threat.",
+      "despair": "A crushing sadness that makes you question every choice you've ever made. The curse feeds on negative emotions."
+    },
+    "exits": {
+      "north": "witches_hut",
+      "west": "bone_yard"
+    },
+    "items": [
+      "cursed_bark",
+      "death_cap",
+      "shadow_essence"
+    ],
+    "npcs": []
+  },
+  "bone_yard": {
+    "name": "Bone Yard",
+    "description": "A macabre collection of bones from creatures both mundane and mystical. The **[bones]** are arranged in strange patterns, and some still glow with residual magic.",
+    "details": {
+      "bones": "Skulls, ribcages, and femurs from dragons, unicorns, and things that have no names. They're arranged in ritual circles and geometric patterns.",
+      "patterns": "Complex magical diagrams drawn in bone dust and marked with standing femurs. They're clearly part of some grand necromantic ritual."
+    },
+    "exits": {
+      "east": "witches_hut"
+    },
+    "items": [
+      "dragon_bone",
+      "unicorn_horn",
+      "bone_dust",
+      "skull_lantern"
+    ],
+    "npcs": []
+  },
+  "world_tree": {
+    "name": "The World Tree",
+    "description": "A massive tree that stretches impossibly high into the sky, its trunk so wide you can't see around it. Its **[roots]** burrow deep into the earth, and its **[branches]** seem to touch the stars.",
+    "details": {
+      "roots": "Massive root systems that disappear into the earth. They pulse with life force, connecting to every living thing in the forest.",
+      "branches": "Limbs that extend into infinity, each one capable of supporting entire ecosystems. Birds nest here that you've never seen before."
+    },
+    "exits": {
+      "south": "ancient_grove"
+    },
+    "items": [
+      "world_seed",
+      "starlight_fruit",
+      "bark_of_ages"
+    ],
+    "npcs": [
+      "tree_shepherd"
+    ]
+  },
+  "nature_shrine": {
+    "name": "Nature Shrine",
+    "description": "A sacred place where druids once communed with nature spirits. The **[altar]** is made of living wood, and **[animals]** gather here in perfect harmony.",
+    "details": {
+      "altar": "A structure grown from living wood, covered in moss and flowers. It pulses with the heartbeat of the forest itself.",
+      "animals": "Creatures that would normally be enemies - wolves lying peacefully beside rabbits, hawks perched next to mice."
+    },
+    "exits": {
+      "west": "ancient_grove"
+    },
+    "items": [
+      "nature_blessing",
+      "animal_totem",
+      "healing_moss"
+    ],
+    "npcs": [
+      "nature_spirit"
+    ]
+  },
+  "treant_clearing": {
+    "name": "Treant Clearing",
+    "description": "A clearing where ancient treants gather to discuss the slow business of forest governance. The **[treants]** are so still they might be mistaken for ordinary trees.",
+    "details": {
+      "treants": "Massive tree-beings with bark for skin and leaves for hair. They speak in voices like creaking wood, discussing matters of centuries past.",
+      "council_ring": "A circle of standing stones where the treants hold their councils. Each stone is carved with nature runes."
+    },
+    "exits": {
+      "north": "ancient_grove"
+    },
+    "items": [
+      "treant_bark",
+      "council_stone",
+      "ancient_acorn"
+    ],
+    "npcs": [
+      "elder_treant",
+      "young_treant"
+    ]
+  },
+  "sacred_pool": {
+    "name": "Sacred Pool",
+    "description": "A pool of water so pure it seems to glow with inner light. **[pilgrims]** come from far and wide to drink from these waters and receive **[visions]**.",
+    "details": {
+      "pilgrims": "Devout followers of various nature religions who have traveled great distances to reach this holy site.",
+      "visions": "The water grants brief glimpses of truth to those pure of heart. Not all who drink are worthy of such revelations."
+    },
+    "exits": {
+      "south": "druid_grove",
+      "east": "pilgrim_quarter",
+      "west": "hermit_cave"
+    },
+    "items": [
+      "blessed_water",
+      "vision_stone",
+      "prayer_beads"
+    ],
+    "npcs": [
+      "pool_guardian",
+      "hermit_sage"
+    ]
+  },
+  "hermit_cave": {
+    "name": "Hermit's Cave",
+    "description": "A simple cave dwelling where a wise hermit has lived for decades. The **[hermit]** offers counsel to those who seek wisdom, and his **[books]** contain ancient knowledge.",
+    "details": {
+      "hermit": "An elderly man with a long white beard and eyes that hold the wisdom of ages. He speaks little but says much.",
+      "books": "Ancient texts written in forgotten languages, containing the accumulated wisdom of centuries."
+    },
+    "exits": {
+      "east": "druid_grove"
+    },
+    "items": [
+      "wisdom_scroll",
+      "hermit_staff",
+      "ancient_tome"
+    ],
+    "npcs": [
+      "wise_hermit"
+    ]
+  },
+  "crystal_throne_room": {
+    "name": "Crystal Throne Room",
+    "description": "A magnificent chamber carved from solid crystal, with a throne that sparkles like captured starlight. This was once the seat of the **[Crystal King]**, now long dead.",
+    "details": {
+      "throne": "A massive chair carved from a single piece of diamond, inscribed with runes of power. It radiates authority even in abandonment.",
+      "crystal_king": "Legend speaks of a ruler who could command the very stones. His crown still sits upon the throne, waiting for a worthy successor."
+    },
+    "exits": {
+      "south": "crystal_caves"
+    },
+    "items": [
+      "crystal_crown",
+      "royal_scepter",
+      "throne_gem"
+    ],
+    "npcs": []
+  },
+  "underground_river": {
+    "name": "Underground River",
+    "description": "A swift-flowing river that has carved its way through the rock over millennia. The **[current]** is strong, and you can hear the **[waterfall]** somewhere ahead.",
+    "details": {
+      "current": "The water moves with tremendous force, carrying debris and creating whirlpools. Swimming would be suicide.",
+      "waterfall": "The roar of falling water echoes through the caverns. Whatever lies beyond must be a sight to behold."
+    },
+    "exits": {
+      "west": "crystal_caves"
+    },
+    "items": [
+      "river_stone",
+      "driftwood",
+      "water_crystal"
+    ],
+    "npcs": []
+  },
+  "mining_tunnels": {
+    "name": "Abandoned Mining Tunnels",
+    "description": "A network of tunnels dug by miners long ago, now abandoned to darkness. Rusted **[equipment]** lies scattered about, and **[cave_ins]** block many passages.",
+    "details": {
+      "equipment": "Pickaxes, shovels, and mining carts left behind when the mines were abandoned. Everything is covered in a thick layer of dust.",
+      "cave_ins": "Collapsed sections of tunnel where the supports gave way. Some might be cleared with effort, others are permanently blocked."
+    },
+    "exits": {
+      "north": "crystal_caves"
+    },
+    "items": [
+      "mining_pick",
+      "ore_sample",
+      "miner_helmet",
+      "support_beam"
+    ],
+    "npcs": []
+  },
+  "spider_queen_lair": {
+    "name": "Spider Queen's Lair",
+    "description": "The heart of the spider-infested woods, where the massive **[spider_queen]** has made her nest. **[Egg_sacs]** hang from every surface, and the floor is littered with the bones of her victims.",
+    "details": {
+      "spider_queen": "A monstrous arachnid the size of a carriage, with eyes like black diamonds and fangs that drip with venom.",
+      "egg_sacs": "Dozens of silk pouches containing thousands of spider eggs. They pulse with life, ready to hatch at any moment."
+    },
+    "exits": {
+      "south": "spider_woods"
+    },
+    "items": [
+      "queen_venom",
+      "royal_silk",
+      "spider_egg"
+    ],
+    "npcs": []
+  },
+  "poisoned_grove": {
+    "name": "Poisoned Grove",
+    "description": "A grove where the very air is toxic, and the trees ooze with **[poison]**. Flowers bloom in unnatural colors, and the **[ground]** is littered with the bones of poisoned animals.",
+    "details": {
+      "poison": "Viscous, colorful liquids that seep from the bark and pool in the roots. Even the scent is dangerous to breathe.",
+      "ground": "Soil stained with toxins, where nothing healthy can grow. The very earth seems to writhe with corruption."
+    },
+    "exits": {
+      "west": "spider_woods"
+    },
+    "items": [
+      "poison_extract",
+      "toxic_flower",
+      "antidote_herb"
+    ],
+    "npcs": []
+  },
+  "webbed_clearing": {
+    "name": "Webbed Clearing",
+    "description": "A clearing completely covered in spider webs, creating a maze of sticky strands. **[Prey]** hangs wrapped in silk from the trees, and **[spiders]** scuttle everywhere.",
+    "details": {
+      "prey": "Wrapped bundles that might once have been deer, rabbits, or even humans. Some still move slightly, suggesting they're still alive.",
+      "spiders": "Hundreds of arachnids of all sizes, from tiny jumping spiders to massive wolf spiders. They seem to be farming this area."
+    },
+    "exits": {
+      "north": "spider_woods"
+    },
+    "items": [
+      "web_silk",
+      "wrapped_prey",
+      "spider_fang"
+    ],
+    "npcs": []
+  },
+  "hunting_grounds": {
+    "name": "Hunting Grounds",
+    "description": "Well-maintained hunting trails wind through the forest, marked with **[signs]** and **[blinds]**. Fresh **[tracks]** suggest abundant game in the area.",
+    "details": {
+      "signs": "Wooden markers indicating game trails, water sources, and the best spots for various types of hunting.",
+      "blinds": "Camouflaged shelters where hunters wait for their prey. They're well-built and strategically placed.",
+      "tracks": "Fresh prints from deer, boar, and other game animals. Some tracks are unusually large."
+    },
+    "exits": {
+      "south": "hunters_lodge"
+    },
+    "items": [
+      "hunting_arrow",
+      "game_call",
+      "tracking_guide",
+      "camouflage_cloak"
+    ],
+    "npcs": []
+  },
+  "trappers_cabin": {
+    "name": "Trapper's Cabin",
+    "description": "A small log cabin where trappers process their catches. **[Pelts]** hang from the rafters, and **[traps]** of various sizes are displayed on the walls.",
+    "details": {
+      "pelts": "Furs from various animals - beaver, fox, bear, and some more exotic creatures. All are expertly prepared.",
+      "traps": "Steel-jawed traps, snares, and cage traps designed for different types of prey. They're well-maintained and deadly."
+    },
+    "exits": {
+      "east": "hunters_lodge"
+    },
+    "items": [
+      "fur_pelt",
+      "steel_trap",
+      "skinning_knife",
+      "trap_bait"
+    ],
+    "npcs": [
+      "master_trapper"
+    ]
+  },
+  "skinning_shed": {
+    "name": "Skinning Shed",
+    "description": "A practical building where hunters process their kills. **[Tables]** are stained with blood, and **[tools]** hang from hooks on the walls. The smell is... intense.",
+    "details": {
+      "tables": "Heavy wooden tables scarred from years of use. They're currently clean but show the stains of countless butchering sessions.",
+      "tools": "Sharp knives, bone saws, and other implements needed for processing game. Everything is kept razor-sharp."
+    },
+    "exits": {
+      "north": "hunters_lodge"
+    },
+    "items": [
+      "butcher_knife",
+      "bone_saw",
+      "cutting_board",
+      "preservation_salt"
+    ],
+    "npcs": []
+  },
+  "goblin_chief_chamber": {
+    "name": "Goblin Chief's Chamber",
+    "description": "The largest chamber in the warren, where the **[goblin_chief]** holds court. His **[throne]** is made of bones and scrap metal, and **[guards]** protect his treasure.",
+    "details": {
+      "goblin_chief": "A particularly large and ugly goblin wearing a crown made of animal teeth. His eyes gleam with cunning intelligence.",
+      "throne": "A crude chair assembled from bones, scrap metal, and bits of armor taken from defeated enemies.",
+      "guards": "Elite goblin warriors who have proven their worth in battle. They're better armed and armored than the common rabble."
+    },
+    "exits": {
+      "south": "goblin_warren"
+    },
+    "items": [
+      "goblin_crown",
+      "bone_throne",
+      "war_banner"
+    ],
+    "npcs": [
+      "goblin_chief",
+      "goblin_elite"
+    ]
+  },
+  "treasure_chamber": {
+    "name": "Goblin Treasure Chamber",
+    "description": "A chamber filled with the goblins' stolen loot. **[Chests]** overflow with coins and jewelry, while **[weapons]** and **[armor]** are piled in corners.",
+    "details": {
+      "chests": "Wooden chests of various sizes, all filled with gold, silver, and precious gems stolen from travelers and raids.",
+      "weapons": "Swords, axes, and spears of varying quality. Some are quite valuable, others are merely functional.",
+      "armor": "Helmets, shields, and mail shirts collected from defeated enemies. The goblins seem to prefer lighter gear."
+    },
+    "exits": {
+      "west": "goblin_warren"
+    },
+    "items": [
+      "gold_coins",
+      "silver_jewelry",
+      "precious_gems",
+      "valuable_weapon"
+    ],
+    "npcs": []
+  },
+  "prison_pits": {
+    "name": "Goblin Prison Pits",
+    "description": "Crude cells carved into the earth, where the goblins keep their **[prisoners]**. Iron **[bars]** prevent escape, and the conditions are deplorable.",
+    "details": {
+      "prisoners": "Unfortunate travelers who were captured rather than killed. They look hungry and desperate.",
+      "bars": "Rusted iron bars that still seem strong enough to hold most prisoners. Some show signs of attempted escape."
+    },
+    "exits": {
+      "north": "goblin_warren"
+    },
+    "items": [
+      "prison_key",
+      "prisoner_chains",
+      "escape_tools"
+    ],
+    "npcs": [
+      "captured_merchant",
+      "imprisoned_soldier"
+    ]
+  },
+  "underground_dock": {
+    "name": "Underground Dock",
+    "description": "A stone pier extends into the dark waters of the underground lake. Ancient **[boats]** are moored here, and **[lanterns]** provide flickering light.",
+    "details": {
+      "boats": "Old but sturdy vessels designed for underground travel. They're equipped with special quiet oars and covered lanterns.",
+      "lanterns": "Oil lamps in protective housings, designed to provide light without creating glare on the water."
+    },
+    "exits": {
+      "south": "underground_lake"
+    },
+    "items": [
+      "boat_oar",
+      "dock_rope",
+      "lantern_oil",
+      "nautical_chart"
+    ],
+    "npcs": [
+      "dock_keeper"
+    ]
+  },
+  "flooded_passages": {
+    "name": "Flooded Passages",
+    "description": "Tunnels that have been claimed by the rising waters of the underground lake. You can wade through in places, but the **[current]** is treacherous.",
+    "details": {
+      "current": "The water moves with surprising force, carrying debris and creating dangerous eddies. One wrong step could sweep you away.",
+      "debris": "Wooden planks, rusted metal, and stranger things float in the murky water. Some might be useful if you can catch them."
+    },
+    "exits": {
+      "east": "underground_lake"
+    },
+    "items": [
+      "waterlogged_wood",
+      "rusted_metal",
+      "floating_debris"
+    ],
+    "npcs": []
+  },
+  "crystal_beach": {
+    "name": "Crystal Beach",
+    "description": "A beach of pure crystal sand stretches along the underground lake. **[Crystals]** grow from the shore like frozen trees, and the **[sand]** sparkles with inner light.",
+    "details": {
+      "crystals": "Formations of quartz and other minerals that have grown into fantastic shapes. They resonate with musical tones when touched.",
+      "sand": "Tiny crystal fragments that have been worn smooth by the gentle waves. They glow with a soft, multicolored light."
+    },
+    "exits": {
+      "north": "underground_lake"
+    },
+    "items": [
+      "crystal_sand",
+      "resonant_crystal",
+      "beach_pearl"
+    ],
+    "npcs": []
+  },
+  "astral_gate": {
+    "name": "Astral Gate",
+    "description": "A shimmering portal that leads to the astral plane. **[Stars]** dance in the gateway, and you can feel the **[pull]** of infinite space beyond.",
+    "details": {
+      "stars": "Distant lights that seem to move with their own will, forming patterns that hurt to look at directly.",
+      "pull": "A gentle but insistent force that tries to draw you into the portal. Resisting it requires considerable willpower."
+    },
+    "exits": {
+      "south": "ritual_chamber"
+    },
+    "items": [
+      "astral_essence",
+      "star_fragment",
+      "void_crystal"
+    ],
+    "npcs": []
+  },
+  "library_ruins": {
+    "name": "Ruined Library",
+    "description": "The remains of a once-great library, its **[shelves]** collapsed and **[books]** scattered. Some tomes still glow with residual magic.",
+    "details": {
+      "shelves": "Massive wooden structures that once held thousands of books. Most have collapsed under the weight of age and neglect.",
+      "books": "Ancient texts on magic, history, and philosophy. Many are damaged beyond repair, but some still contain valuable knowledge."
+    },
+    "exits": {
+      "west": "ritual_chamber"
+    },
+    "items": [
+      "spell_tome",
+      "history_book",
+      "ancient_map",
+      "magic_scroll"
+    ],
+    "npcs": []
+  },
+  "sanctum": {
+    "name": "Inner Sanctum",
+    "description": "The most sacred chamber of the ancient temple. A **[altar]** stands in the center, surrounded by **[protective_wards]** that still function after centuries.",
+    "details": {
+      "altar": "A massive stone slab covered in intricate carvings. Dark stains suggest it was once used for sacrificial rituals.",
+      "protective_wards": "Magical barriers that prevent the unworthy from approaching the altar. They glow with a soft, menacing light."
+    },
+    "exits": {
+      "east": "ritual_chamber"
+    },
+    "items": [
+      "sacred_relic",
+      "ritual_knife",
+      "holy_symbol",
+      "ward_stone"
+    ],
+    "npcs": []
+  },
+  "financial_district": {
+    "name": "Financial District",
+    "description": "A gleaming district of marble and gold where the city's wealth flows like water. **[Bankers]** in fine clothes hurry between **[counting_houses]**, and the air rings with the sound of coins.",
+    "details": {
+      "bankers": "Well-dressed professionals with ledgers and calculating devices, managing the complex flow of money through the city.",
+      "counting_houses": "Imposing buildings with reinforced vaults and armed guards, where vast sums of money are stored and traded."
+    },
+    "exits": {
+      "north": "grand_bank",
+      "south": "town_square",
+      "east": "merchant_exchange",
+      "west": "insurance_house"
+    },
+    "items": [
+      "gold_coin",
+      "trade_contract",
+      "banker_seal"
+    ],
+    "npcs": [
+      "district_banker",
+      "gold_trader",
+      "investment_advisor"
+    ]
+  },
+  "grand_bank": {
+    "name": "Grand Bank of Prosperity",
+    "description": "The largest bank in the region, with towering **[marble_columns]** and an **[ornate_vault]** that's said to hold more gold than a dragon's hoard. **[Clerks]** work furiously at adding machines.",
+    "details": {
+      "marble_columns": "Massive pillars carved from pristine white marble, each worth more than most people see in a lifetime.",
+      "ornate_vault": "A masterwork of engineering and magic, with locks that would take a master thief years to crack.",
+      "clerks": "Dozens of workers managing accounts, calculating interest, and processing the endless flow of financial transactions."
+    },
+    "exits": {
+      "south": "financial_district",
+      "east": "vault_level",
+      "west": "loan_office"
+    },
+    "items": [
+      "bank_statement",
+      "gold_bars",
+      "investment_portfolio",
+      "credit_note"
+    ],
+    "npcs": [
+      "bank_president",
+      "head_clerk",
+      "vault_guardian"
+    ]
+  },
+  "vault_level": {
+    "name": "Bank Vault Level",
+    "description": "A heavily secured underground level lined with **[safety_deposit_boxes]** and protected by **[magical_wards]**. Only the wealthiest clients have access here.",
+    "details": {
+      "safety_deposit_boxes": "Hundreds of small secured compartments containing the most valuable possessions of the city's elite.",
+      "magical_wards": "Powerful protective spells that would incinerate any unauthorized person who tries to access the vaults."
+    },
+    "exits": {
+      "west": "grand_bank",
+      "south": "treasure_vault"
+    },
+    "items": [
+      "vault_key",
+      "magical_lock",
+      "precious_jewels",
+      "royal_crown"
+    ],
+    "npcs": [
+      "vault_keeper",
+      "security_mage"
+    ]
+  },
+  "merchant_exchange": {
+    "name": "Merchant Exchange",
+    "description": "A bustling trading floor where **[merchants]** buy and sell everything from grain futures to exotic spices. **[Price_boards]** show constantly changing values.",
+    "details": {
+      "merchants": "Traders from every corner of the known world, each trying to make the best deals for their goods.",
+      "price_boards": "Large chalk boards showing current prices for hundreds of different commodities, updated by the minute."
+    },
+    "exits": {
+      "west": "financial_district",
+      "north": "commodity_warehouse",
+      "south": "futures_pit"
+    },
+    "items": [
+      "trade_ledger",
+      "commodity_sample",
+      "merchant_license",
+      "exchange_token"
+    ],
+    "npcs": [
+      "floor_trader",
+      "commodity_broker",
+      "exchange_official"
+    ]
+  },
+  "insurance_house": {
+    "name": "Adventurer's Insurance House",
+    "description": "A unique establishment that provides **[insurance_policies]** for dangerous ventures. **[Actuaries]** calculate the odds of surviving various quests and expeditions.",
+    "details": {
+      "insurance_policies": "Contracts that pay out to beneficiaries if the policyholder dies during covered dangerous activities.",
+      "actuaries": "Mathematical experts who use complex formulas to determine risk levels for different types of adventures."
+    },
+    "exits": {
+      "east": "financial_district",
+      "north": "risk_assessment_office"
+    },
+    "items": [
+      "insurance_policy",
+      "risk_assessment",
+      "mortality_table",
+      "beneficiary_form"
+    ],
+    "npcs": [
+      "insurance_agent",
+      "risk_assessor",
+      "claims_adjuster"
+    ]
+  },
+  "artisan_quarter": {
+    "name": "Artisan Quarter",
+    "description": "A district alive with creativity and craftsmanship. **[Workshops]** line the streets, each filled with the sounds of hammering, weaving, and creation. **[Apprentices]** scurry between buildings.",
+    "details": {
+      "workshops": "Specialized craft shops where master artisans create everything from fine jewelry to mechanical wonders.",
+      "apprentices": "Young people learning their trades, carrying materials and tools between different workshops."
+    },
+    "exits": {
+      "north": "master_forge",
+      "south": "town_square",
+      "east": "jeweler_district",
+      "west": "textile_quarter"
+    },
+    "items": [
+      "artisan_tools",
+      "craft_sample",
+      "quality_certificate"
+    ],
+    "npcs": [
+      "guild_master",
+      "traveling_artisan",
+      "craft_inspector"
+    ]
+  },
+  "master_forge": {
+    "name": "Master Forge",
+    "description": "The heart of the metalworking trade, where **[master_smiths]** create legendary weapons and armor. The **[forge_fire]** burns with magical intensity, hot enough to work even the most exotic metals.",
+    "details": {
+      "master_smiths": "Legendary craftsmen whose skills border on the magical, capable of forging items of incredible power.",
+      "forge_fire": "A magical flame that burns at precisely the right temperature for any metal, maintained by ancient dwarven techniques."
+    },
+    "exits": {
+      "south": "artisan_quarter",
+      "east": "enchantment_workshop",
+      "west": "weapon_testing_ground"
+    },
+    "items": [
+      "masterwork_hammer",
+      "dragon_steel_ingot",
+      "legendary_blueprint",
+      "forging_catalyst"
+    ],
+    "npcs": [
+      "grandmaster_smith",
+      "forge_keeper",
+      "apprentice_blacksmith"
+    ]
+  },
+  "jeweler_district": {
+    "name": "Jeweler's District",
+    "description": "A sparkling district where **[gem_cutters]** and **[jewelry_crafters]** create works of breathtaking beauty. Every surface seems to catch and reflect light.",
+    "details": {
+      "gem_cutters": "Artisans with incredibly steady hands who can cut gems with mathematical precision to maximize their brilliance.",
+      "jewelry_crafters": "Artists who combine precious metals and gems into wearable masterpieces."
+    },
+    "exits": {
+      "west": "artisan_quarter",
+      "north": "gem_vault",
+      "south": "appraisal_office"
+    },
+    "items": [
+      "cut_diamonds",
+      "golden_necklace",
+      "jeweler_loupe",
+      "gem_setting_tools"
+    ],
+    "npcs": [
+      "master_jeweler",
+      "gem_appraiser",
+      "precious_stone_dealer"
+    ]
+  },
+  "clockwork_workshop": {
+    "name": "Clockwork Workshop",
+    "description": "A fascinating workshop filled with **[mechanical_devices]** and **[precision_tools]**. Gears tick and whir as **[inventors]** work on their latest mechanical marvels.",
+    "details": {
+      "mechanical_devices": "Intricate machines made of brass, steel, and crystal that perform various functions with clockwork precision.",
+      "precision_tools": "Incredibly fine instruments needed to craft the tiny components that make mechanical devices work.",
+      "inventors": "Brilliant minds who push the boundaries of what's possible with mechanical engineering."
+    },
+    "exits": {
+      "south": "artisan_quarter",
+      "east": "innovation_lab"
+    },
+    "items": [
+      "clockwork_components",
+      "precision_gears",
+      "mechanical_blueprint",
+      "automation_core"
+    ],
+    "npcs": [
+      "master_clockmaker",
+      "mechanical_engineer",
+      "innovation_specialist"
+    ]
+  },
+  "textile_quarter": {
+    "name": "Textile Quarter",
+    "description": "A colorful district where **[weavers]** create magnificent fabrics and **[tailors]** craft garments fit for royalty. **[Looms]** clack rhythmically in every workshop.",
+    "details": {
+      "weavers": "Skilled artisans who create complex patterns and textures in silk, wool, and exotic fibers.",
+      "tailors": "Master clothing crafters who can create garments that are both beautiful and functional.",
+      "looms": "Large mechanical devices that interlace threads to create fabric, operated with incredible skill."
+    },
+    "exits": {
+      "east": "artisan_quarter",
+      "north": "silk_emporium",
+      "south": "dye_works"
+    },
+    "items": [
+      "silk_fabric",
+      "embroidered_cloak",
+      "weaving_pattern",
+      "tailoring_supplies"
+    ],
+    "npcs": [
+      "master_weaver",
+      "royal_tailor",
+      "fabric_merchant"
+    ]
+  },
+  "alchemy_laboratory": {
+    "name": "Grand Alchemy Laboratory",
+    "description": "A complex of laboratories where **[alchemists]** brew potions and create magical substances. **[Bubbling_cauldrons]** and **[distillation_apparatus]** fill every room.",
+    "details": {
+      "alchemists": "Learned practitioners who combine science and magic to create useful and dangerous substances.",
+      "bubbling_cauldrons": "Large pots where base ingredients are combined and transformed through careful heating and stirring.",
+      "distillation_apparatus": "Complex glass tubes and chambers that purify and concentrate alchemical essences."
+    },
+    "exits": {
+      "west": "artisan_quarter",
+      "north": "ingredient_vault",
+      "east": "experimental_chamber"
+    },
+    "items": [
+      "master_potion",
+      "alchemical_apparatus",
+      "rare_reagent",
+      "formula_book"
+    ],
+    "npcs": [
+      "grandmaster_alchemist",
+      "potion_brewer",
+      "ingredient_specialist"
+    ]
+  },
+  "noble_district": {
+    "name": "Noble District",
+    "description": "An exclusive district where the city's elite live in luxury. **[Mansions]** with manicured **[gardens]** line tree-bordered streets, and **[servants]** in livery attend to every need.",
+    "details": {
+      "mansions": "Enormous homes built from the finest materials, each one a display of wealth and power.",
+      "gardens": "Perfectly maintained landscapes with exotic plants, decorative fountains, and artistic topiaries.",
+      "servants": "Well-trained staff who maintain the homes and attend to their masters with practiced discretion."
+    },
+    "exits": {
+      "north": "grand_mansion",
+      "south": "artisan_quarter",
+      "east": "noble_court",
+      "west": "exclusive_club"
+    },
+    "items": [
+      "noble_invitation",
+      "family_crest",
+      "luxury_item"
+    ],
+    "npcs": [
+      "noble_lord",
+      "duchess",
+      "high_society_matron"
+    ]
+  },
+  "grand_mansion": {
+    "name": "Grand Mansion",
+    "description": "The largest mansion in the district, home to the **[duke]** himself. **[Marble_statues]** line the grand **[staircase]**, and **[crystal_chandeliers]** illuminate every room.",
+    "details": {
+      "duke": "The most powerful noble in the city, whose word carries enormous weight in political and social circles.",
+      "marble_statues": "Masterful sculptures depicting the duke's ancestors, each one a work of art worth a fortune.",
+      "staircase": "A sweeping marble staircase with golden railings that leads to the upper floors of the mansion.",
+      "crystal_chandeliers": "Magnificent lighting fixtures made from the finest crystal, each one containing dozens of magical lights."
+    },
+    "exits": {
+      "south": "noble_district",
+      "east": "duke_private_study",
+      "west": "grand_ballroom"
+    },
+    "items": [
+      "duke_signet_ring",
+      "royal_decree",
+      "priceless_artifact",
+      "noble_ceremonial_sword"
+    ],
+    "npcs": [
+      "duke",
+      "duchess",
+      "personal_bodyguard",
+      "head_butler"
+    ]
+  },
+  "noble_court": {
+    "name": "Noble Court",
+    "description": "Where the nobility gather to conduct politics and social affairs. **[Courtiers]** engage in elaborate dances of intrigue while **[judges]** arbitrate disputes.",
+    "details": {
+      "courtiers": "Sophisticated nobles who wield words and influence as weapons, constantly maneuvering for advantage.",
+      "judges": "Learned arbiters who settle disputes between nobles according to ancient laws and customs."
+    },
+    "exits": {
+      "west": "noble_district",
+      "north": "throne_room",
+      "south": "council_chamber"
+    },
+    "items": [
+      "court_record",
+      "legal_precedent",
+      "diplomatic_message",
+      "royal_seal"
+    ],
+    "npcs": [
+      "court_judge",
+      "master_diplomat",
+      "political_advisor",
+      "royal_messenger"
+    ]
+  },
+  "exclusive_club": {
+    "name": "Gentlemen's Exclusive Club",
+    "description": "A private club where only the wealthiest and most powerful are members. **[Leather_chairs]** surround **[gaming_tables]**, and **[rare_spirits]** flow freely.",
+    "details": {
+      "leather_chairs": "The finest furniture, each chair worth more than most people's annual income.",
+      "gaming_tables": "Where fortunes are won and lost in games of chance and skill played only by the elite.",
+      "rare_spirits": "Alcoholic beverages so expensive and rare that most people will never taste them."
+    },
+    "exits": {
+      "east": "noble_district",
+      "north": "private_dining_room"
+    },
+    "items": [
+      "membership_token",
+      "rare_vintage",
+      "gaming_chips",
+      "club_rules"
+    ],
+    "npcs": [
+      "club_president",
+      "wealthy_gambler",
+      "exclusive_bartender"
+    ]
+  },
+  "royal_gardens": {
+    "name": "Royal Gardens",
+    "description": "Magnificent gardens where **[exotic_plants]** from around the world grow in perfect harmony. **[Fountains]** provide soothing sounds, and **[peacocks]** strut across manicured lawns.",
+    "details": {
+      "exotic_plants": "Rare flora collected from distant lands, each plant carefully tended by expert gardeners.",
+      "fountains": "Elaborate water features carved from precious stones and powered by hidden magical mechanisms.",
+      "peacocks": "Beautiful birds that serve as living decorations, their brilliant plumage adding color to the gardens."
+    },
+    "exits": {
+      "south": "noble_district"
+    },
+    "items": [
+      "rare_seed",
+      "garden_tool",
+      "peacock_feather",
+      "botanical_guide"
+    ],
+    "npcs": [
+      "master_gardener",
+      "botanist",
+      "garden_keeper"
+    ]
+  },
+  "merchant_quarter": {
+    "name": "Merchant Quarter",
+    "description": "The commercial heart of the city, where **[traders]** from distant lands sell exotic goods. **[Caravan_wagons]** line the streets, and the air fills with a dozen different languages.",
+    "details": {
+      "traders": "Merchants from every corner of the known world, each bringing unique goods and stories.",
+      "caravan_wagons": "Heavy wagons loaded with goods, guarded by hired protection and pulled by sturdy animals."
+    },
+    "exits": {
+      "north": "grand_bazaar",
+      "south": "artisan_quarter",
+      "east": "foreign_embassy",
+      "west": "caravan_depot"
+    },
+    "items": [
+      "exotic_goods",
+      "trade_manifest",
+      "foreign_currency"
+    ],
+    "npcs": [
+      "caravan_master",
+      "exotic_trader",
+      "merchant_prince"
+    ]
+  },
+  "grand_bazaar": {
+    "name": "Grand Bazaar",
+    "description": "A massive covered marketplace where anything can be bought or sold. **[Stalls]** overflow with goods, **[auctioneers]** call out bids, and the noise is overwhelming.",
+    "details": {
+      "stalls": "Hundreds of small shops selling everything from common necessities to impossible rarities.",
+      "auctioneers": "Fast-talking salesmen who run continuous auctions for valuable and unusual items."
+    },
+    "exits": {
+      "south": "merchant_quarter",
+      "east": "rare_goods_section",
+      "west": "food_market",
+      "north": "import_warehouse"
+    },
+    "items": [
+      "auction_catalog",
+      "rare_spice",
+      "mysterious_artifact",
+      "foreign_delicacy"
+    ],
+    "npcs": [
+      "bazaar_manager",
+      "auction_caller",
+      "rare_goods_dealer",
+      "spice_merchant"
+    ]
+  },
+  "foreign_embassy": {
+    "name": "Foreign Embassy District",
+    "description": "Where **[ambassadors]** from distant nations conduct diplomacy. Each **[embassy_building]** represents a different culture, and **[diplomatic_couriers]** come and go constantly.",
+    "details": {
+      "ambassadors": "High-ranking diplomats who negotiate treaties and maintain relations between nations.",
+      "embassy_buildings": "Structures built in the architectural styles of their home nations, each one a small piece of foreign soil.",
+      "diplomatic_couriers": "Trusted messengers who carry sensitive communications between governments."
+    },
+    "exits": {
+      "west": "merchant_quarter",
+      "north": "treaty_hall",
+      "south": "diplomatic_quarter"
+    },
+    "items": [
+      "diplomatic_papers",
+      "foreign_flag",
+      "embassy_seal",
+      "cultural_artifact"
+    ],
+    "npcs": [
+      "chief_ambassador",
+      "diplomatic_clerk",
+      "foreign_dignitary",
+      "embassy_guard"
+    ]
+  },
+  "caravan_depot": {
+    "name": "Caravan Depot",
+    "description": "Where **[caravans]** load and unload their precious cargo. **[Warehouse_workers]** move goods while **[caravan_guards]** keep watch for thieves.",
+    "details": {
+      "caravans": "Large groups of merchants and guards who travel dangerous routes to bring goods to the city.",
+      "warehouse_workers": "Strong laborers who specialize in moving heavy cargo quickly and safely.",
+      "caravan_guards": "Professional warriors hired to protect valuable shipments from bandits and monsters."
+    },
+    "exits": {
+      "east": "merchant_quarter",
+      "north": "guard_barracks",
+      "south": "supply_warehouse"
+    },
+    "items": [
+      "shipping_manifest",
+      "caravan_supplies",
+      "guard_equipment",
+      "route_map"
+    ],
+    "npcs": [
+      "depot_supervisor",
+      "caravan_captain",
+      "warehouse_foreman",
+      "security_chief"
+    ]
+  },
+  "trading_post": {
+    "name": "Exotic Trading Post",
+    "description": "Specializing in the most unusual goods from the far corners of the world. **[Magical_items]**, **[monster_parts]**, and **[ancient_relics]** are displayed behind protective glass.",
+    "details": {
+      "magical_items": "Enchanted objects with various mystical properties, each one authenticated by expert mages.",
+      "monster_parts": "Rare components harvested from dangerous creatures, used in alchemy and enchantment.",
+      "ancient_relics": "Artifacts from lost civilizations, their true purposes often mysterious."
+    },
+    "exits": {
+      "west": "merchant_quarter",
+      "north": "appraisal_chamber"
+    },
+    "items": [
+      "dragon_scale",
+      "phoenix_feather",
+      "void_crystal",
+      "time_shard",
+      "ancient_coin"
+    ],
+    "npcs": [
+      "exotic_trader",
+      "artifact_specialist",
+      "magical_appraiser"
+    ]
+  },
+  "commodity_exchange": {
+    "name": "Commodity Exchange",
+    "description": "Where **[bulk_traders]** buy and sell large quantities of basic goods. **[Price_boards]** show fluctuating values for everything from grain to iron ore.",
+    "details": {
+      "bulk_traders": "Merchants who deal in massive quantities of raw materials and basic necessities.",
+      "price_boards": "Large displays showing current market prices for hundreds of different commodities."
+    },
+    "exits": {
+      "south": "merchant_quarter",
+      "east": "futures_market"
+    },
+    "items": [
+      "commodity_contract",
+      "market_report",
+      "trading_license",
+      "bulk_sample"
+    ],
+    "npcs": [
+      "commodity_broker",
+      "market_analyst",
+      "floor_supervisor"
+    ]
+  },
+  "smuggler_den": {
+    "name": "Hidden Smuggler's Den",
+    "description": "A secret location where **[smugglers]** trade in goods that can't be sold legally. **[Hidden_compartments]** conceal contraband, and **[lookouts]** watch for authorities.",
+    "details": {
+      "smugglers": "Criminal traders who specialize in moving illegal or heavily taxed goods across borders.",
+      "hidden_compartments": "Concealed spaces built into walls and furniture to hide contraband from searches.",
+      "lookouts": "Criminals posted to watch for law enforcement and signal when it's safe to conduct business."
+    },
+    "exits": {
+      "east": "merchant_quarter"
+    },
+    "items": [
+      "contraband_goods",
+      "false_documents",
+      "smuggling_map",
+      "bribe_money"
+    ],
+    "npcs": [
+      "smuggling_chief",
+      "contraband_dealer",
+      "corrupt_official"
+    ]
+  },
+  "industrial_district": {
+    "name": "Industrial District",
+    "description": "A district of smoke and steam where the city's heavy industry operates. **[Forges]** burn day and night, **[steam_engines]** power massive machines, and **[workers]** toil in organized efficiency.",
+    "details": {
+      "forges": "Massive furnaces that burn hot enough to smelt any metal, operated by skilled metallurgists.",
+      "steam_engines": "Revolutionary machines that harness the power of steam to drive industrial equipment.",
+      "workers": "Skilled laborers who operate complex machinery and work in dangerous but well-paid conditions."
+    },
+    "exits": {
+      "north": "grand_foundry",
+      "south": "merchant_quarter",
+      "east": "steam_works",
+      "west": "mill_complex"
+    },
+    "items": [
+      "industrial_tools",
+      "metal_ingot",
+      "steam_pressure_gauge"
+    ],
+    "npcs": [
+      "factory_foreman",
+      "steam_engineer",
+      "industrial_worker"
+    ]
+  },
+  "grand_foundry": {
+    "name": "Grand Foundry",
+    "description": "The largest metalworking facility in the region, where **[molten_metal]** flows like lava through carefully designed **[channels]**. **[Master_smelters]** oversee the dangerous but lucrative process.",
+    "details": {
+      "molten_metal": "Superheated metal that glows white-hot as it's poured into molds to create tools, weapons, and machinery.",
+      "channels": "Stone and ceramic conduits that direct the flow of molten metal to different casting stations.",
+      "master_smelters": "Experts who understand the precise temperatures and timing needed to create perfect metal castings."
+    },
+    "exits": {
+      "south": "industrial_district",
+      "east": "casting_hall",
+      "west": "ore_processing"
+    },
+    "items": [
+      "casting_mold",
+      "smelting_flux",
+      "temperature_crystal",
+      "refined_steel"
+    ],
+    "npcs": [
+      "master_smelter",
+      "foundry_supervisor",
+      "safety_inspector"
+    ]
+  },
+  "steam_works": {
+    "name": "Steam Works",
+    "description": "A complex of **[boilers]** and **[steam_pipes]** that provides power to the entire industrial district. **[Engineers]** monitor pressure gauges and maintain the intricate machinery.",
+    "details": {
+      "boilers": "Massive vessels that convert water to steam under carefully controlled pressure.",
+      "steam_pipes": "A network of reinforced pipes that carry pressurized steam throughout the district.",
+      "engineers": "Technical experts who understand the complex science of steam power and industrial automation."
+    },
+    "exits": {
+      "west": "industrial_district",
+      "north": "engine_room",
+      "south": "maintenance_tunnel"
+    },
+    "items": [
+      "pressure_valve",
+      "steam_gauge",
+      "engineering_blueprint",
+      "coal_fuel"
+    ],
+    "npcs": [
+      "chief_engineer",
+      "boiler_operator",
+      "mechanical_technician"
+    ]
+  },
+  "mill_complex": {
+    "name": "Mill Complex",
+    "description": "Where **[grain_mills]** and **[textile_looms]** are powered by water wheels and steam engines. **[Millers]** work around the clock to process raw materials.",
+    "details": {
+      "grain_mills": "Large stones that grind grain into flour, powered by the district's steam systems.",
+      "textile_looms": "Mechanical devices that weave thread into cloth with incredible speed and precision.",
+      "millers": "Skilled workers who operate the milling equipment and ensure consistent quality."
+    },
+    "exits": {
+      "east": "industrial_district",
+      "north": "flour_warehouse",
+      "south": "textile_factory"
+    },
+    "items": [
+      "ground_flour",
+      "woven_cloth",
+      "mill_stone",
+      "loom_shuttle"
+    ],
+    "npcs": [
+      "head_miller",
+      "textile_supervisor",
+      "quality_inspector"
+    ]
+  },
+  "chemical_laboratory": {
+    "name": "Industrial Chemical Laboratory",
+    "description": "Where **[chemists]** develop new industrial processes and create specialized **[compounds]**. **[Glass_apparatus]** bubbles with experimental reactions.",
+    "details": {
+      "chemists": "Scientists who apply chemistry to industrial problems, creating new materials and processes.",
+      "compounds": "Chemical substances designed for specific industrial applications, from cleaning agents to preservatives.",
+      "glass_apparatus": "Complex arrangements of tubes, flasks, and condensers used for chemical experiments."
+    },
+    "exits": {
+      "south": "industrial_district"
+    },
+    "items": [
+      "chemical_compound",
+      "reaction_catalyst",
+      "laboratory_notes",
+      "industrial_solvent"
+    ],
+    "npcs": [
+      "chief_chemist",
+      "research_assistant",
+      "safety_coordinator"
+    ]
+  },
+  "scholar_district": {
+    "name": "Scholar District",
+    "description": "A quiet district devoted to learning and research. **[Libraries]** house countless books, **[scholars]** debate in public squares, and the air hums with intellectual energy.",
+    "details": {
+      "libraries": "Magnificent buildings filled with books, scrolls, and documents from every field of knowledge.",
+      "scholars": "Learned individuals who devote their lives to the pursuit of knowledge and understanding."
+    },
+    "exits": {
+      "north": "grand_library",
+      "south": "noble_district",
+      "east": "academy_complex",
+      "west": "observatory"
+    },
+    "items": [
+      "research_notes",
+      "scholarly_journal",
+      "academic_certificate"
+    ],
+    "npcs": [
+      "head_librarian",
+      "philosophy_professor",
+      "research_scholar"
+    ]
+  },
+  "grand_library": {
+    "name": "Grand Library",
+    "description": "The largest repository of knowledge in the known world. **[Towering_shelves]** reach toward the ceiling, and **[reading_rooms]** provide quiet spaces for study. **[Librarians]** maintain perfect order.",
+    "details": {
+      "towering_shelves": "Enormous bookcases that require ladders to reach the highest volumes, organized by complex cataloging systems.",
+      "reading_rooms": "Comfortable chambers with good lighting where scholars can study without distraction.",
+      "librarians": "Guardians of knowledge who can locate any book in the vast collection and maintain the library's organization."
+    },
+    "exits": {
+      "south": "scholar_district",
+      "east": "rare_books_vault",
+      "west": "manuscript_room",
+      "north": "archive_level"
+    },
+    "items": [
+      "ancient_tome",
+      "library_catalog",
+      "reading_lamp",
+      "bookmark_collection"
+    ],
+    "npcs": [
+      "grand_librarian",
+      "archive_keeper",
+      "manuscript_expert"
+    ]
+  },
+  "academy_complex": {
+    "name": "Academy Complex",
+    "description": "Where the city's brightest minds teach and learn. **[Lecture_halls]** echo with the voices of **[professors]**, and **[students]** hurry between classes with armloads of books.",
+    "details": {
+      "lecture_halls": "Large chambers designed for teaching, with excellent acoustics and tiered seating.",
+      "professors": "Master scholars who have dedicated their lives to teaching and advancing their fields of study.",
+      "students": "Young people from across the land who come here to receive the finest education available."
+    },
+    "exits": {
+      "west": "scholar_district",
+      "north": "philosophy_hall",
+      "south": "laboratory_wing",
+      "east": "dormitory_quarter"
+    },
+    "items": [
+      "textbook",
+      "student_notes",
+      "academic_robes",
+      "graduation_scroll"
+    ],
+    "npcs": [
+      "academy_dean",
+      "mathematics_professor",
+      "history_teacher",
+      "promising_student"
+    ]
+  },
+  "observatory": {
+    "name": "Celestial Observatory",
+    "description": "A tower dedicated to studying the heavens. **[Telescopes]** point toward the sky, and **[star_charts]** map the movements of celestial bodies. **[Astronomers]** work through the night.",
+    "details": {
+      "telescopes": "Precision instruments that magnify distant stars and planets, revealing the secrets of the cosmos.",
+      "star_charts": "Detailed maps showing the positions and movements of stars, planets, and other celestial objects.",
+      "astronomers": "Scholars who study the heavens and use their observations to understand the nature of the universe."
+    },
+    "exits": {
+      "east": "scholar_district",
+      "north": "star_chamber"
+    },
+    "items": [
+      "star_chart",
+      "telescope_lens",
+      "celestial_calendar",
+      "comet_fragment"
+    ],
+    "npcs": [
+      "master_astronomer",
+      "star_gazer",
+      "celestial_calculator"
+    ]
+  },
+  "experimental_laboratory": {
+    "name": "Experimental Laboratory",
+    "description": "Where the academy's most ambitious research takes place. **[Experimental_apparatus]** fills every surface, and **[researchers]** work on projects that push the boundaries of knowledge.",
+    "details": {
+      "experimental_apparatus": "Complex devices designed to test new theories and explore unknown phenomena.",
+      "researchers": "Brilliant minds who pursue knowledge wherever it leads, regardless of conventional wisdom."
+    },
+    "exits": {
+      "north": "academy_complex"
+    },
+    "items": [
+      "experimental_data",
+      "prototype_device",
+      "research_grant",
+      "innovation_award"
+    ],
+    "npcs": [
+      "head_researcher",
+      "experimental_scientist",
+      "research_assistant"
+    ]
+  },
+  "ancient_archive": {
+    "name": "Ancient Archive",
+    "description": "The deepest level of the library, where the oldest and most precious documents are kept. **[Ancient_scrolls]** are preserved in **[climate_controlled_chambers]**, protected by **[preservation_spells]**.",
+    "details": {
+      "ancient_scrolls": "Documents from lost civilizations, written in languages that few can still read.",
+      "climate_controlled_chambers": "Specially designed rooms that maintain perfect temperature and humidity for document preservation.",
+      "preservation_spells": "Magical enchantments that prevent the ancient documents from deteriorating with age."
+    },
+    "exits": {
+      "south": "grand_library"
+    },
+    "items": [
+      "primordial_text",
+      "lost_language_dictionary",
+      "preservation_crystal",
+      "translation_notes"
+    ],
+    "npcs": [
+      "archive_guardian",
+      "ancient_linguist",
+      "preservation_specialist"
+    ]
+  },
+  "entertainment_district": {
+    "name": "Entertainment District",
+    "description": "Where the city comes to enjoy itself. **[Theaters]** host grand performances, **[taverns]** echo with laughter, and **[street_performers]** entertain crowds at every corner.",
+    "details": {
+      "theaters": "Magnificent venues where the finest actors and musicians perform for appreciative audiences.",
+      "taverns": "Lively establishments where people gather to drink, socialize, and enjoy each other's company.",
+      "street_performers": "Talented entertainers who bring joy to passersby with music, juggling, and other skills."
+    },
+    "exits": {
+      "north": "grand_theater",
+      "south": "scholar_district",
+      "east": "gambling_hall",
+      "west": "music_conservatory"
+    },
+    "items": [
+      "theater_ticket",
+      "street_performer_coins",
+      "entertainment_poster"
+    ],
+    "npcs": [
+      "theater_director",
+      "famous_actor",
+      "street_musician"
+    ]
+  },
+  "grand_theater": {
+    "name": "Grand Theater",
+    "description": "The finest performance venue in the city, with perfect **[acoustics]** and luxurious **[seating]**. **[Actors]** perform classics and new works for **[distinguished_audiences]**.",
+    "details": {
+      "acoustics": "The theater is designed so that every whisper on stage can be heard clearly in the furthest seat.",
+      "seating": "Comfortable chairs arranged in tiers, with the best seats reserved for the city's most important citizens.",
+      "actors": "Talented performers who bring stories to life with skill and passion.",
+      "distinguished_audiences": "The cultural elite of the city, who appreciate fine performances and support the arts."
+    },
+    "exits": {
+      "south": "entertainment_district",
+      "east": "backstage_area",
+      "west": "costume_workshop"
+    },
+    "items": [
+      "theater_program",
+      "actor_autograph",
+      "stage_prop",
+      "performance_review"
+    ],
+    "npcs": [
+      "lead_actor",
+      "theater_manager",
+      "dramatic_critic",
+      "stage_director"
+    ]
+  },
+  "gambling_hall": {
+    "name": "High Stakes Gambling Hall",
+    "description": "Where fortunes are won and lost at **[gaming_tables]**. **[Professional_gamblers]** play with cool precision while **[wealthy_patrons]** risk vast sums for the thrill.",
+    "details": {
+      "gaming_tables": "Tables for various games of chance and skill, from simple dice to complex card games.",
+      "professional_gamblers": "Experts who make their living through gambling, using skill and psychology to win.",
+      "wealthy_patrons": "Rich individuals who gamble for entertainment, sometimes wagering more than most people earn in a lifetime."
+    },
+    "exits": {
+      "west": "entertainment_district",
+      "north": "private_gaming_room",
+      "south": "casino_vault"
+    },
+    "items": [
+      "lucky_dice",
+      "marked_cards",
+      "gambling_chips",
+      "house_rules"
+    ],
+    "npcs": [
+      "casino_owner",
+      "professional_gambler",
+      "card_dealer",
+      "security_enforcer"
+    ]
+  },
+  "music_conservatory": {
+    "name": "Music Conservatory",
+    "description": "Where **[musicians]** perfect their art. **[Practice_rooms]** echo with scales and melodies, while **[master_teachers]** guide students toward musical excellence.",
+    "details": {
+      "musicians": "Talented individuals who devote their lives to creating beautiful music.",
+      "practice_rooms": "Soundproofed chambers where students can practice without disturbing others.",
+      "master_teachers": "Accomplished musicians who pass on their knowledge and techniques to the next generation."
+    },
+    "exits": {
+      "east": "entertainment_district",
+      "north": "concert_hall",
+      "south": "instrument_workshop"
+    },
+    "items": [
+      "sheet_music",
+      "tuning_fork",
+      "music_manuscript",
+      "performance_medal"
+    ],
+    "npcs": [
+      "music_director",
+      "virtuoso_performer",
+      "composition_teacher",
+      "talented_student"
+    ]
+  },
+  "arena_complex": {
+    "name": "Combat Arena Complex",
+    "description": "Where **[gladiators]** fight for glory and gold. The **[arena_floor]** is stained with the blood of countless battles, while **[spectators]** cheer from the stands.",
+    "details": {
+      "gladiators": "Professional fighters who risk their lives for entertainment, fame, and prize money.",
+      "arena_floor": "Sand-covered fighting ground where combats take place, with barriers to protect the audience.",
+      "spectators": "Crowds who come to watch the violent spectacles, cheering for their favorite fighters."
+    },
+    "exits": {
+      "south": "entertainment_district",
+      "east": "gladiator_barracks",
+      "west": "betting_booths"
+    },
+    "items": [
+      "arena_sand",
+      "gladiator_weapon",
+      "victory_wreath",
+      "combat_trophy"
+    ],
+    "npcs": [
+      "arena_master",
+      "champion_gladiator",
+      "combat_trainer",
+      "betting_official"
+    ]
+  },
+  "festival_grounds": {
+    "name": "Festival Grounds",
+    "description": "A large open area where the city holds its celebrations. **[Colorful_banners]** flutter in the breeze, and **[festival_organizers]** prepare for the next grand event.",
+    "details": {
+      "colorful_banners": "Bright flags and decorations that create a festive atmosphere during celebrations.",
+      "festival_organizers": "People who plan and coordinate the city's many festivals and public celebrations."
+    },
+    "exits": {
+      "north": "entertainment_district"
+    },
+    "items": [
+      "festival_banner",
+      "celebration_mask",
+      "fireworks",
+      "party_supplies"
+    ],
+    "npcs": [
+      "festival_coordinator",
+      "celebration_planner",
+      "entertainment_booking_agent"
+    ]
   }
-} 
+}

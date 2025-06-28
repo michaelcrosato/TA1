@@ -541,9 +541,12 @@ class Enemy:
         
         # Choose based on AI pattern
         rand = random.random()
-        if rand < self.ai_pattern.get("attack_chance", 0.8):
+        attack_chance = self.ai_pattern.get("attack_chance", 0.8)
+        defend_chance = self.ai_pattern.get("defend_chance", 0.2)
+        
+        if rand < attack_chance:
             return "attack"
-        elif rand < self.ai_pattern.get("attack_chance", 0.8) + self.ai_pattern.get("defend_chance", 0.2):
+        elif rand < attack_chance + defend_chance:
             return "defend"
         else:
             return "attack"  # Default fallback

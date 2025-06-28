@@ -1,6 +1,6 @@
 # Text RPG Adventure - Phase 4: Quests & Polish
 
-A comprehensive text-based RPG built with Python, featuring a complete quest system, combat mechanics, character progression, and economic gameplay.
+A comprehensive text-based RPG built with Python, featuring a complete quest system, combat mechanics, character progression, economic gameplay, and advanced social systems.
 
 ## 🌟 Version 1.0.0 - Phase 4 Features
 
@@ -26,19 +26,27 @@ A comprehensive text-based RPG built with Python, featuring a complete quest sys
 
 ### 💰 Economy System
 - **Merchant Trading**: Buy premium items at 150% value, sell at 60%
-- **Healing Services**: Tavern healing at 5 gold per HP
+- **Healing Services**: Tavern healing at 1 gold per HP
 - **Legendary Items**: High-end equipment for dedicated players
 - **Quest Rewards**: Additional income through quest completion
+
+### 🤝 Social Systems
+- **Faction Reputation**: Build relationships with different factions (-100 to +100)
+- **NPC Relationships**: Individual relationship tracking with NPCs
+- **World Impact Tracking**: Your actions affect the game world
+- **Dynamic Interactions**: NPC responses change based on your reputation
 
 ### 🗺️ Game World
 - **9 Interconnected Rooms**: Tavern, town square, shops, forests, caves, and ancient ruins
 - **Interactive Objects**: Examine marked objects **[like this]** for detailed descriptions
 - **Item Placement**: Strategic item locations encourage exploration
 - **Environmental Storytelling**: Rich descriptions create immersive atmosphere
+- **Recall System**: Fast travel back to town when needed
 
 ### 🎮 Gameplay Features
 - **Smart Command Parser**: Natural language commands with aliases (n/s/e/w, l=look, x=examine)
-- **Inventory Management**: 10-slot inventory with equipment system
+- **Unlimited Inventory**: Carry as many items as you find
+- **Equipment System**: Separate weapon and armor slots
 - **Save/Load System**: Persistent game state with JSON serialization
 - **Debug Tools**: Development commands for testing and balancing
 
@@ -117,30 +125,38 @@ A comprehensive text-based RPG built with Python, featuring a complete quest sys
 ### Economy
 - `buy <item>` - Purchase from merchant
 - `sell <item>` - Sell to merchant
-- `heal` - Use healing services at tavern (5 gold per HP)
+- `heal` - Use healing services at tavern (1 gold per HP)
 
 ### Character
 - `stats` - View character information and progression
+- `reputation` - View faction standings and NPC relationships
+- `recall` - Fast travel back to town
 - `save` - Save your game progress
 - `help [topic]` - Get help on commands or specific topics
 
 ## 🏗️ Technical Implementation
 
 ### Architecture
-- **Single-file Design**: All game logic in main.py for maximum clarity
+- **Single-file Design**: All game logic in main.py for maximum clarity and LLM visibility
 - **Data-driven Content**: JSON files for rooms, items, enemies, combat text, and quests
-- **Modular Systems**: Separate systems for combat, quests, economy, and progression
+- **Modular Systems**: Separate systems for combat, quests, economy, progression, and social interactions
 
 ### Data Files
-- `rooms.json` - 9 rooms with rich descriptions and interactive objects
-- `items.json` - 11 items including weapons, armor, consumables, and quest items
-- `enemies.json` - 3 enemy types with unique AI patterns and loot tables
-- `combat_text.json` - 88+ varied combat messages for immersion
-- `quests.json` - 5 quests with multiple objective types and rewards
+- `rooms.json` - 9 rooms with rich descriptions and interactive objects (2151 lines)
+- `items.json` - Comprehensive item database with weapons, armor, consumables, and quest items (1097 lines)
+- `enemies.json` - 3 enemy types with unique AI patterns and loot tables (822 lines)
+- `combat_text.json` - 88+ varied combat messages for immersion (88 lines)
+- `quests.json` - 5 quests with multiple objective types and rewards (655 lines)
+
+### Advanced Features
+- **Faction System**: Track reputation with different groups
+- **Relationship Tracking**: Individual NPC relationship management
+- **World State Management**: Global flags and action tracking
+- **Dynamic Content**: Game world responds to player actions
 
 ### Save System
 - **JSON Serialization**: Complete game state preservation
-- **Player Data**: Stats, inventory, equipment, quest progress
+- **Player Data**: Stats, inventory, equipment, quest progress, and social standings
 - **Respawn System**: Death penalty with safe respawn location
 
 ## 🚀 Development Phases
